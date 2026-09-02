@@ -874,3 +874,265 @@ select {
     min-height: auto;
   }
 }
+/* =========================================
+   FINAL LAYOUT TUNING
+========================================= */
+
+/* ヘッダー */
+.header-logo-image {
+  width: 195px;
+}
+
+.header-inner {
+  min-height: 88px;
+}
+
+/* ヒーロー全体 */
+.hero-inner {
+  min-height: 620px;
+  padding-top: 72px;
+  padding-bottom: 72px;
+  gap: 56px;
+}
+
+/* ヒーロータイトルを少し小さく */
+.hero h1 {
+  font-size: clamp(3.3rem, 5.4vw, 5rem);
+  line-height: 1.14;
+}
+
+/* ヒーロー説明文 */
+.hero-description {
+  max-width: 580px;
+  font-size: 1rem;
+  line-height: 2;
+}
+
+/* ヒーロー画像 */
+.hero-image {
+  max-width: 720px;
+  border-radius: 30px;
+}
+
+/* セクション見出し全体を少し抑える */
+.section h2 {
+  font-size: clamp(2.4rem, 4.6vw, 3.8rem);
+  line-height: 1.28;
+}
+
+/* ABOUT */
+.intro-inner {
+  max-width: 900px;
+}
+
+.intro-inner p:not(.section-en) {
+  max-width: 820px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 足のお悩みカード */
+.feature-card {
+  min-height: 430px;
+  display: flex;
+  flex-direction: column;
+}
+
+.feature-card a {
+  margin-top: auto;
+}
+
+/* アロマ */
+.split-layout {
+  gap: 64px;
+}
+
+.image-panel img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* リフレクソロジー */
+.reflexology-content {
+  gap: 64px;
+}
+
+.reflexology-image img {
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+/* 診断 */
+.diagnosis-box {
+  grid-template-columns: 1fr 0.9fr;
+  gap: 56px;
+}
+
+.diagnosis-content h2 {
+  max-width: 680px;
+  font-size: clamp(2.8rem, 4.4vw, 4.2rem);
+  line-height: 1.32;
+  word-break: keep-all;
+  overflow-wrap: normal;
+}
+
+.diagnosis-content p {
+  max-width: 650px;
+}
+
+.diagnosis-image img {
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+/* コラム */
+.article-grid {
+  align-items: stretch;
+}
+
+.article-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.article-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.article-link {
+  margin-top: auto;
+}
+
+/* FUTURE */
+.future-box {
+  max-width: 900px;
+}
+
+.future-box p:not(.section-en) {
+  max-width: 780px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* フッター */
+.site-footer {
+  padding-top: 72px;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 960px) {
+
+  .header-logo-image {
+    width: 170px;
+  }
+
+  .hero-inner {
+    min-height: auto;
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 8vw, 4.6rem);
+  }
+
+  .diagnosis-content h2 {
+    font-size: clamp(2.5rem, 7vw, 3.8rem);
+  }
+
+  .feature-card {
+    min-height: 360px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 640px) {
+
+  .header-inner {
+    min-height: 70px;
+  }
+
+  .header-logo-image {
+    width: 138px;
+  }
+
+  .hero-inner {
+    padding-top: 46px;
+    padding-bottom: 48px;
+    gap: 34px;
+  }
+
+  .hero-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.55rem, 13vw, 3.7rem);
+    line-height: 1.17;
+  }
+
+  .hero-description {
+    margin-top: 22px;
+    font-size: 0.93rem;
+    line-height: 1.9;
+  }
+
+  .hero-image {
+    border-radius: 20px;
+  }
+
+  .section {
+    padding-top: 64px;
+    padding-bottom: 64px;
+  }
+
+  .section h2 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    line-height: 1.3;
+  }
+
+  .intro-inner {
+    text-align: left;
+  }
+
+  .feature-card {
+    min-height: auto;
+  }
+
+  .diagnosis-box {
+    padding: 24px;
+    gap: 32px;
+  }
+
+  .diagnosis-content h2 {
+    font-size: clamp(2.2rem, 10vw, 3rem);
+    line-height: 1.32;
+  }
+
+  .diagnosis-content h2 br {
+    display: none;
+  }
+
+  .article-body h3 {
+    line-height: 1.5;
+  }
+
+  .future-box {
+    text-align: left;
+  }
+
+  .footer-nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+}

@@ -1495,3 +1495,41 @@ a.feature-card:hover {
   }
 
 }
+.concern-title {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 22px;
+}
+
+.concern-number {
+  color: var(--green-dark);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  flex-shrink: 0;
+}
+
+.concern-title h3 {
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .concern-title {
+    gap: 12px;
+    margin-bottom: 18px;
+  }
+
+  .concern-number {
+    font-size: 0.82rem;
+  }
+
+  .concern-title h3 {
+    font-size: 1.25rem;
+    line-height: 1.45;
+  }
+
+  .feature-card {
+    padding: 28px 24px;
+  }
+}

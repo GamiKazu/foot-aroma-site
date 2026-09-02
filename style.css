@@ -1136,3 +1136,97 @@ select {
     gap: 10px;
   }
 }
+/* =========================================
+   MOBILE SECTION CARD STYLE
+   スマホで「画像が置いてあるだけ」感をなくす
+========================================= */
+
+@media (max-width: 640px) {
+
+  /* ヒーロー・アロマ・診断などを
+     1つのまとまりとして見せる */
+  .hero-inner,
+  .split-layout,
+  .diagnosis-box {
+    padding: 22px;
+    border-radius: 28px;
+    background: rgba(255, 255, 255, 0.48);
+    border: 1px solid rgba(95, 105, 89, 0.10);
+    box-shadow: 0 12px 34px rgba(65, 69, 61, 0.05);
+  }
+
+  /* セクション内の文章と画像の距離を近づける */
+  .hero-inner,
+  .split-layout,
+  .diagnosis-box,
+  .reflexology-content {
+    gap: 26px;
+  }
+
+  /* 画像をカードの中に馴染ませる */
+  .hero-image,
+  .image-panel img,
+  .reflexology-image img,
+  .diagnosis-image img {
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 22px;
+    box-shadow: 0 10px 26px rgba(65, 69, 61, 0.08);
+  }
+
+  /* アロマの画像まわり */
+  .image-panel {
+    margin-top: 4px;
+    border-radius: 22px;
+  }
+
+  /* リフレクソロジー画像 */
+  .reflexology-image {
+    margin-top: 8px;
+  }
+
+  /* 診断画像 */
+  .diagnosis-image {
+    margin-top: 4px;
+  }
+
+  /* セクション上下の余白も少し圧縮 */
+  .hero {
+    padding: 18px 0 34px;
+  }
+
+  #aroma,
+  #diagnosis {
+    padding-top: 54px;
+    padding-bottom: 54px;
+  }
+
+  /* スマホ時の文章を少し読みやすく */
+  .hero-description,
+  .split-content p,
+  .diagnosis-content p {
+    line-height: 1.9;
+  }
+
+  /* ABOUTはカード化しすぎず自然に */
+  .intro-inner {
+    padding-left: 8px;
+    padding-right: 8px;
+  }
+
+  /* 足のお悩みカード */
+  .feature-card {
+    box-shadow: 0 10px 28px rgba(65, 69, 61, 0.05);
+  }
+
+  /* コラムも画像と本文を1つのカードとして強調 */
+  .article-card {
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(65, 69, 61, 0.06);
+  }
+
+  .article-image img {
+    border-radius: 0;
+  }
+}

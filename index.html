@@ -20,7 +20,6 @@
 
   <!-- OGP -->
   <meta property="og:type" content="website">
-
   <meta property="og:locale" content="ja_JP">
 
   <meta
@@ -40,7 +39,7 @@
 
   <meta
     property="og:site_name"
-    content="足と香りのセルフケア"
+    content="Foot & Aroma"
   >
 
   <meta
@@ -56,7 +55,7 @@
 
   <meta
     name="twitter:title"
-    content="足と香りのセルフケア"
+    content="足と香りのセルフケア｜Foot & Aroma"
   >
 
   <meta
@@ -71,11 +70,13 @@
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- 構造化データ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebSite",
-    "name": "足と香りのセルフケア",
+    "name": "Foot & Aroma",
+    "alternateName": "足と香りのセルフケア",
     "url": "https://gamikazu.github.io/foot-aroma-site/",
     "description": "アロマテラピー、リフレクソロジー、足裏ケアについて紹介するセルフケア情報サイト",
     "inLanguage": "ja"
@@ -87,7 +88,10 @@
 
 <body>
 
-  <!-- HEADER -->
+
+  <!-- ========================================
+       HEADER
+  ========================================= -->
 
   <header class="site-header">
 
@@ -95,8 +99,8 @@
 
       <a
         class="site-logo"
-        href="./"
-        aria-label="足と香りのセルフケア トップページへ"
+        href="index.html"
+        aria-label="Foot & Aroma トップページ"
       >
 
         <img
@@ -141,7 +145,7 @@
           リフレクソロジー
         </a>
 
-        <a href="#diagnosis">
+        <a href="diagnosis.html">
           無料診断
         </a>
 
@@ -157,10 +161,16 @@
 
 
 
+  <!-- ========================================
+       MAIN
+  ========================================= -->
+
   <main>
 
 
-    <!-- HERO -->
+    <!-- ========================================
+         HERO
+    ========================================= -->
 
     <section class="hero">
 
@@ -203,7 +213,7 @@
 
             <a
               class="button button-secondary"
-              href="#diagnosis"
+              href="diagnosis.html"
             >
               無料セルフチェック
             </a>
@@ -218,7 +228,7 @@
 
           <img
             src="hero-main.png"
-            alt="足裏とアロマオイル、植物を組み合わせたアロマテラピーと足元セルフケアのイメージ"
+            alt="足元とアロマオイル、植物を組み合わせたセルフケアのイメージ"
             class="hero-image"
             fetchpriority="high"
             decoding="async"
@@ -232,7 +242,9 @@
 
 
 
-    <!-- INTRO -->
+    <!-- ========================================
+         INTRO
+    ========================================= -->
 
     <section class="intro section">
 
@@ -247,15 +259,18 @@
         </h2>
 
         <p>
+
           このサイトでは、
           アロマテラピー・リフレクソロジー・
           足裏セルフケアを中心に、
 
           毎日の暮らしに取り入れやすい
           情報を紹介しています。
+
         </p>
 
         <p>
+
           「立ち仕事で足が疲れる」
 
           「夕方になると足が重く感じる」
@@ -266,7 +281,16 @@
 
           自分に合ったセルフケアを
           探してみてください。
+
         </p>
+
+
+        <a
+          class="text-link"
+          href="about.html"
+        >
+          このサイトについて →
+        </a>
 
       </div>
 
@@ -274,7 +298,9 @@
 
 
 
-    <!-- FOOT CONCERNS -->
+    <!-- ========================================
+         FOOT CONCERNS
+    ========================================= -->
 
     <section
       id="concerns"
@@ -404,7 +430,9 @@
 
 
 
-    <!-- AROMA -->
+    <!-- ========================================
+         AROMA
+    ========================================= -->
 
     <section
       id="aroma"
@@ -424,17 +452,21 @@
           </h2>
 
           <p>
+
             アロマテラピーは、
 
             植物から得られる精油の香りを
             日々の暮らしの中で楽しむ方法のひとつです。
+
           </p>
 
           <p>
+
             香りの特徴や初心者向けの選び方、
 
-            お部屋や入浴時間などで楽しむ方法を
-            紹介していきます。
+            お部屋やリラックスタイムなどで
+            楽しむ方法を紹介します。
+
           </p>
 
           <a
@@ -465,7 +497,9 @@
 
 
 
-    <!-- REFLEXOLOGY -->
+    <!-- ========================================
+         REFLEXOLOGY
+    ========================================= -->
 
     <section
       id="reflexology"
@@ -486,11 +520,14 @@
           </h2>
 
           <p>
+
             足元に触れながら、
 
             リラックスタイムを過ごすための
             セルフケアについて紹介します。
+
           </p>
+
 
           <a
             class="button button-secondary"
@@ -506,6 +543,7 @@
         <div class="reflexology-content">
 
           <div class="info-grid">
+
 
             <div>
 
@@ -563,6 +601,7 @@
 
             </div>
 
+
           </div>
 
 
@@ -571,7 +610,7 @@
 
             <img
               src="category-reflexology.png"
-              alt="足裏へのリフレクソロジー施術をイメージした写真"
+              alt="足元をやさしくケアするリフレクソロジーのイメージ"
               loading="lazy"
               decoding="async"
             >
@@ -586,7 +625,9 @@
 
 
 
-    <!-- DIAGNOSIS -->
+    <!-- ========================================
+         DIAGNOSIS
+    ========================================= -->
 
     <section
       id="diagnosis"
@@ -607,17 +648,23 @@
           </h2>
 
           <p>
-            いくつかの簡単な質問から、
 
-            気になる足元の状態に合わせた
-            セルフケアや香りを紹介する
+            足裏写真といくつかの簡単な質問から、
 
-            無料診断を準備しています。
+            足元の状態や日々のセルフケア、
+            おすすめの香りを確認できる
+
+            無料セルフチェックをご案内しています。
+
           </p>
 
-          <p class="diagnosis-coming-soon">
-            現在準備中
-          </p>
+
+          <a
+            class="button button-primary"
+            href="diagnosis.html"
+          >
+            無料診断について見る
+          </a>
 
         </div>
 
@@ -640,7 +687,9 @@
 
 
 
-    <!-- COLUMN -->
+    <!-- ========================================
+         COLUMN
+    ========================================= -->
 
     <section
       id="column"
@@ -685,6 +734,7 @@
               >
 
             </div>
+
 
             <div class="article-body">
 
@@ -734,6 +784,7 @@
 
             </div>
 
+
             <div class="article-body">
 
               <div class="article-meta">
@@ -782,6 +833,7 @@
 
             </div>
 
+
             <div class="article-body">
 
               <div class="article-meta">
@@ -802,9 +854,12 @@
                 インソール選びの基本を紹介します。
               </p>
 
-              <span class="article-link">
-                記事準備中
-              </span>
+              <a
+                class="article-link"
+                href="insole.html"
+              >
+                詳しく見る →
+              </a>
 
             </div>
 
@@ -819,7 +874,9 @@
 
 
 
-    <!-- FUTURE -->
+    <!-- ========================================
+         FUTURE
+    ========================================= -->
 
     <section class="section">
 
@@ -835,18 +892,30 @@
         </h2>
 
         <p>
+
           今後はアロマテラピーや
           リフレクソロジーに関する
 
           サービス展開も検討しています。
+
         </p>
 
         <p>
+
           現在は情報発信を中心に、
 
           足元から毎日を心地よくするための
           コンテンツを育てています。
+
         </p>
+
+
+        <a
+          class="text-link"
+          href="about.html"
+        >
+          Foot & Aromaについて →
+        </a>
 
       </div>
 
@@ -857,7 +926,9 @@
 
 
 
-  <!-- FOOTER -->
+  <!-- ========================================
+       FOOTER
+  ========================================= -->
 
   <footer class="site-footer">
 
@@ -882,6 +953,10 @@
         aria-label="フッターナビゲーション"
       >
 
+        <a href="index.html">
+          トップ
+        </a>
+
         <a href="foot-care.html">
           足の悩み
         </a>
@@ -894,12 +969,16 @@
           リフレクソロジー
         </a>
 
-        <a href="#diagnosis">
+        <a href="insole.html">
+          インソール
+        </a>
+
+        <a href="diagnosis.html">
           無料診断
         </a>
 
-        <a href="#column">
-          コラム
+        <a href="about.html">
+          このサイトについて
         </a>
 
       </nav>
@@ -907,11 +986,14 @@
 
 
       <p class="footer-note">
+
         当サイトは一般的なセルフケア情報を
         提供するものであり、
 
         医療行為・診断を目的としたものではありません。
+
       </p>
+
 
       <p class="copyright">
         © 2026 Foot & Aroma
@@ -923,6 +1005,7 @@
 
 
   <script src="script.js"></script>
+
 
 </body>
 

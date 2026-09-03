@@ -112,7 +112,7 @@ h2 {
 ========================================================= */
 
 .section {
-  padding: 92px 0;
+  padding: 88px 0;
 }
 
 .eyebrow {
@@ -134,14 +134,14 @@ h2 {
 
 .section-heading {
   max-width: 720px;
-  margin-bottom: 40px;
+  margin-bottom: 38px;
 }
 
 .section-heading h2 {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
-  font-size: clamp(2.5rem, 4.5vw, 4.2rem);
-  line-height: 1.26;
+  font-size: clamp(2.45rem, 4.3vw, 4rem);
+  line-height: 1.27;
 }
 
 .section-heading > p:last-child {
@@ -249,6 +249,136 @@ h2 {
     transform: scale(1.018);
     opacity: .97;
   }
+}
+
+
+/* =========================================================
+   IMAGE CTA
+========================================================= */
+
+.image-cta-card {
+  position: relative;
+
+  display: block;
+
+  overflow: hidden;
+
+  isolation: isolate;
+}
+
+.image-cta-card::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  z-index: 1;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(25, 36, 28, 0) 48%,
+      rgba(25, 36, 28, 0.10) 62%,
+      rgba(25, 36, 28, 0.72) 100%
+    );
+}
+
+.image-cta-overlay {
+  position: absolute;
+
+  left: 22px;
+  right: 22px;
+  bottom: 20px;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  gap: 8px;
+
+  color: #fff;
+}
+
+.image-cta-kicker {
+  display: inline-flex;
+
+  padding: 5px 10px;
+
+  border-radius: 999px;
+
+  color: rgba(255,255,255,.94);
+
+  background:
+    rgba(255,255,255,.13);
+
+  border:
+    1px solid rgba(255,255,255,.24);
+
+  backdrop-filter: blur(5px);
+
+  font-size: .63rem;
+  font-weight: 800;
+
+  letter-spacing: .14em;
+}
+
+.image-cta-title {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 9px;
+
+  font-size: 1rem;
+  font-weight: 700;
+
+  line-height: 1.4;
+
+  text-shadow:
+    0 2px 8px rgba(0,0,0,.20);
+}
+
+.image-cta-arrow {
+  display: inline-block;
+
+  transition: transform .2s ease;
+}
+
+.image-cta-card:hover .image-cta-arrow {
+  transform: translateX(4px);
+}
+
+
+/* ヒーローはCTAを控えめに */
+
+.image-cta-hero::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(25,36,28,0) 58%,
+      rgba(25,36,28,.48) 100%
+    );
+}
+
+.image-cta-hero .image-cta-overlay {
+  left: 20px;
+  bottom: 18px;
+}
+
+
+/* リフレ画像は背景が深緑なので少し明確に */
+
+.image-cta-reflexology::after {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(20,29,22,0) 42%,
+      rgba(20,29,22,.16) 60%,
+      rgba(20,29,22,.78) 100%
+    );
 }
 
 
@@ -384,7 +514,7 @@ h2 {
 .hero {
   position: relative;
 
-  padding: 44px 0 68px;
+  padding: 42px 0 62px;
 
   overflow: hidden;
 
@@ -428,12 +558,12 @@ h2 {
 
   margin-inline: auto;
 
-  padding: 50px;
+  padding: 48px;
 
   display: grid;
   grid-template-columns: .94fr 1.06fr;
 
-  gap: 54px;
+  gap: 52px;
 
   align-items: center;
 
@@ -457,9 +587,9 @@ h2 {
 }
 
 .hero-copy h1 {
-  margin-bottom: 25px;
+  margin-bottom: 24px;
 
-  font-size: clamp(3.05rem, 5.8vw, 5.4rem);
+  font-size: clamp(2.95rem, 5.5vw, 5.15rem);
   line-height: 1.15;
 }
 
@@ -471,7 +601,7 @@ h2 {
 .hero-description {
   max-width: 500px;
 
-  margin-bottom: 28px;
+  margin-bottom: 27px;
 
   color: var(--text-soft);
 
@@ -527,7 +657,7 @@ h2 {
 ========================================================= */
 
 .section-about {
-  padding: 82px 0;
+  padding: 76px 0;
 
   background: #fcfaf5;
 }
@@ -537,16 +667,16 @@ h2 {
 }
 
 .about-content h2 {
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 
-  font-size: clamp(2.55rem, 4.7vw, 4.15rem);
+  font-size: clamp(2.45rem, 4.4vw, 3.95rem);
   line-height: 1.3;
 }
 
 .about-content > p {
   max-width: 720px;
 
-  margin-bottom: 18px;
+  margin-bottom: 17px;
 
   color: var(--text-soft);
 
@@ -563,7 +693,7 @@ h2 {
 ========================================================= */
 
 .section-concerns {
-  padding: 82px 0;
+  padding: 76px 0;
 
   background:
     linear-gradient(
@@ -578,13 +708,13 @@ h2 {
 
   grid-template-columns: repeat(2,1fr);
 
-  gap: 18px;
+  gap: 16px;
 }
 
 .concern-card {
-  min-height: 185px;
+  min-height: 170px;
 
-  padding: 27px 28px;
+  padding: 24px 26px;
 
   display: flex;
   flex-direction: column;
@@ -594,7 +724,7 @@ h2 {
   border:
     1px solid rgba(45,50,46,.055);
 
-  border-radius: 26px;
+  border-radius: 24px;
 
   box-shadow:
     0 8px 25px rgba(53,62,55,.035);
@@ -615,9 +745,9 @@ h2 {
   display: flex;
   align-items: center;
 
-  gap: 12px;
+  gap: 11px;
 
-  margin-bottom: 13px;
+  margin-bottom: 11px;
 }
 
 .concern-card-top span {
@@ -632,15 +762,15 @@ h2 {
 .concern-card-top h3 {
   margin: 0;
 
-  font-size: 1.22rem;
+  font-size: 1.18rem;
 }
 
 .concern-card p {
-  margin-bottom: 17px;
+  margin-bottom: 14px;
 
   color: var(--text-soft);
 
-  line-height: 1.75;
+  line-height: 1.7;
 }
 
 .concern-card strong {
@@ -659,7 +789,7 @@ h2 {
 .section-aroma {
   position: relative;
 
-  padding: 86px 0;
+  padding: 78px 0;
 
   overflow: hidden;
 
@@ -694,13 +824,13 @@ h2 {
 
   max-width: 1020px;
 
-  padding: 48px;
+  padding: 44px;
 
   display: grid;
 
   grid-template-columns: .9fr 1.1fr;
 
-  gap: 48px;
+  gap: 44px;
 
   align-items: center;
 
@@ -710,30 +840,30 @@ h2 {
   border:
     1px solid rgba(45,50,46,.07);
 
-  border-radius: 36px;
+  border-radius: 34px;
 
   box-shadow: var(--shadow-soft);
 }
 
 .aroma-copy h2 {
-  margin-bottom: 23px;
+  margin-bottom: 21px;
 
-  font-size: clamp(2.55rem, 4.6vw, 4.1rem);
+  font-size: clamp(2.4rem, 4.25vw, 3.9rem);
   line-height: 1.3;
 }
 
 .aroma-copy > p:not(.eyebrow) {
-  margin-bottom: 17px;
+  margin-bottom: 15px;
 
   color: var(--text-soft);
 
-  line-height: 1.95;
+  line-height: 1.9;
 }
 
 .aroma-image {
   overflow: hidden;
 
-  border-radius: 25px;
+  border-radius: 24px;
 
   box-shadow:
     0 10px 30px rgba(53,62,55,.055);
@@ -751,7 +881,7 @@ h2 {
 ========================================================= */
 
 .section-reflexology {
-  padding: 86px 0;
+  padding: 78px 0;
 
   color: #fff;
 
@@ -768,17 +898,17 @@ h2 {
 
   grid-template-columns: 1fr .82fr;
 
-  gap: 44px;
+  gap: 42px;
 
   align-items: end;
 
-  margin-bottom: 34px;
+  margin-bottom: 31px;
 }
 
 .reflexology-heading h2 {
   margin: 0;
 
-  font-size: clamp(2.55rem,4.7vw,4.15rem);
+  font-size: clamp(2.4rem,4.3vw,3.95rem);
   line-height: 1.28;
 }
 
@@ -787,7 +917,7 @@ h2 {
 
   color: rgba(255,255,255,.74);
 
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 .reflexology-layout {
@@ -795,7 +925,7 @@ h2 {
 
   grid-template-columns: .9fr 1.1fr;
 
-  gap: 44px;
+  gap: 42px;
 
   align-items: center;
 }
@@ -806,7 +936,7 @@ h2 {
 }
 
 .reflexology-row {
-  min-height: 88px;
+  min-height: 84px;
 
   display: grid;
 
@@ -831,7 +961,7 @@ h2 {
 
   margin-bottom: 3px;
 
-  font-size: 1.08rem;
+  font-size: 1.06rem;
 }
 
 .reflexology-row small {
@@ -848,7 +978,7 @@ h2 {
 .reflexology-image {
   overflow: hidden;
 
-  border-radius: 26px;
+  border-radius: 24px;
 }
 
 .reflexology-image img {
@@ -857,17 +987,13 @@ h2 {
   object-fit: cover;
 }
 
-.reflexology-action {
-  margin-top: 27px;
-}
-
 
 /* =========================================================
    DIAGNOSIS
 ========================================================= */
 
 .section-diagnosis {
-  padding: 86px 0;
+  padding: 78px 0;
 
   background:
     linear-gradient(
@@ -884,7 +1010,7 @@ h2 {
 
   margin-inline: auto;
 
-  padding: 45px;
+  padding: 42px;
 
   background:
     linear-gradient(
@@ -896,7 +1022,7 @@ h2 {
   border:
     1px solid rgba(45,50,46,.07);
 
-  border-radius: 34px;
+  border-radius: 32px;
 
   box-shadow:
     0 20px 55px rgba(53,62,55,.09);
@@ -905,7 +1031,7 @@ h2 {
 .diagnosis-badge {
   display: inline-flex;
 
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 
   padding: 7px 12px;
 
@@ -922,10 +1048,10 @@ h2 {
 }
 
 .diagnosis-copy h2 {
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 
-  font-size: clamp(2.45rem,4.6vw,4rem);
-  line-height: 1.28;
+  font-size: clamp(2.3rem,4.2vw,3.75rem);
+  line-height: 1.3;
 }
 
 .diagnosis-copy > p {
@@ -933,15 +1059,15 @@ h2 {
 
   color: var(--text-soft);
 
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 .diagnosis-image {
-  margin-top: 26px;
+  margin-top: 24px;
 
   overflow: hidden;
 
-  border-radius: 24px;
+  border-radius: 22px;
 }
 
 .diagnosis-image img {
@@ -951,9 +1077,12 @@ h2 {
 }
 
 .diagnosis-button {
-  margin-top: 22px;
+  margin-top: 20px;
 
   min-width: 260px;
+
+  box-shadow:
+    0 12px 28px rgba(83,104,79,.20);
 }
 
 
@@ -962,7 +1091,7 @@ h2 {
 ========================================================= */
 
 .section-column {
-  padding: 82px 0;
+  padding: 76px 0;
 
   background:
     linear-gradient(
@@ -977,7 +1106,7 @@ h2 {
 
   grid-template-columns: repeat(3,1fr);
 
-  gap: 22px;
+  gap: 20px;
 }
 
 .column-card {
@@ -991,7 +1120,7 @@ h2 {
   border:
     1px solid rgba(45,50,46,.055);
 
-  border-radius: 26px;
+  border-radius: 24px;
 
   box-shadow: var(--shadow-card);
 }
@@ -1007,7 +1136,7 @@ h2 {
 }
 
 .column-body {
-  padding: 23px 24px 25px;
+  padding: 21px 22px 23px;
 
   display: flex;
   flex: 1;
@@ -1017,7 +1146,7 @@ h2 {
 .column-tag {
   align-self: flex-start;
 
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
   padding: 5px 11px;
 
@@ -1034,19 +1163,19 @@ h2 {
 }
 
 .column-body h3 {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
 
-  font-size: 1.07rem;
-  line-height: 1.6;
+  font-size: 1.03rem;
+  line-height: 1.58;
 }
 
 .column-body p {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 
   color: var(--text-soft);
 
-  font-size: .88rem;
-  line-height: 1.75;
+  font-size: .86rem;
+  line-height: 1.7;
 }
 
 .column-body .text-link {
@@ -1059,7 +1188,7 @@ h2 {
 ========================================================= */
 
 .section-future {
-  padding: 78px 0;
+  padding: 72px 0;
 
   background: #fcfaf5;
 }
@@ -1069,7 +1198,7 @@ h2 {
 
   grid-template-columns: 120px 1fr;
 
-  gap: 38px;
+  gap: 36px;
 
   max-width: 880px;
 }
@@ -1105,18 +1234,18 @@ h2 {
 }
 
 .future-copy h2 {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
-  font-size: clamp(2.5rem,4.6vw,4.05rem);
-  line-height: 1.3;
+  font-size: clamp(2.35rem,4.2vw,3.8rem);
+  line-height: 1.31;
 }
 
 .future-copy > p {
-  margin-bottom: 18px;
+  margin-bottom: 16px;
 
   color: var(--text-soft);
 
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 
@@ -1303,11 +1432,11 @@ h2 {
   }
 
   .section {
-    padding: 58px 0;
+    padding: 52px 0;
   }
 
   .eyebrow {
-    margin-bottom: 12px;
+    margin-bottom: 11px;
 
     font-size: 10px;
 
@@ -1371,7 +1500,7 @@ h2 {
   /* HERO */
 
   .hero {
-    padding: 24px 0 46px;
+    padding: 22px 0 40px;
   }
 
   .hero::before {
@@ -1388,14 +1517,14 @@ h2 {
 
     margin: 0 auto;
 
-    padding: 28px 20px 20px;
+    padding: 26px 20px 18px;
 
     display: flex;
     flex-direction: column;
 
-    gap: 20px;
+    gap: 18px;
 
-    border-radius: 28px;
+    border-radius: 27px;
   }
 
   .hero-copy,
@@ -1405,9 +1534,9 @@ h2 {
   }
 
   .hero-copy h1 {
-    margin-bottom: 19px;
+    margin-bottom: 17px;
 
-    font-size: 34px;
+    font-size: 32px;
     line-height: 1.28;
   }
 
@@ -1417,17 +1546,17 @@ h2 {
   }
 
   .hero-description {
-    margin-bottom: 21px;
+    margin-bottom: 19px;
 
     font-size: 14px;
-    line-height: 1.88;
+    line-height: 1.82;
   }
 
   .hero-actions {
     display: flex;
     flex-direction: column;
 
-    gap: 10px;
+    gap: 9px;
   }
 
   .hero-actions .button {
@@ -1435,7 +1564,7 @@ h2 {
   }
 
   .hero-visual {
-    margin-top: 1px;
+    margin-top: 0;
 
     border-radius: 20px;
   }
@@ -1446,86 +1575,100 @@ h2 {
     object-fit: cover;
   }
 
+  .image-cta-hero .image-cta-overlay {
+    left: 16px;
+    right: 16px;
+    bottom: 14px;
+  }
+
+  .image-cta-hero .image-cta-kicker {
+    display: none;
+  }
+
+  .image-cta-hero .image-cta-title {
+    font-size: 13px;
+  }
+
 
   /* ABOUT */
 
   .section-about {
-    padding: 58px 0;
+    padding: 52px 0;
   }
 
   .about-content h2 {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
-    font-size: 32px;
+    font-size: 30px;
     line-height: 1.36;
   }
 
   .about-content > p {
-    margin-bottom: 16px;
+    margin-bottom: 14px;
 
     font-size: 14px;
-    line-height: 1.9;
+    line-height: 1.86;
   }
 
 
   /* CONCERNS */
 
   .section-concerns {
-    padding: 58px 0;
+    padding: 52px 0;
   }
 
   .section-heading {
-    margin-bottom: 26px;
+    margin-bottom: 23px;
   }
 
   .section-heading h2 {
-    margin-bottom: 13px;
+    margin-bottom: 12px;
 
-    font-size: 31px;
+    font-size: 29px;
     line-height: 1.34;
   }
 
   .section-heading > p:last-child {
     font-size: 14px;
-    line-height: 1.85;
+    line-height: 1.82;
   }
 
   .concern-grid {
     grid-template-columns: 1fr;
 
-    gap: 14px;
+    gap: 12px;
   }
 
   .concern-card {
     min-height: 0;
 
-    padding: 20px 20px;
+    padding: 18px 20px;
 
-    border-radius: 23px;
+    border-radius: 22px;
   }
 
   .concern-card-top {
-    margin-bottom: 9px;
+    margin-bottom: 8px;
 
-    gap: 10px;
+    gap: 9px;
   }
 
   .concern-card-top h3 {
-    font-size: 18px;
+    font-size: 17px;
   }
 
   .concern-card p {
-    margin-bottom: 12px;
+    margin-bottom: 10px;
 
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.65;
   }
 
 
   /* AROMA */
 
   .section-aroma {
-    padding: 58px 0;
+    padding: 52px 0;
   }
 
   .aroma-layout {
@@ -1534,74 +1677,92 @@ h2 {
 
     margin: 0 auto;
 
-    padding: 26px 20px 20px;
+    padding: 24px 20px 18px;
 
     display: flex;
     flex-direction: column;
 
-    gap: 21px;
+    gap: 18px;
 
-    border-radius: 26px;
+    border-radius: 25px;
   }
 
   .aroma-copy h2 {
-    margin-bottom: 19px;
+    margin-bottom: 17px;
 
-    font-size: 32px;
+    font-size: 30px;
     line-height: 1.34;
   }
 
   .aroma-copy > p:not(.eyebrow) {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 
     font-size: 14px;
-    line-height: 1.88;
+    line-height: 1.82;
   }
 
   .aroma-image {
     border-radius: 20px;
   }
 
+  .image-cta-overlay {
+    left: 16px;
+    right: 16px;
+    bottom: 15px;
+
+    gap: 6px;
+  }
+
+  .image-cta-kicker {
+    padding: 4px 8px;
+
+    font-size: 9px;
+  }
+
+  .image-cta-title {
+    font-size: 14px;
+  }
+
 
   /* REFLEXOLOGY */
 
   .section-reflexology {
-    padding: 60px 0;
+    padding: 54px 0;
   }
 
   .reflexology-heading {
     display: block;
 
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
 
   .reflexology-heading h2 {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 
-    font-size: 32px;
+    font-size: 30px;
     line-height: 1.34;
   }
 
   .reflexology-heading > p {
     font-size: 14px;
-    line-height: 1.85;
+    line-height: 1.8;
   }
 
   .reflexology-layout {
     display: flex;
     flex-direction: column;
 
-    gap: 22px;
+    gap: 18px;
   }
 
   .reflexology-row {
     min-height: 0;
 
-    padding: 15px 0;
+    padding: 13px 0;
 
-    grid-template-columns: 32px 1fr 20px;
+    grid-template-columns: 31px 1fr 20px;
 
-    gap: 9px;
+    gap: 8px;
   }
 
   .reflexology-row strong {
@@ -1616,31 +1777,23 @@ h2 {
     border-radius: 20px;
   }
 
-  .reflexology-action {
-    margin-top: 20px;
-  }
-
-  .reflexology-action .button {
-    width: 100%;
-  }
-
 
   /* DIAGNOSIS */
 
   .section-diagnosis {
-    padding: 58px 0;
+    padding: 52px 0;
   }
 
   .diagnosis-card {
     width: 100%;
 
-    padding: 26px 20px 20px;
+    padding: 24px 20px 18px;
 
-    border-radius: 27px;
+    border-radius: 26px;
   }
 
   .diagnosis-badge {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 
     padding: 6px 10px;
 
@@ -1648,21 +1801,21 @@ h2 {
   }
 
   .diagnosis-copy h2 {
-    margin-bottom: 17px;
+    margin-bottom: 15px;
 
-    font-size: 30px;
-    line-height: 1.36;
+    font-size: 28px;
+    line-height: 1.35;
   }
 
   .diagnosis-copy > p {
     font-size: 14px;
-    line-height: 1.85;
+    line-height: 1.8;
   }
 
   .diagnosis-image {
-    margin-top: 21px;
+    margin-top: 19px;
 
-    border-radius: 20px;
+    border-radius: 19px;
   }
 
   .diagnosis-image img {
@@ -1674,53 +1827,53 @@ h2 {
 
     min-width: 0;
 
-    margin-top: 18px;
+    margin-top: 16px;
   }
 
 
   /* COLUMN */
 
   .section-column {
-    padding: 58px 0;
+    padding: 52px 0;
   }
 
   .column-grid {
     grid-template-columns: 1fr;
 
-    gap: 18px;
+    gap: 16px;
   }
 
   .column-card {
-    border-radius: 23px;
+    border-radius: 22px;
   }
 
   .column-body {
-    padding: 20px 20px 22px;
+    padding: 18px 20px 20px;
   }
 
   .column-tag {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
   }
 
   .column-body h3 {
-    margin-bottom: 11px;
+    margin-bottom: 10px;
 
-    font-size: 17px;
-    line-height: 1.6;
+    font-size: 16px;
+    line-height: 1.55;
   }
 
   .column-body p {
-    margin-bottom: 14px;
+    margin-bottom: 12px;
 
     font-size: 13px;
-    line-height: 1.7;
+    line-height: 1.65;
   }
 
 
   /* FUTURE */
 
   .section-future {
-    padding: 58px 0;
+    padding: 52px 0;
   }
 
   .future-layout {
@@ -1728,23 +1881,23 @@ h2 {
   }
 
   .future-brand {
-    margin-bottom: 15px;
+    margin-bottom: 13px;
 
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .future-copy h2 {
-    margin-bottom: 19px;
+    margin-bottom: 17px;
 
-    font-size: 31px;
+    font-size: 29px;
     line-height: 1.35;
   }
 
   .future-copy > p {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
     font-size: 14px;
-    line-height: 1.85;
+    line-height: 1.8;
   }
 
 

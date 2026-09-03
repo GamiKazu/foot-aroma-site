@@ -2279,3 +2279,70 @@ h2 {
   }
 
 }
+/* =========================================================
+   FINAL MOBILE COMPACT ADJUSTMENTS
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+  /* =========================
+     1. 固定ヘッダーを少しコンパクトに
+  ========================= */
+
+  .site-header {
+    min-height: 76px;
+  }
+
+  .header-inner {
+    min-height: 76px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .site-logo {
+    transform: scale(0.93);
+    transform-origin: left center;
+  }
+
+  .menu-button {
+    transform: scale(0.88);
+    transform-origin: right center;
+  }
+
+
+  /* =========================
+     2. コラム画像を少し低くする
+  ========================= */
+
+  .column-image {
+    height: 285px;
+    overflow: hidden;
+  }
+
+  .column-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  /* カード本文もほんの少し詰める */
+  .column-body {
+    padding-top: 22px;
+    padding-bottom: 24px;
+  }
+
+
+  /* =========================
+     3. ABOUT下の余白を少し縮める
+  ========================= */
+
+  .section-about {
+    padding-bottom: 42px;
+  }
+
+  .section-future {
+    padding-top: 52px;
+  }
+
+}

@@ -4647,3 +4647,687 @@ h2 {
   }
 
 }
+/* =========================================================
+   SUB PAGE FINAL ADDITIONS
+   Header / SP Break / Reflex Zones / Insole spacing
+========================================================= */
+
+
+/* =========================================================
+   HEADER LOGO
+   トップページ・遷移先ページ共通
+========================================================= */
+
+.site-logo {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 7px;
+
+  flex-shrink: 0;
+}
+
+.header-logo-image {
+  display: block;
+
+  width: auto;
+  height: 34px;
+
+  object-fit: contain;
+}
+
+.header-gob {
+  flex-shrink: 0;
+
+  color: #718071;
+
+  font-family:
+    Georgia,
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    serif;
+
+  font-size: 0.72rem;
+  font-weight: 500;
+
+  line-height: 1;
+
+  letter-spacing: 0.045em;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================================
+   SMARTPHONE ONLY LINE BREAK
+========================================================= */
+
+.sp-only {
+  display: none;
+}
+
+
+/* =========================================================
+   REFLEXOLOGY PAGE NAV
+   反射区追加で5項目になったため調整
+========================================================= */
+
+.reflex-nav-list {
+  grid-template-columns:
+    repeat(5, 1fr);
+}
+
+
+/* =========================================================
+   REFLEX ZONES
+========================================================= */
+
+.reflex-zones-section {
+  position: relative;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eef2e9 0%,
+      #f7f5ef 100%
+    );
+
+  overflow: hidden;
+}
+
+
+/* 背景の薄い装飾 */
+
+.reflex-zones-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -150px;
+  top: 90px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(205, 219, 201, 0.27);
+
+  pointer-events: none;
+}
+
+
+.reflex-zones-section .container {
+  position: relative;
+
+  z-index: 1;
+}
+
+
+/* =========================================================
+   INTRODUCTION
+========================================================= */
+
+.reflex-zone-intro {
+  max-width: 780px;
+
+  margin-bottom: 28px;
+
+  padding: 24px 26px;
+
+  background:
+    rgba(255, 255, 255, 0.70);
+
+  border:
+    1px solid rgba(83, 106, 82, 0.10);
+
+  border-radius: 22px;
+}
+
+
+.reflex-zone-intro > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: var(--sage-500);
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.15em;
+}
+
+
+.reflex-zone-intro p {
+  margin-bottom: 8px;
+
+  color: var(--text-soft);
+
+  font-size: 0.88rem;
+
+  line-height: 1.78;
+}
+
+
+.reflex-zone-intro p:last-child {
+  margin-bottom: 0;
+}
+
+
+/* =========================================================
+   REFLEX ZONE LIST
+========================================================= */
+
+.reflex-zone-list {
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+
+/* =========================================================
+   EACH CARD
+========================================================= */
+
+.reflex-zone-card {
+  overflow: hidden;
+
+  background:
+    rgba(255, 255, 255, 0.93);
+
+  border:
+    1px solid rgba(83, 106, 82, 0.09);
+
+  border-radius: 21px;
+
+  box-shadow:
+    0 8px 24px rgba(53, 62, 55, 0.035);
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+
+.reflex-zone-card[open] {
+  border-color:
+    rgba(83, 106, 82, 0.18);
+
+  box-shadow:
+    0 12px 30px rgba(53, 62, 55, 0.055);
+}
+
+
+/* =========================================================
+   SUMMARY
+========================================================= */
+
+.reflex-zone-card summary {
+  min-height: 88px;
+
+  padding: 18px 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    44px 1fr auto;
+
+  gap: 15px;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  list-style: none;
+
+  user-select: none;
+}
+
+
+.reflex-zone-card summary::-webkit-details-marker {
+  display: none;
+}
+
+
+/* 番号 */
+
+.reflex-zone-number {
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--green);
+
+  background:
+    var(--sage-100);
+
+  border-radius: 50%;
+
+  font-size: 0.62rem;
+  font-weight: 800;
+
+  letter-spacing: 0.08em;
+}
+
+
+/* タイトル */
+
+.reflex-zone-heading {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+
+.reflex-zone-heading small {
+  color: #8b9989;
+
+  font-size: 0.57rem;
+  font-weight: 800;
+
+  line-height: 1.35;
+
+  letter-spacing: 0.12em;
+}
+
+
+.reflex-zone-heading strong {
+  color: var(--green-deep);
+
+  font-size: 1rem;
+
+  line-height: 1.45;
+}
+
+
+/* 「位置・押し方を見る」 */
+
+.reflex-zone-toggle {
+  position: relative;
+
+  padding-right: 24px;
+
+  color: var(--green);
+
+  font-size: 0.77rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+
+.reflex-zone-toggle::after {
+  content: "+";
+
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  transform:
+    translateY(-50%);
+
+  color: #789078;
+
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  line-height: 1;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.reflex-zone-card[open]
+.reflex-zone-toggle::after {
+  content: "−";
+}
+
+
+/* =========================================================
+   OPEN DETAIL
+========================================================= */
+
+.reflex-zone-detail {
+  padding:
+    0 20px 20px 79px;
+
+  border-top:
+    1px solid rgba(83, 106, 82, 0.08);
+}
+
+
+.reflex-zone-detail-row {
+  padding: 15px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    72px 1fr;
+
+  gap: 15px;
+
+  border-bottom:
+    1px solid rgba(83, 106, 82, 0.07);
+}
+
+
+.reflex-zone-detail-row:last-child {
+  padding-bottom: 2px;
+
+  border-bottom: 0;
+}
+
+
+.reflex-zone-detail-row > span {
+  color: var(--sage-500);
+
+  font-size: 0.69rem;
+  font-weight: 800;
+
+  letter-spacing: 0.06em;
+}
+
+
+.reflex-zone-detail-row p {
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: 0.88rem;
+
+  line-height: 1.78;
+}
+
+
+/* =========================================================
+   REFLEX NOTE
+========================================================= */
+
+.reflex-zone-note {
+  max-width: 880px;
+
+  margin:
+    22px 0 0;
+
+  color: #858d86;
+
+  font-size: 0.74rem;
+
+  line-height: 1.75;
+}
+
+
+/* =========================================================
+   INSOLE BUTTON SPACING
+========================================================= */
+
+.insole-link-button {
+  margin-top: 23px;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 768px) {
+
+
+  /* =========================
+     HEADER
+  ========================= */
+
+  .site-logo {
+    gap: 6px;
+
+    transform: none;
+  }
+
+
+  .header-logo-image {
+    width: auto;
+    height: 29px;
+  }
+
+
+  .header-gob {
+    font-size: 9px;
+
+    letter-spacing: 0.04em;
+  }
+
+
+  /*
+    既存CSSでは74pxと76pxが混在しているため、
+    最終的に72pxへ統一
+  */
+
+  :root {
+    --header-height: 72px;
+  }
+
+
+  .site-header {
+    min-height:
+      var(--header-height);
+  }
+
+
+  .header-inner {
+    min-height:
+      var(--header-height);
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+
+  body {
+    padding-top:
+      var(--header-height);
+  }
+
+
+  html {
+    scroll-padding-top: 84px;
+  }
+
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
+
+    flex:
+      0 0 40px;
+
+    transform: none;
+  }
+
+
+  /* =========================
+     SMARTPHONE LINE BREAK
+  ========================= */
+
+  .sp-only {
+    display: block;
+  }
+
+
+  /* =========================
+     REFLEX NAV
+  ========================= */
+
+  .reflex-nav-list {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+
+  /*
+    5項目なので最後の
+    「アイテム」だけ横いっぱい
+  */
+
+  .reflex-nav-list a:last-child {
+    grid-column:
+      1 / -1;
+  }
+
+
+  /* =========================
+     REFLEX ZONES
+  ========================= */
+
+  .reflex-zones-section::before {
+    width: 230px;
+    height: 230px;
+
+    right: -130px;
+    top: 120px;
+  }
+
+
+  .reflex-zone-intro {
+    margin-bottom: 20px;
+
+    padding: 19px 18px;
+
+    border-radius: 19px;
+  }
+
+
+  .reflex-zone-intro p {
+    font-size: 13px;
+
+    line-height: 1.72;
+  }
+
+
+  .reflex-zone-list {
+    gap: 9px;
+  }
+
+
+  .reflex-zone-card {
+    border-radius: 18px;
+  }
+
+
+  .reflex-zone-card summary {
+    min-height: 76px;
+
+    padding:
+      15px 15px;
+
+    grid-template-columns:
+      34px 1fr;
+
+    gap: 11px;
+  }
+
+
+  .reflex-zone-number {
+    width: 31px;
+    height: 31px;
+
+    font-size: 9px;
+  }
+
+
+  .reflex-zone-heading small {
+    font-size: 8px;
+  }
+
+
+  .reflex-zone-heading strong {
+    font-size: 15px;
+  }
+
+
+  /*
+    スマホでは右に置くと窮屈なので
+    3列目から2列目の下へ移動
+  */
+
+  .reflex-zone-toggle {
+    grid-column: 2;
+
+    margin-top: 4px;
+
+    padding-right: 22px;
+
+    justify-self: start;
+
+    font-size: 12px;
+  }
+
+
+  .reflex-zone-toggle::after {
+    font-size: 17px;
+  }
+
+
+  .reflex-zone-detail {
+    padding:
+      0 15px 16px;
+  }
+
+
+  .reflex-zone-detail-row {
+    padding: 13px 0;
+
+    display: block;
+  }
+
+
+  .reflex-zone-detail-row > span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    font-size: 10px;
+  }
+
+
+  .reflex-zone-detail-row p {
+    font-size: 13px;
+
+    line-height: 1.72;
+  }
+
+
+  .reflex-zone-note {
+    margin-top: 18px;
+
+    font-size: 11px;
+
+    line-height: 1.7;
+  }
+
+
+  /* =========================
+     INSOLE BUTTON
+  ========================= */
+
+  .insole-link-button {
+    width: 100%;
+
+    margin-top: 22px;
+  }
+
+}

@@ -2309,3 +2309,98 @@ h2 {
   }
 
 }
+/* =========================================================
+   FINAL POLISH
+   ABOUT + FOOT CONCERNS
+========================================================= */
+
+
+/* ---------------------------------------------------------
+   1. FOOT CONCERNSカードを少しコンパクトに
+--------------------------------------------------------- */
+
+.concern-card {
+  min-height: 0;
+  padding: 26px 30px;
+}
+
+.concern-card-top {
+  margin-bottom: 13px;
+}
+
+.concern-card p {
+  margin-bottom: 15px;
+}
+
+.concern-card strong {
+  margin-top: 0;
+}
+
+
+/* ---------------------------------------------------------
+   2. 「詳しく見る」の右側ラインを控えめに
+--------------------------------------------------------- */
+
+.concern-card strong::after {
+  content: "";
+  display: inline-block;
+
+  width: 22px;
+  height: 1px;
+
+  margin-left: 10px;
+  vertical-align: middle;
+
+  background: rgba(83, 106, 82, 0.32);
+}
+
+
+/* ---------------------------------------------------------
+   3. ABOUT右側の中途半端な装飾を削除
+--------------------------------------------------------- */
+
+.section-about::before,
+.section-about::after,
+.about-layout::before,
+.about-layout::after,
+.about-content::before,
+.about-content::after {
+  display: none !important;
+  content: none !important;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media screen and (max-width: 640px) {
+
+  /* FOOT CONCERNSをスマホでさらに軽くする */
+
+  .concern-card {
+    padding: 20px 20px 19px;
+    border-radius: 24px;
+  }
+
+  .concern-card-top {
+    margin-bottom: 11px;
+  }
+
+  .concern-card p {
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .concern-card strong {
+    font-size: 14px;
+  }
+
+  .concern-card strong::after {
+    width: 18px;
+    margin-left: 8px;
+  }
+
+}

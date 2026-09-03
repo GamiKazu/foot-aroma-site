@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
   <meta charset="UTF-8">
 
@@ -15,7 +14,7 @@
 
   <meta
     name="description"
-    content="足の疲れ・むくみ・冷えなど、毎日の足元の悩みに。アロマテラピー、リフレクソロジー、足裏セルフケアを通じて、自分に合ったセルフケアを見つけるための情報サイトです。"
+    content="足の疲れ・むくみ・冷えなど、毎日の足元の悩みに。アロマテラピー、リフレクソロジー、足元セルフケアを通じて、自分に合ったセルフケアを探せる情報サイトです。"
   >
 
   <link
@@ -71,10 +70,7 @@
     content="https://gamikazu.github.io/foot-aroma-site/hero-main.png"
   >
 
-  <link
-    rel="stylesheet"
-    href="style.css"
-  >
+  <link rel="stylesheet" href="style.css">
 
   <script type="application/ld+json">
   {
@@ -87,23 +83,22 @@
     "inLanguage": "ja"
   }
   </script>
-
 </head>
 
 <body>
 
-  <!-- ======================================
+  <!-- =========================
        HEADER
-  ======================================= -->
+  ========================== -->
 
   <header class="site-header">
 
     <div class="header-inner">
 
       <a
-        href="index.html"
         class="site-logo"
-        aria-label="Foot & Aroma トップページ"
+        href="index.html"
+        aria-label="Foot & Aroma トップ"
       >
         <img
           src="logo-simple.png"
@@ -112,7 +107,7 @@
       </a>
 
       <nav
-        class="global-nav"
+        class="desktop-nav"
         aria-label="メインナビゲーション"
       >
         <a href="#foot-care">足の悩み</a>
@@ -133,6 +128,17 @@
         <span></span>
       </button>
 
+      <nav
+        class="mobile-nav"
+        aria-label="スマートフォンメニュー"
+      >
+        <a href="#foot-care">足の悩み</a>
+        <a href="#aroma">アロマ</a>
+        <a href="#reflexology">リフレクソロジー</a>
+        <a href="#diagnosis">無料診断</a>
+        <a href="#column">コラム</a>
+      </nav>
+
     </div>
 
   </header>
@@ -140,13 +146,13 @@
 
   <main>
 
-    <!-- ======================================
+    <!-- =========================
          HERO
-    ======================================= -->
+    ========================== -->
 
-    <section class="hero">
+    <section class="hero-section">
 
-      <div class="hero-shell">
+      <div class="hero-card">
 
         <div class="hero-copy">
 
@@ -163,12 +169,12 @@
             足の疲れやむくみ、冷えなど、
             日々感じる足元の悩み。
             アロマテラピーやリフレクソロジー、
-            足裏セルフケアを通じて、
+            足元のセルフケアを通じて、
             毎日を心地よく過ごすための
             ヒントをお届けします。
           </p>
 
-          <div class="hero-actions">
+          <div class="hero-buttons">
 
             <a
               href="foot-care.html"
@@ -188,11 +194,11 @@
 
         </div>
 
-        <div class="hero-visual">
+        <div class="hero-image-wrap">
 
           <img
             src="hero-main.png"
-            alt="アロマと足元のセルフケアをイメージしたビジュアル"
+            alt="足元とアロマを組み合わせたセルフケアのイメージ"
             fetchpriority="high"
             decoding="async"
           >
@@ -204,24 +210,24 @@
     </section>
 
 
-    <!-- ======================================
+    <!-- =========================
          ABOUT
-    ======================================= -->
+    ========================== -->
 
     <section class="section about-section">
 
-      <div class="container narrow-container">
+      <div class="content-narrow">
 
         <p class="section-label">
           ABOUT THIS SITE
         </p>
 
         <h2 class="section-title">
-          足元から、<br class="mobile-break">
+          足元から、<br>
           自分をいたわる。
         </h2>
 
-        <div class="about-copy">
+        <div class="long-copy">
 
           <p>
             Foot & Aromaでは、
@@ -236,7 +242,8 @@
             「夕方になると足が重く感じる」
             「自宅でできるケアを知りたい」
             といった身近な悩みから、
-            自分に合ったセルフケアを探してみてください。
+            自分に合ったセルフケアを
+            探してみてください。
           </p>
 
         </div>
@@ -254,9 +261,9 @@
     </section>
 
 
-    <!-- ======================================
-         FOOT CONCERNS
-    ======================================= -->
+    <!-- =========================
+         CONCERNS
+    ========================== -->
 
     <section
       id="foot-care"
@@ -265,7 +272,7 @@
 
       <div class="container">
 
-        <div class="section-head">
+        <div class="section-header">
 
           <div>
 
@@ -279,7 +286,7 @@
 
           </div>
 
-          <p class="section-description">
+          <p class="section-subcopy">
             気になる状態に合わせて、
             セルフケア情報を探せます。
           </p>
@@ -287,14 +294,14 @@
         </div>
 
 
-        <div class="concern-grid">
+        <div class="concerns-grid">
 
           <a
             href="foot-care.html#fatigue"
             class="concern-card"
           >
 
-            <div class="concern-heading">
+            <div class="concern-card-title">
               <span>01</span>
               <h3>足の疲れ</h3>
             </div>
@@ -304,9 +311,9 @@
               足が重く感じる日のセルフケア。
             </p>
 
-            <div class="card-link">
+            <strong>
               詳しく見る →
-            </div>
+            </strong>
 
           </a>
 
@@ -316,7 +323,7 @@
             class="concern-card"
           >
 
-            <div class="concern-heading">
+            <div class="concern-card-title">
               <span>02</span>
               <h3>むくみが気になる</h3>
             </div>
@@ -326,9 +333,9 @@
               足元のリフレッシュ方法を紹介します。
             </p>
 
-            <div class="card-link">
+            <strong>
               詳しく見る →
-            </div>
+            </strong>
 
           </a>
 
@@ -338,7 +345,7 @@
             class="concern-card"
           >
 
-            <div class="concern-heading">
+            <div class="concern-card-title">
               <span>03</span>
               <h3>足の冷え</h3>
             </div>
@@ -348,9 +355,9 @@
               心地よく過ごすためのセルフケア情報。
             </p>
 
-            <div class="card-link">
+            <strong>
               詳しく見る →
-            </div>
+            </strong>
 
           </a>
 
@@ -360,7 +367,7 @@
             class="concern-card"
           >
 
-            <div class="concern-heading">
+            <div class="concern-card-title">
               <span>04</span>
               <h3>立ち仕事の足ケア</h3>
             </div>
@@ -370,9 +377,9 @@
               足元を見直すヒントを紹介します。
             </p>
 
-            <div class="card-link">
+            <strong>
               詳しく見る →
-            </div>
+            </strong>
 
           </a>
 
@@ -383,9 +390,9 @@
     </section>
 
 
-    <!-- ======================================
+    <!-- =========================
          AROMA
-    ======================================= -->
+    ========================== -->
 
     <section
       id="aroma"
@@ -394,7 +401,7 @@
 
       <div class="container">
 
-        <div class="editorial-card aroma-card">
+        <div class="editorial-panel">
 
           <div class="editorial-copy">
 
@@ -415,7 +422,7 @@
 
             <p>
               香りの特徴や初心者向けの選び方、
-              お部屋やリラックスタイムでの
+              お部屋やリラックスタイムなどでの
               楽しみ方を紹介します。
             </p>
 
@@ -431,13 +438,13 @@
 
           <a
             href="aroma.html"
-            class="editorial-image image-link"
+            class="editorial-image clickable-image"
             aria-label="アロマについて見る"
           >
 
             <img
               src="category-aroma.png"
-              alt="ラベンダーと精油を使ったアロマテラピーのイメージ"
+              alt="ラベンダーと精油を使ったアロマテラピー"
               loading="lazy"
               decoding="async"
             >
@@ -451,9 +458,9 @@
     </section>
 
 
-    <!-- ======================================
+    <!-- =========================
          REFLEXOLOGY
-    ======================================= -->
+    ========================== -->
 
     <section
       id="reflexology"
@@ -462,11 +469,11 @@
 
       <div class="container">
 
-        <div class="reflexology-header">
+        <div class="reflexology-heading">
 
           <div>
 
-            <p class="section-label section-label-light">
+            <p class="section-label light-label">
               REFLEXOLOGY
             </p>
 
@@ -477,7 +484,7 @@
 
           </div>
 
-          <p class="reflexology-description">
+          <p>
             足元に触れながら、
             リラックスタイムを過ごすための
             セルフケアについて紹介します。
@@ -486,78 +493,70 @@
         </div>
 
 
-        <div class="reflexology-layout">
+        <div class="reflexology-content">
 
           <div class="reflexology-list">
 
             <a
               href="reflexology.html"
-              class="reflexology-row"
+              class="reflexology-item"
             >
 
-              <span class="reflexology-number">
-                01
-              </span>
+              <span class="item-number">01</span>
 
               <div>
                 <h3>初心者向け</h3>
+
                 <p>
-                  リフレクソロジーを初めて知る人にも
+                  リフレクソロジーを
+                  初めて知る人にも
                   分かりやすく紹介。
                 </p>
               </div>
 
-              <span class="reflexology-arrow">
-                →
-              </span>
+              <span class="item-arrow">→</span>
 
             </a>
 
 
             <a
               href="reflexology.html"
-              class="reflexology-row"
+              class="reflexology-item"
             >
 
-              <span class="reflexology-number">
-                02
-              </span>
+              <span class="item-number">02</span>
 
               <div>
                 <h3>セルフケア</h3>
+
                 <p>
                   自宅で取り入れやすい
                   足元のケア方法を紹介。
                 </p>
               </div>
 
-              <span class="reflexology-arrow">
-                →
-              </span>
+              <span class="item-arrow">→</span>
 
             </a>
 
 
             <a
               href="reflexology.html"
-              class="reflexology-row"
+              class="reflexology-item"
             >
 
-              <span class="reflexology-number">
-                03
-              </span>
+              <span class="item-number">03</span>
 
               <div>
                 <h3>アイテム</h3>
+
                 <p>
                   フットローラーやオイルなどの
                   選び方を紹介。
                 </p>
               </div>
 
-              <span class="reflexology-arrow">
-                →
-              </span>
+              <span class="item-arrow">→</span>
 
             </a>
 
@@ -566,13 +565,13 @@
 
           <a
             href="reflexology.html"
-            class="reflexology-image image-link"
+            class="reflexology-image clickable-image"
             aria-label="リフレクソロジーについて見る"
           >
 
             <img
               src="category-reflexology.png"
-              alt="足元をやさしくケアするリフレクソロジーのイメージ"
+              alt="足元をケアするリフレクソロジー"
               loading="lazy"
               decoding="async"
             >
@@ -582,25 +581,21 @@
         </div>
 
 
-        <div class="reflexology-action">
-
-          <a
-            href="reflexology.html"
-            class="button button-light"
-          >
-            リフレクソロジーについて見る
-          </a>
-
-        </div>
+        <a
+          href="reflexology.html"
+          class="button button-light reflexology-button"
+        >
+          リフレクソロジーについて見る
+        </a>
 
       </div>
 
     </section>
 
 
-    <!-- ======================================
+    <!-- =========================
          FREE CHECK
-    ======================================= -->
+    ========================== -->
 
     <section
       id="diagnosis"
@@ -609,7 +604,7 @@
 
       <div class="container">
 
-        <div class="diagnosis-card">
+        <div class="diagnosis-panel">
 
           <div class="diagnosis-copy">
 
@@ -617,7 +612,7 @@
               FREE CHECK
             </p>
 
-            <h2 class="section-title diagnosis-title">
+            <h2 class="section-title">
               あなたに合った<br>
               足元セルフケアをチェック
             </h2>
@@ -634,13 +629,13 @@
 
           <a
             href="diagnosis.html"
-            class="diagnosis-image image-link"
+            class="diagnosis-image clickable-image"
             aria-label="無料診断について見る"
           >
 
             <img
               src="diagnosis-banner.png"
-              alt="足裏タイプ診断とアロマテラピーのイメージ"
+              alt="足裏タイプ診断とアロマテラピー"
               loading="lazy"
               decoding="async"
             >
@@ -648,7 +643,7 @@
           </a>
 
 
-          <div class="diagnosis-action">
+          <div class="diagnosis-button-wrap">
 
             <a
               href="diagnosis.html"
@@ -666,9 +661,9 @@
     </section>
 
 
-    <!-- ======================================
+    <!-- =========================
          COLUMN
-    ======================================= -->
+    ========================== -->
 
     <section
       id="column"
@@ -677,7 +672,7 @@
 
       <div class="container">
 
-        <div class="section-head">
+        <div class="section-header">
 
           <div>
 
@@ -691,7 +686,7 @@
 
           </div>
 
-          <p class="section-description">
+          <p class="section-subcopy">
             日常で役立つ足元のセルフケアや
             アロマについて紹介します。
           </p>
@@ -705,7 +700,7 @@
 
             <a
               href="foot-care.html#fatigue"
-              class="column-image image-link"
+              class="column-image clickable-image"
             >
 
               <img
@@ -736,7 +731,8 @@
                 href="foot-care.html#fatigue"
                 class="text-link"
               >
-                詳しく見る →
+                詳しく見る
+                <span>→</span>
               </a>
 
             </div>
@@ -748,7 +744,7 @@
 
             <a
               href="aroma.html"
-              class="column-image image-link"
+              class="column-image clickable-image"
             >
 
               <img
@@ -779,7 +775,8 @@
                 href="aroma.html"
                 class="text-link"
               >
-                詳しく見る →
+                詳しく見る
+                <span>→</span>
               </a>
 
             </div>
@@ -791,12 +788,12 @@
 
             <a
               href="insole.html"
-              class="column-image image-link"
+              class="column-image clickable-image"
             >
 
               <img
                 src="column-insole.png"
-                alt="靴とインソールを使った足元ケア"
+                alt="靴とインソール"
                 loading="lazy"
               >
 
@@ -822,7 +819,8 @@
                 href="insole.html"
                 class="text-link"
               >
-                詳しく見る →
+                詳しく見る
+                <span>→</span>
               </a>
 
             </div>
@@ -836,13 +834,13 @@
     </section>
 
 
-    <!-- ======================================
+    <!-- =========================
          FUTURE
-    ======================================= -->
+    ========================== -->
 
     <section class="section future-section">
 
-      <div class="container narrow-container">
+      <div class="content-narrow">
 
         <p class="section-label">
           FUTURE
@@ -853,17 +851,21 @@
           その先のセルフケアへ。
         </h2>
 
-        <p>
-          今後はアロマテラピーや
-          リフレクソロジーに関する
-          サービス展開も検討しています。
-        </p>
+        <div class="long-copy">
 
-        <p>
-          現在は情報発信を中心に、
-          足元から毎日を心地よくするための
-          コンテンツを育てています。
-        </p>
+          <p>
+            今後はアロマテラピーや
+            リフレクソロジーに関する
+            サービス展開も検討しています。
+          </p>
+
+          <p>
+            現在は情報発信を中心に、
+            足元から毎日を心地よくするための
+            コンテンツを育てています。
+          </p>
+
+        </div>
 
         <a
           href="about.html"
@@ -880,13 +882,13 @@
   </main>
 
 
-  <!-- ======================================
+  <!-- =========================
        FOOTER
-  ======================================= -->
+  ========================== -->
 
   <footer class="site-footer">
 
-    <div class="container footer-grid">
+    <div class="footer-inner">
 
       <div class="footer-brand">
 
@@ -933,8 +935,41 @@
   </footer>
 
 
-  <script src="script.js"></script>
+  <script>
+    const menuButton = document.querySelector(".menu-button");
+    const mobileNav = document.querySelector(".mobile-nav");
+
+    if (menuButton && mobileNav) {
+      menuButton.addEventListener("click", () => {
+
+        const isOpen =
+          mobileNav.classList.toggle("is-open");
+
+        menuButton.setAttribute(
+          "aria-expanded",
+          isOpen ? "true" : "false"
+        );
+
+      });
+
+      mobileNav
+        .querySelectorAll("a")
+        .forEach((link) => {
+
+          link.addEventListener("click", () => {
+
+            mobileNav.classList.remove("is-open");
+
+            menuButton.setAttribute(
+              "aria-expanded",
+              "false"
+            );
+
+          });
+
+        });
+    }
+  </script>
 
 </body>
-
 </html>

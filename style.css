@@ -1997,3 +1997,14 @@ h2 {
     -webkit-backdrop-filter: blur(10px);
   }
 }
+@media screen and (max-width: 768px) {
+  .global-nav a {
+    color: #2f3d31;
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(83, 106, 82, 0.14);
+  }
+
+  .global-nav a:last-child {
+    border-bottom: none;
+  }
+}

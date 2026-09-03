@@ -864,6 +864,164 @@ h2 {
 
 
 /* =========================================================
+   TOP - REFLEX ZONE CTA
+========================================================= */
+
+.reflex-zone-cta-section {
+  padding: 38px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f3ece2 0%,
+      #edf3ea 100%
+    );
+}
+
+.reflex-zone-cta {
+  position: relative;
+
+  min-height: 230px;
+
+  padding: 34px 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+
+  overflow: hidden;
+
+  color: #fff;
+
+  background:
+    linear-gradient(
+      135deg,
+      #5c7258,
+      #405443
+    );
+
+  border-radius: 30px;
+
+  box-shadow:
+    0 16px 40px rgba(47,64,51,.12);
+
+  transition:
+    transform .2s ease,
+    box-shadow .2s ease;
+}
+
+.reflex-zone-cta::before {
+  content: "";
+
+  position: absolute;
+
+  width: 240px;
+  height: 240px;
+
+  right: -60px;
+  top: -100px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(255,255,255,.06);
+
+  pointer-events: none;
+}
+
+.reflex-zone-cta:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 20px 46px rgba(47,64,51,.16);
+}
+
+.reflex-zone-cta-copy {
+  position: relative;
+  z-index: 2;
+
+  max-width: 620px;
+}
+
+.reflex-zone-cta-label {
+  display: inline-block;
+
+  margin-bottom: 10px;
+
+  color:
+    rgba(255,255,255,.68);
+
+  font-size: .63rem;
+  font-weight: 800;
+
+  letter-spacing: .16em;
+}
+
+.reflex-zone-cta h2 {
+  margin-bottom: 13px;
+
+  color: #fff;
+
+  font-size:
+    clamp(2rem,4vw,3.3rem);
+
+  line-height: 1.28;
+}
+
+.reflex-zone-cta p {
+  max-width: 520px;
+
+  margin-bottom: 14px;
+
+  color:
+    rgba(255,255,255,.72);
+
+  line-height: 1.8;
+}
+
+.reflex-zone-cta strong {
+  color: #fff;
+
+  font-size: .92rem;
+}
+
+.reflex-zone-cta-mark {
+  position: relative;
+  z-index: 2;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  color:
+    rgba(255,255,255,.14);
+
+  font-family:
+    Georgia,
+    serif;
+
+  font-size: 6rem;
+
+  line-height: 1;
+}
+
+.reflex-zone-cta-mark small {
+  color:
+    rgba(255,255,255,.36);
+
+  font-size: .65rem;
+  font-weight: 700;
+
+  line-height: 1.45;
+
+  letter-spacing: .13em;
+}
+
+
+/* =========================================================
    AROMA
 ========================================================= */
 
@@ -1586,12 +1744,12 @@ h2 {
 @media screen and (max-width: 640px) {
 
   :root {
-    --header-height: 74px;
+    --header-height: 72px;
   }
 
 
   html {
-    scroll-padding-top: 88px;
+    scroll-padding-top: 84px;
   }
 
 
@@ -1647,6 +1805,9 @@ h2 {
 
     min-height:
       var(--header-height);
+
+    padding-top: 8px;
+    padding-bottom: 8px;
   }
 
 
@@ -1674,10 +1835,12 @@ h2 {
   .menu-button {
     display: block;
 
-    width: 42px;
-    height: 42px;
+    width: 40px;
+    height: 40px;
 
-    flex: 0 0 42px;
+    flex: 0 0 40px;
+
+    transform: none;
   }
 
 
@@ -1951,6 +2114,63 @@ h2 {
 
   .concern-card strong::after {
     width: 12px;
+  }
+
+
+  /* REFLEX ZONE CTA */
+
+  .reflex-zone-cta-section {
+    padding: 22px 0;
+  }
+
+
+  .reflex-zone-cta {
+    min-height: 0;
+
+    padding:
+      25px 22px;
+
+    border-radius: 24px;
+  }
+
+
+  .reflex-zone-cta h2 {
+    margin-bottom: 11px;
+
+    font-size: 27px;
+  }
+
+
+  .reflex-zone-cta p {
+    margin-bottom: 13px;
+
+    padding-right: 15px;
+
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+
+
+  .reflex-zone-cta strong {
+    font-size: 13px;
+  }
+
+
+  .reflex-zone-cta-mark {
+    position: absolute;
+
+    right: -4px;
+    bottom: -8px;
+
+    font-size: 5.5rem;
+
+    opacity: .65;
+  }
+
+
+  .reflex-zone-cta-mark small {
+    display: none;
   }
 
 
@@ -2279,82 +2499,12 @@ h2 {
   }
 
 }
-/* =========================================================
-   FINAL MOBILE COMPACT ADJUSTMENTS
-========================================================= */
-
-@media screen and (max-width: 768px) {
-
-  /* =========================
-     1. 固定ヘッダーを少しコンパクトに
-  ========================= */
-
-  .site-header {
-    min-height: 76px;
-  }
-
-  .header-inner {
-    min-height: 76px;
-    padding-top: 12px;
-    padding-bottom: 12px;
-  }
-
-  .site-logo {
-    transform: scale(0.93);
-    transform-origin: left center;
-  }
-
-  .menu-button {
-    transform: scale(0.88);
-    transform-origin: right center;
-  }
 
 
-  /* =========================
-     2. コラム画像を少し低くする
-  ========================= */
-
-  .column-image {
-    height: 285px;
-    overflow: hidden;
-  }
-
-  .column-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-
-  /* カード本文もほんの少し詰める */
-  .column-body {
-    padding-top: 22px;
-    padding-bottom: 24px;
-  }
-
-
-  /* =========================
-     3. ABOUT下の余白を少し縮める
-  ========================= */
-
-  .section-about {
-    padding-bottom: 42px;
-  }
-
-  .section-future {
-    padding-top: 52px;
-  }
-
-}
 /* =========================================================
    SUB PAGES
    Aroma / Reflexology / Diagnosis / Foot Care /
    Insole / About
-========================================================= */
-
-
-/* =========================================================
-   COMMON SUB PAGE
 ========================================================= */
 
 .aroma-page,
@@ -2367,7 +2517,9 @@ h2 {
 }
 
 
-/* ---------- HERO ---------- */
+/* =========================================================
+   SUB PAGE HERO
+========================================================= */
 
 .aroma-page-hero,
 .reflex-page-hero,
@@ -2380,7 +2532,7 @@ h2 {
   background:
     radial-gradient(
       circle at 88% 10%,
-      rgba(218, 230, 214, .62),
+      rgba(218,230,214,.62),
       transparent 32%
     ),
     linear-gradient(
@@ -2389,7 +2541,6 @@ h2 {
       #f2ece1 100%
     );
 }
-
 
 .aroma-hero-card,
 .reflex-hero-card,
@@ -2422,7 +2573,6 @@ h2 {
     var(--shadow-soft);
 }
 
-
 .aroma-hero-copy h1,
 .reflex-hero-copy h1,
 .diagnosis-hero-copy h1,
@@ -2436,7 +2586,6 @@ h2 {
 
   line-height: 1.2;
 }
-
 
 .aroma-hero-lead,
 .reflex-hero-lead,
@@ -2454,7 +2603,6 @@ h2 {
   line-height: 1.85;
 }
 
-
 .aroma-hero-text,
 .reflex-hero-text,
 .diagnosis-hero-text,
@@ -2467,7 +2615,6 @@ h2 {
 
   line-height: 1.9;
 }
-
 
 .aroma-hero-image,
 .reflex-hero-image,
@@ -2485,7 +2632,6 @@ h2 {
     0 14px 36px rgba(53,62,55,.08);
 }
 
-
 .aroma-hero-image img,
 .reflex-hero-image img,
 .diagnosis-hero-image img,
@@ -2496,7 +2642,6 @@ h2 {
 
   object-fit: cover;
 }
-
 
 .aroma-hero-image::after,
 .reflex-hero-image::after,
@@ -2517,7 +2662,6 @@ h2 {
       rgba(32,46,35,.64) 100%
     );
 }
-
 
 .aroma-image-caption,
 .reflex-image-caption,
@@ -2540,7 +2684,6 @@ h2 {
   color: #fff;
 }
 
-
 .aroma-image-caption span,
 .reflex-image-caption span,
 .footcare-image-caption span,
@@ -2551,7 +2694,6 @@ h2 {
 
   letter-spacing: .16em;
 }
-
 
 .aroma-image-caption strong,
 .reflex-image-caption strong,
@@ -2582,7 +2724,6 @@ h2 {
     1px solid rgba(83,106,82,.08);
 }
 
-
 .aroma-nav-title,
 .reflex-nav-title,
 .diagnosis-nav-title,
@@ -2596,7 +2737,6 @@ h2 {
   font-weight: 700;
 }
 
-
 .aroma-nav-list,
 .reflex-nav-list,
 .diagnosis-nav-list,
@@ -2609,7 +2749,6 @@ h2 {
 
   gap: 9px;
 }
-
 
 .aroma-nav-list a,
 .reflex-nav-list a,
@@ -2641,7 +2780,6 @@ h2 {
     background .2s ease;
 }
 
-
 .aroma-nav-list a:hover,
 .reflex-nav-list a:hover,
 .diagnosis-nav-list a:hover,
@@ -2652,7 +2790,6 @@ h2 {
   background:
     var(--sage-100);
 }
-
 
 .aroma-nav-list span,
 .reflex-nav-list span,
@@ -2668,6 +2805,13 @@ h2 {
 }
 
 
+/* リフレページのみ5項目 */
+
+.reflex-nav-list {
+  grid-template-columns:
+    repeat(5,1fr);
+}
+
 
 /* =========================================================
    GENERIC SUB SECTIONS
@@ -2682,7 +2826,6 @@ h2 {
   padding: 76px 0;
 }
 
-
 .aroma-section-heading,
 .reflex-section-heading,
 .diagnosis-section-heading,
@@ -2693,7 +2836,6 @@ h2 {
 
   margin-bottom: 34px;
 }
-
 
 .aroma-heading-line,
 .reflex-heading-line,
@@ -2706,7 +2848,6 @@ h2 {
 
   gap: 16px;
 }
-
 
 .aroma-heading-line::after,
 .reflex-heading-line::after,
@@ -2723,7 +2864,6 @@ h2 {
     rgba(83,106,82,.33);
 }
 
-
 .aroma-section-heading h2,
 .reflex-section-heading h2,
 .diagnosis-section-heading h2,
@@ -2738,7 +2878,6 @@ h2 {
   line-height: 1.28;
 }
 
-
 .aroma-section-heading > p:last-child,
 .reflex-section-heading > p:last-child,
 .diagnosis-section-heading > p:last-child,
@@ -2751,7 +2890,6 @@ h2 {
 }
 
 
-
 /* =========================================================
    INTRO / NOTE
 ========================================================= */
@@ -2762,7 +2900,6 @@ h2 {
 .about-concept-section {
   background: #fcfaf5;
 }
-
 
 .aroma-intro-layout,
 .reflex-intro-layout,
@@ -2777,7 +2914,6 @@ h2 {
   align-items: start;
 }
 
-
 .aroma-intro-main,
 .reflex-intro-main,
 .insole-basic-main,
@@ -2789,14 +2925,12 @@ h2 {
   line-height: 1.95;
 }
 
-
 .aroma-intro-main p,
 .reflex-intro-main p,
 .insole-basic-main p,
 .about-concept-main p {
   margin-bottom: 17px;
 }
-
 
 .aroma-intro-note,
 .reflex-intro-note,
@@ -2817,7 +2951,6 @@ h2 {
   border-radius: 24px;
 }
 
-
 .aroma-intro-note > span,
 .reflex-intro-note > span,
 .insole-basic-note > span,
@@ -2834,7 +2967,6 @@ h2 {
   letter-spacing: .15em;
 }
 
-
 .aroma-intro-note strong,
 .reflex-intro-note strong,
 .insole-basic-note strong,
@@ -2848,7 +2980,6 @@ h2 {
   font-size: 1.04rem;
 }
 
-
 .aroma-intro-note p,
 .reflex-intro-note p,
 .insole-basic-note p,
@@ -2861,7 +2992,6 @@ h2 {
 
   line-height: 1.8;
 }
-
 
 
 /* =========================================================
@@ -2881,7 +3011,6 @@ h2 {
     );
 }
 
-
 .aroma-step-list,
 .reflex-care-list,
 .diagnosis-feature-list,
@@ -2894,7 +3023,6 @@ h2 {
 
   gap: 15px;
 }
-
 
 .aroma-step-card,
 .reflex-care-card,
@@ -2924,7 +3052,6 @@ h2 {
     0 10px 28px rgba(53,62,55,.04);
 }
 
-
 .aroma-step-number,
 .reflex-care-number,
 .diagnosis-feature-number,
@@ -2950,7 +3077,6 @@ h2 {
   letter-spacing: .08em;
 }
 
-
 .aroma-step-content > span,
 .reflex-care-content > span,
 .diagnosis-feature-en,
@@ -2968,7 +3094,6 @@ h2 {
   letter-spacing: .14em;
 }
 
-
 .aroma-step-card h3,
 .reflex-care-card h3,
 .diagnosis-feature-card h3,
@@ -2978,7 +3103,6 @@ h2 {
 
   font-size: 1.08rem;
 }
-
 
 .aroma-step-card p,
 .reflex-care-card p,
@@ -2995,7 +3119,6 @@ h2 {
 }
 
 
-
 /* =========================================================
    STEP ROWS
 ========================================================= */
@@ -3005,7 +3128,6 @@ h2 {
   background: #fcfaf5;
 }
 
-
 .reflex-step-list,
 .diagnosis-step-list {
   max-width: 850px;
@@ -3013,7 +3135,6 @@ h2 {
   border-top:
     1px solid var(--line);
 }
-
 
 .reflex-step-row,
 .diagnosis-step-row {
@@ -3030,7 +3151,6 @@ h2 {
     1px solid var(--line);
 }
 
-
 .reflex-step-number,
 .diagnosis-step-number {
   color: #879987;
@@ -3039,7 +3159,6 @@ h2 {
 
   font-size: 1.25rem;
 }
-
 
 .diagnosis-step-en {
   display: block;
@@ -3054,14 +3173,12 @@ h2 {
   letter-spacing: .14em;
 }
 
-
 .reflex-step-row h3,
 .diagnosis-step-row h3 {
   margin-bottom: 7px;
 
   font-size: 1.08rem;
 }
-
 
 .reflex-step-row p,
 .diagnosis-step-row p {
@@ -3073,7 +3190,6 @@ h2 {
 }
 
 
-
 /* =========================================================
    AROMA SCENTS
 ========================================================= */
@@ -3081,7 +3197,6 @@ h2 {
 .aroma-scents-section {
   background: #f8f5ee;
 }
-
 
 .aroma-scent-grid {
   display: grid;
@@ -3091,7 +3206,6 @@ h2 {
 
   gap: 16px;
 }
-
 
 .aroma-scent-card {
   padding: 27px;
@@ -3107,7 +3221,6 @@ h2 {
     var(--shadow-card);
 }
 
-
 .aroma-scent-top {
   margin-bottom: 19px;
 
@@ -3116,7 +3229,6 @@ h2 {
 
   align-items: center;
 }
-
 
 .aroma-scent-number {
   width: 38px;
@@ -3136,7 +3248,6 @@ h2 {
   font-weight: 800;
 }
 
-
 .aroma-scent-en {
   color: #8b9989;
 
@@ -3146,13 +3257,11 @@ h2 {
   letter-spacing: .13em;
 }
 
-
 .aroma-scent-card h3 {
   margin-bottom: 10px;
 
   font-size: 1.25rem;
 }
-
 
 .aroma-scent-description {
   min-height: 96px;
@@ -3164,14 +3273,12 @@ h2 {
   line-height: 1.75;
 }
 
-
 .aroma-scent-scenes {
   display: flex;
   flex-wrap: wrap;
 
   gap: 6px;
 }
-
 
 .aroma-scent-scenes span {
   padding: 5px 9px;
@@ -3185,7 +3292,6 @@ h2 {
 
   font-size: .67rem;
 }
-
 
 
 /* =========================================================
@@ -3211,7 +3317,6 @@ h2 {
     );
 }
 
-
 .aroma-foot-layout,
 .reflex-aroma-layout,
 .footcare-reflex-layout,
@@ -3224,7 +3329,6 @@ h2 {
 
   align-items: center;
 }
-
 
 .aroma-foot-copy h2,
 .reflex-aroma-copy h2,
@@ -3241,7 +3345,6 @@ h2 {
   line-height: 1.29;
 }
 
-
 .aroma-foot-copy p,
 .reflex-aroma-copy p,
 .footcare-reflex-copy p,
@@ -3255,7 +3358,6 @@ h2 {
   line-height: 1.87;
 }
 
-
 .aroma-foot-visual,
 .reflex-aroma-image,
 .footcare-reflex-image,
@@ -3265,7 +3367,6 @@ h2 {
   border-radius: 26px;
 }
 
-
 .aroma-foot-visual img,
 .reflex-aroma-image img,
 .footcare-reflex-image img,
@@ -3274,9 +3375,6 @@ h2 {
 
   object-fit: cover;
 }
-
-
-/* Alias for CTA HTML used on sub pages */
 
 .image-cta-layer {
   position: absolute;
@@ -3297,7 +3395,6 @@ h2 {
 }
 
 
-
 /* =========================================================
    SIMPLE ITEM ROWS
 ========================================================= */
@@ -3306,7 +3403,6 @@ h2 {
 .reflex-items-section {
   background: #fcfaf5;
 }
-
 
 .aroma-item-list,
 .reflex-item-list,
@@ -3317,7 +3413,6 @@ h2 {
   border-top:
     1px solid var(--line);
 }
-
 
 .aroma-item-row,
 .reflex-item-row,
@@ -3336,7 +3431,6 @@ h2 {
     1px solid var(--line);
 }
 
-
 .aroma-item-row > span,
 .reflex-item-row > span,
 .insole-items-row > span,
@@ -3348,7 +3442,6 @@ h2 {
   font-size: 1rem;
 }
 
-
 .aroma-item-row h3,
 .reflex-item-row h3,
 .insole-items-row h3,
@@ -3357,7 +3450,6 @@ h2 {
 
   font-size: 1.02rem;
 }
-
 
 .aroma-item-row p,
 .reflex-item-row p,
@@ -3373,7 +3465,6 @@ h2 {
 }
 
 
-
 /* =========================================================
    SAFETY / NOTICE
 ========================================================= */
@@ -3387,7 +3478,6 @@ h2 {
   background:
     #f3eee4;
 }
-
 
 .aroma-safety-card,
 .reflex-safety-card,
@@ -3410,7 +3500,6 @@ h2 {
     var(--shadow-card);
 }
 
-
 .aroma-safety-heading > span,
 .reflex-safety-heading > span,
 .insole-caution-card > span,
@@ -3429,7 +3518,6 @@ h2 {
   letter-spacing: .15em;
 }
 
-
 .aroma-safety-card h2,
 .reflex-safety-card h2,
 .insole-caution-card h2,
@@ -3444,7 +3532,6 @@ h2 {
   line-height: 1.3;
 }
 
-
 .aroma-safety-list,
 .reflex-safety-list {
   margin: 24px 0;
@@ -3456,7 +3543,6 @@ h2 {
   border-top:
     1px solid var(--line);
 }
-
 
 .aroma-safety-list li,
 .reflex-safety-list li {
@@ -3473,14 +3559,12 @@ h2 {
     1px solid var(--line);
 }
 
-
 .aroma-safety-list span,
 .reflex-safety-list span {
   color: #899888;
 
   font-size: .66rem;
 }
-
 
 .aroma-safety-note,
 .reflex-safety-note,
@@ -3494,7 +3578,6 @@ h2 {
 
   line-height: 1.78;
 }
-
 
 
 /* =========================================================
@@ -3514,7 +3597,6 @@ h2 {
       #edf3eb
     );
 }
-
 
 .aroma-final-card,
 .reflex-final-card,
@@ -3539,7 +3621,6 @@ h2 {
   box-shadow:
     0 18px 50px rgba(53,62,55,.08);
 }
-
 
 .aroma-final-label,
 .reflex-final-label,
@@ -3566,7 +3647,6 @@ h2 {
   letter-spacing: .13em;
 }
 
-
 .aroma-final-card h2,
 .reflex-final-card h2,
 .footcare-check-card h2,
@@ -3578,7 +3658,6 @@ h2 {
 
   line-height: 1.3;
 }
-
 
 .aroma-final-card > p:not(.eyebrow),
 .reflex-final-card > p:not(.eyebrow),
@@ -3595,7 +3674,6 @@ h2 {
 }
 
 
-
 /* =========================================================
    DIAGNOSIS PAGE
 ========================================================= */
@@ -3606,11 +3684,9 @@ h2 {
   margin-inline: auto;
 }
 
-
 .diagnosis-start-button {
   margin-top: 20px;
 }
-
 
 .diagnosis-small-note {
   margin-top: 8px !important;
@@ -3619,7 +3695,6 @@ h2 {
 
   font-size: .72rem;
 }
-
 
 .diagnosis-photo-section {
   padding: 76px 0;
@@ -3634,7 +3709,6 @@ h2 {
     );
 }
 
-
 .diagnosis-photo-card {
   display: grid;
 
@@ -3642,7 +3716,6 @@ h2 {
 
   gap: 42px;
 }
-
 
 .diagnosis-photo-heading h2 {
   margin-bottom: 17px;
@@ -3653,11 +3726,9 @@ h2 {
   line-height: 1.3;
 }
 
-
 .diagnosis-photo-heading > p:last-child {
   color: rgba(255,255,255,.72);
 }
-
 
 .diagnosis-photo-content {
   padding: 28px;
@@ -3669,7 +3740,6 @@ h2 {
   border-radius: 26px;
 }
 
-
 .diagnosis-photo-item {
   padding-bottom: 21px;
 
@@ -3678,7 +3748,6 @@ h2 {
   border-bottom:
     1px solid var(--line);
 }
-
 
 .diagnosis-photo-item > span {
   color: var(--sage-500);
@@ -3689,13 +3758,11 @@ h2 {
   letter-spacing: .14em;
 }
 
-
 .diagnosis-photo-item h3 {
   margin: 6px 0 8px;
 
   font-size: 1.05rem;
 }
-
 
 .diagnosis-photo-item p,
 .diagnosis-photo-points,
@@ -3705,13 +3772,11 @@ h2 {
   font-size: .87rem;
 }
 
-
 .diagnosis-photo-points-title {
   color: var(--green);
 
   font-weight: 700;
 }
-
 
 .diagnosis-example-grid,
 .diagnosis-related-grid {
@@ -3722,7 +3787,6 @@ h2 {
 
   gap: 14px;
 }
-
 
 .diagnosis-example-card,
 .diagnosis-related-card {
@@ -3739,7 +3803,6 @@ h2 {
     var(--shadow-card);
 }
 
-
 .diagnosis-example-card > span,
 .diagnosis-related-card > span {
   display: block;
@@ -3754,12 +3817,10 @@ h2 {
   letter-spacing: .13em;
 }
 
-
 .diagnosis-example-card h3,
 .diagnosis-related-card h3 {
   margin-bottom: 7px;
 }
-
 
 .diagnosis-example-card p,
 .diagnosis-related-card p {
@@ -3770,7 +3831,6 @@ h2 {
   font-size: .86rem;
 }
 
-
 .diagnosis-start-card {
   max-width: 760px;
 
@@ -3779,18 +3839,15 @@ h2 {
   text-align: center;
 }
 
-
 .diagnosis-start-label {
   color: var(--green-deep);
 
   background: rgba(255,255,255,.88);
 }
 
-
 .diagnosis-main-button {
   margin-top: 13px;
 }
-
 
 .diagnosis-start-sub {
   display: block;
@@ -3801,7 +3858,6 @@ h2 {
 
   font-size: .7rem;
 }
-
 
 
 /* =========================================================
@@ -3816,7 +3872,6 @@ h2 {
 
   gap: 14px;
 }
-
 
 .footcare-concern-card {
   padding: 24px;
@@ -3837,7 +3892,6 @@ h2 {
   box-shadow: var(--shadow-card);
 }
 
-
 .footcare-concern-number {
   width: 40px;
   height: 40px;
@@ -3856,7 +3910,6 @@ h2 {
   font-weight: 800;
 }
 
-
 .footcare-concern-en {
   color: #8b9989;
 
@@ -3866,11 +3919,9 @@ h2 {
   letter-spacing: .13em;
 }
 
-
 .footcare-concern-card h3 {
   margin: 3px 0 5px;
 }
-
 
 .footcare-concern-card p {
   margin: 0;
@@ -3880,11 +3931,9 @@ h2 {
   font-size: .84rem;
 }
 
-
 .footcare-detail-soft {
   background: #f3eee4;
 }
-
 
 .footcare-detail-layout,
 .insole-detail-layout {
@@ -3895,7 +3944,6 @@ h2 {
 
   gap: 48px;
 }
-
 
 .footcare-detail-number,
 .insole-detail-number {
@@ -3910,7 +3958,6 @@ h2 {
   font-size: 1.5rem;
 }
 
-
 .footcare-detail-heading h2,
 .insole-detail-heading h2 {
   font-size:
@@ -3919,14 +3966,12 @@ h2 {
   line-height: 1.3;
 }
 
-
 .footcare-detail-content,
 .insole-detail-content {
   color: var(--text-soft);
 
   line-height: 1.9;
 }
-
 
 .footcare-detail-lead,
 .insole-detail-lead {
@@ -3935,7 +3980,6 @@ h2 {
   font-size: 1rem;
   font-weight: 600;
 }
-
 
 .footcare-tip-box,
 .insole-tip-box,
@@ -3952,7 +3996,6 @@ h2 {
     1px solid rgba(83,106,82,.07);
 }
 
-
 .footcare-tip-box > span,
 .insole-tip-box > span,
 .insole-note-box > span {
@@ -3965,7 +4008,6 @@ h2 {
 }
 
 
-
 /* =========================================================
    INSOLE PAGE
 ========================================================= */
@@ -3976,18 +4018,15 @@ h2 {
   background: #f3eee4;
 }
 
-
 .insole-standing-card {
   max-width: 850px;
 }
-
 
 .insole-standing-copy ul {
   margin: 24px 0;
 
   color: rgba(255,255,255,.78);
 }
-
 
 .insole-shoes-grid {
   display: grid;
@@ -3997,7 +4036,6 @@ h2 {
 
   gap: 11px;
 }
-
 
 .insole-shoe-item {
   padding: 22px;
@@ -4010,7 +4048,6 @@ h2 {
     var(--shadow-card);
 }
 
-
 .insole-shoe-item > span {
   display: block;
 
@@ -4021,13 +4058,11 @@ h2 {
   font-family: Georgia,serif;
 }
 
-
 .insole-shoe-item strong {
   display: block;
 
   margin-bottom: 6px;
 }
-
 
 .insole-shoe-item p {
   margin: 0;
@@ -4036,7 +4071,6 @@ h2 {
 
   font-size: .83rem;
 }
-
 
 .insole-replacement-layout {
   display: grid;
@@ -4049,12 +4083,10 @@ h2 {
   align-items: center;
 }
 
-
 .insole-replacement-list {
   border-top:
     1px solid var(--line);
 }
-
 
 .insole-replacement-list > div {
   padding: 16px 0;
@@ -4070,13 +4102,15 @@ h2 {
     1px solid var(--line);
 }
 
-
 .insole-replacement-list span {
   color: #8d9c8d;
 
   font-size: .7rem;
 }
 
+.insole-link-button {
+  margin-top: 23px;
+}
 
 
 /* =========================================================
@@ -4086,7 +4120,6 @@ h2 {
 .about-policy-section {
   background: #fcfaf5;
 }
-
 
 .about-future-section {
   padding: 76px 0;
@@ -4100,11 +4133,9 @@ h2 {
     #edf3e9;
 }
 
-
 .about-future-card {
   max-width: 850px;
 }
-
 
 .about-future-brand {
   margin-bottom: 19px;
@@ -4121,14 +4152,12 @@ h2 {
   font-size: 1.65rem;
 }
 
-
 .about-future-brand i {
   width: 56px;
   height: 1px;
 
   background: #b6c2b4;
 }
-
 
 .about-future-card h2 {
   margin-bottom: 17px;
@@ -4139,7 +4168,6 @@ h2 {
   line-height: 1.3;
 }
 
-
 .about-future-card > p:not(.eyebrow) {
   max-width: 700px;
 
@@ -4149,12 +4177,370 @@ h2 {
 }
 
 
+/* =========================================================
+   SMARTPHONE ONLY LINE BREAK
+========================================================= */
+
+.sp-only {
+  display: none;
+}
+
+
+/* =========================================================
+   REFLEX ZONES
+========================================================= */
+
+#reflex-zones {
+  scroll-margin-top: 100px;
+}
+
+.reflex-zones-section {
+  position: relative;
+
+  background:
+    linear-gradient(
+      180deg,
+      #eef2e9 0%,
+      #f7f5ef 100%
+    );
+
+  overflow: hidden;
+}
+
+.reflex-zones-section::before {
+  content: "";
+
+  position: absolute;
+
+  width: 330px;
+  height: 330px;
+
+  right: -150px;
+  top: 90px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(205,219,201,.27);
+
+  pointer-events: none;
+}
+
+.reflex-zones-section .container {
+  position: relative;
+
+  z-index: 1;
+}
+
+.reflex-zone-intro {
+  max-width: 780px;
+
+  margin-bottom: 28px;
+
+  padding: 24px 26px;
+
+  background:
+    rgba(255,255,255,.70);
+
+  border:
+    1px solid rgba(83,106,82,.10);
+
+  border-radius: 22px;
+}
+
+.reflex-zone-intro > span {
+  display: block;
+
+  margin-bottom: 9px;
+
+  color: var(--sage-500);
+
+  font-size: .62rem;
+  font-weight: 800;
+
+  letter-spacing: .15em;
+}
+
+.reflex-zone-intro p {
+  margin-bottom: 8px;
+
+  color: var(--text-soft);
+
+  font-size: .88rem;
+
+  line-height: 1.78;
+}
+
+.reflex-zone-intro p:last-child {
+  margin-bottom: 0;
+}
+
+.reflex-zone-list {
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 11px;
+}
+
+.reflex-zone-card {
+  overflow: hidden;
+
+  background:
+    rgba(255,255,255,.93);
+
+  border:
+    1px solid rgba(83,106,82,.09);
+
+  border-radius: 21px;
+
+  box-shadow:
+    0 8px 24px rgba(53,62,55,.035);
+
+  transition:
+    border-color .2s ease,
+    box-shadow .2s ease;
+}
+
+.reflex-zone-card[open] {
+  border-color:
+    rgba(83,106,82,.18);
+
+  box-shadow:
+    0 12px 30px rgba(53,62,55,.055);
+}
+
+.reflex-zone-card summary {
+  min-height: 88px;
+
+  padding: 18px 20px;
+
+  display: grid;
+
+  grid-template-columns:
+    44px 1fr auto;
+
+  gap: 15px;
+
+  align-items: center;
+
+  cursor: pointer;
+
+  list-style: none;
+
+  user-select: none;
+}
+
+.reflex-zone-card summary::-webkit-details-marker {
+  display: none;
+}
+
+.reflex-zone-number {
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: var(--green);
+
+  background:
+    var(--sage-100);
+
+  border-radius: 50%;
+
+  font-size: .62rem;
+  font-weight: 800;
+
+  letter-spacing: .08em;
+}
+
+.reflex-zone-heading {
+  min-width: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.reflex-zone-heading small {
+  color: #8b9989;
+
+  font-size: .57rem;
+  font-weight: 800;
+
+  line-height: 1.35;
+
+  letter-spacing: .12em;
+}
+
+.reflex-zone-heading strong {
+  color: var(--green-deep);
+
+  font-size: 1rem;
+
+  line-height: 1.45;
+}
+
+.reflex-zone-toggle {
+  position: relative;
+
+  padding-right: 24px;
+
+  color: var(--green);
+
+  font-size: .77rem;
+  font-weight: 700;
+
+  white-space: nowrap;
+}
+
+.reflex-zone-toggle::after {
+  content: "+";
+
+  position: absolute;
+
+  top: 50%;
+  right: 0;
+
+  transform:
+    translateY(-50%);
+
+  color: #789078;
+
+  font-size: 1.25rem;
+  font-weight: 400;
+
+  line-height: 1;
+}
+
+.reflex-zone-card[open]
+.reflex-zone-toggle::after {
+  content: "−";
+}
+
+.reflex-zone-detail {
+  padding:
+    0 20px 20px 79px;
+
+  border-top:
+    1px solid rgba(83,106,82,.08);
+}
+
+.reflex-zone-detail-row {
+  padding: 15px 0;
+
+  display: grid;
+
+  grid-template-columns:
+    72px 1fr;
+
+  gap: 15px;
+
+  border-bottom:
+    1px solid rgba(83,106,82,.07);
+}
+
+.reflex-zone-detail-row:last-child {
+  padding-bottom: 2px;
+
+  border-bottom: 0;
+}
+
+.reflex-zone-detail-row > span {
+  color: var(--sage-500);
+
+  font-size: .69rem;
+  font-weight: 800;
+
+  letter-spacing: .06em;
+}
+
+.reflex-zone-detail-row p {
+  margin: 0;
+
+  color: var(--text-soft);
+
+  font-size: .88rem;
+
+  line-height: 1.78;
+}
+
+.reflex-zone-note {
+  max-width: 880px;
+
+  margin:
+    22px 0 0;
+
+  color: #858d86;
+
+  font-size: .74rem;
+
+  line-height: 1.75;
+}
+
 
 /* =========================================================
    SUB PAGE MOBILE
 ========================================================= */
 
 @media screen and (max-width: 768px) {
+
+  :root {
+    --header-height: 72px;
+  }
+
+
+  .site-header {
+    min-height:
+      var(--header-height);
+  }
+
+
+  .header-inner {
+    min-height:
+      var(--header-height);
+
+    padding-top: 8px;
+    padding-bottom: 8px;
+  }
+
+
+  body {
+    padding-top:
+      var(--header-height);
+  }
+
+
+  html {
+    scroll-padding-top: 84px;
+  }
+
+
+  #reflex-zones {
+    scroll-margin-top: 84px;
+  }
+
+
+  .menu-button {
+    width: 40px;
+    height: 40px;
+
+    flex: 0 0 40px;
+
+    transform: none;
+  }
+
+
+  .sp-only {
+    display: block;
+  }
+
 
   .aroma-page-hero,
   .reflex-page-hero,
@@ -4291,6 +4677,13 @@ h2 {
 
     border-radius: 14px;
   }
+
+
+  /*
+    重要:
+    05アイテムだけ横幅いっぱいにする指定は入れない。
+    他のカードと同じ1マス分になる。
+  */
 
 
   /* SECTIONS */
@@ -4635,6 +5028,13 @@ h2 {
   }
 
 
+  .insole-link-button {
+    width: 100%;
+
+    margin-top: 22px;
+  }
+
+
   /* ABOUT FUTURE */
 
   .about-future-section {
@@ -4646,552 +5046,8 @@ h2 {
     font-size: 30px;
   }
 
-}
-/* =========================================================
-   SUB PAGE FINAL ADDITIONS
-   Header / SP Break / Reflex Zones / Insole spacing
-========================================================= */
 
-
-/* =========================================================
-   HEADER LOGO
-   トップページ・遷移先ページ共通
-========================================================= */
-
-.site-logo {
-  display: inline-flex;
-  align-items: center;
-
-  gap: 7px;
-
-  flex-shrink: 0;
-}
-
-.header-logo-image {
-  display: block;
-
-  width: auto;
-  height: 34px;
-
-  object-fit: contain;
-}
-
-.header-gob {
-  flex-shrink: 0;
-
-  color: #718071;
-
-  font-family:
-    Georgia,
-    "Yu Mincho",
-    "Hiragino Mincho ProN",
-    serif;
-
-  font-size: 0.72rem;
-  font-weight: 500;
-
-  line-height: 1;
-
-  letter-spacing: 0.045em;
-
-  white-space: nowrap;
-}
-
-
-/* =========================================================
-   SMARTPHONE ONLY LINE BREAK
-========================================================= */
-
-.sp-only {
-  display: none;
-}
-
-
-/* =========================================================
-   REFLEXOLOGY PAGE NAV
-   反射区追加で5項目になったため調整
-========================================================= */
-
-.reflex-nav-list {
-  grid-template-columns:
-    repeat(5, 1fr);
-}
-
-
-/* =========================================================
-   REFLEX ZONES
-========================================================= */
-
-.reflex-zones-section {
-  position: relative;
-
-  background:
-    linear-gradient(
-      180deg,
-      #eef2e9 0%,
-      #f7f5ef 100%
-    );
-
-  overflow: hidden;
-}
-
-
-/* 背景の薄い装飾 */
-
-.reflex-zones-section::before {
-  content: "";
-
-  position: absolute;
-
-  width: 330px;
-  height: 330px;
-
-  right: -150px;
-  top: 90px;
-
-  border-radius: 50%;
-
-  background:
-    rgba(205, 219, 201, 0.27);
-
-  pointer-events: none;
-}
-
-
-.reflex-zones-section .container {
-  position: relative;
-
-  z-index: 1;
-}
-
-
-/* =========================================================
-   INTRODUCTION
-========================================================= */
-
-.reflex-zone-intro {
-  max-width: 780px;
-
-  margin-bottom: 28px;
-
-  padding: 24px 26px;
-
-  background:
-    rgba(255, 255, 255, 0.70);
-
-  border:
-    1px solid rgba(83, 106, 82, 0.10);
-
-  border-radius: 22px;
-}
-
-
-.reflex-zone-intro > span {
-  display: block;
-
-  margin-bottom: 9px;
-
-  color: var(--sage-500);
-
-  font-size: 0.62rem;
-  font-weight: 800;
-
-  letter-spacing: 0.15em;
-}
-
-
-.reflex-zone-intro p {
-  margin-bottom: 8px;
-
-  color: var(--text-soft);
-
-  font-size: 0.88rem;
-
-  line-height: 1.78;
-}
-
-
-.reflex-zone-intro p:last-child {
-  margin-bottom: 0;
-}
-
-
-/* =========================================================
-   REFLEX ZONE LIST
-========================================================= */
-
-.reflex-zone-list {
-  max-width: 900px;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 11px;
-}
-
-
-/* =========================================================
-   EACH CARD
-========================================================= */
-
-.reflex-zone-card {
-  overflow: hidden;
-
-  background:
-    rgba(255, 255, 255, 0.93);
-
-  border:
-    1px solid rgba(83, 106, 82, 0.09);
-
-  border-radius: 21px;
-
-  box-shadow:
-    0 8px 24px rgba(53, 62, 55, 0.035);
-
-  transition:
-    border-color 0.2s ease,
-    box-shadow 0.2s ease;
-}
-
-
-.reflex-zone-card[open] {
-  border-color:
-    rgba(83, 106, 82, 0.18);
-
-  box-shadow:
-    0 12px 30px rgba(53, 62, 55, 0.055);
-}
-
-
-/* =========================================================
-   SUMMARY
-========================================================= */
-
-.reflex-zone-card summary {
-  min-height: 88px;
-
-  padding: 18px 20px;
-
-  display: grid;
-
-  grid-template-columns:
-    44px 1fr auto;
-
-  gap: 15px;
-
-  align-items: center;
-
-  cursor: pointer;
-
-  list-style: none;
-
-  user-select: none;
-}
-
-
-.reflex-zone-card summary::-webkit-details-marker {
-  display: none;
-}
-
-
-/* 番号 */
-
-.reflex-zone-number {
-  width: 38px;
-  height: 38px;
-
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-
-  flex-shrink: 0;
-
-  color: var(--green);
-
-  background:
-    var(--sage-100);
-
-  border-radius: 50%;
-
-  font-size: 0.62rem;
-  font-weight: 800;
-
-  letter-spacing: 0.08em;
-}
-
-
-/* タイトル */
-
-.reflex-zone-heading {
-  min-width: 0;
-
-  display: flex;
-  flex-direction: column;
-
-  gap: 3px;
-}
-
-
-.reflex-zone-heading small {
-  color: #8b9989;
-
-  font-size: 0.57rem;
-  font-weight: 800;
-
-  line-height: 1.35;
-
-  letter-spacing: 0.12em;
-}
-
-
-.reflex-zone-heading strong {
-  color: var(--green-deep);
-
-  font-size: 1rem;
-
-  line-height: 1.45;
-}
-
-
-/* 「位置・押し方を見る」 */
-
-.reflex-zone-toggle {
-  position: relative;
-
-  padding-right: 24px;
-
-  color: var(--green);
-
-  font-size: 0.77rem;
-  font-weight: 700;
-
-  white-space: nowrap;
-}
-
-
-.reflex-zone-toggle::after {
-  content: "+";
-
-  position: absolute;
-
-  top: 50%;
-  right: 0;
-
-  transform:
-    translateY(-50%);
-
-  color: #789078;
-
-  font-size: 1.25rem;
-  font-weight: 400;
-
-  line-height: 1;
-
-  transition:
-    transform 0.25s ease;
-}
-
-
-.reflex-zone-card[open]
-.reflex-zone-toggle::after {
-  content: "−";
-}
-
-
-/* =========================================================
-   OPEN DETAIL
-========================================================= */
-
-.reflex-zone-detail {
-  padding:
-    0 20px 20px 79px;
-
-  border-top:
-    1px solid rgba(83, 106, 82, 0.08);
-}
-
-
-.reflex-zone-detail-row {
-  padding: 15px 0;
-
-  display: grid;
-
-  grid-template-columns:
-    72px 1fr;
-
-  gap: 15px;
-
-  border-bottom:
-    1px solid rgba(83, 106, 82, 0.07);
-}
-
-
-.reflex-zone-detail-row:last-child {
-  padding-bottom: 2px;
-
-  border-bottom: 0;
-}
-
-
-.reflex-zone-detail-row > span {
-  color: var(--sage-500);
-
-  font-size: 0.69rem;
-  font-weight: 800;
-
-  letter-spacing: 0.06em;
-}
-
-
-.reflex-zone-detail-row p {
-  margin: 0;
-
-  color: var(--text-soft);
-
-  font-size: 0.88rem;
-
-  line-height: 1.78;
-}
-
-
-/* =========================================================
-   REFLEX NOTE
-========================================================= */
-
-.reflex-zone-note {
-  max-width: 880px;
-
-  margin:
-    22px 0 0;
-
-  color: #858d86;
-
-  font-size: 0.74rem;
-
-  line-height: 1.75;
-}
-
-
-/* =========================================================
-   INSOLE BUTTON SPACING
-========================================================= */
-
-.insole-link-button {
-  margin-top: 23px;
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media screen and (max-width: 768px) {
-
-
-  /* =========================
-     HEADER
-  ========================= */
-
-  .site-logo {
-    gap: 6px;
-
-    transform: none;
-  }
-
-
-  .header-logo-image {
-    width: auto;
-    height: 29px;
-  }
-
-
-  .header-gob {
-    font-size: 9px;
-
-    letter-spacing: 0.04em;
-  }
-
-
-  /*
-    既存CSSでは74pxと76pxが混在しているため、
-    最終的に72pxへ統一
-  */
-
-  :root {
-    --header-height: 72px;
-  }
-
-
-  .site-header {
-    min-height:
-      var(--header-height);
-  }
-
-
-  .header-inner {
-    min-height:
-      var(--header-height);
-
-    padding-top: 8px;
-    padding-bottom: 8px;
-  }
-
-
-  body {
-    padding-top:
-      var(--header-height);
-  }
-
-
-  html {
-    scroll-padding-top: 84px;
-  }
-
-
-  .menu-button {
-    width: 40px;
-    height: 40px;
-
-    flex:
-      0 0 40px;
-
-    transform: none;
-  }
-
-
-  /* =========================
-     SMARTPHONE LINE BREAK
-  ========================= */
-
-  .sp-only {
-    display: block;
-  }
-
-
-  /* =========================
-     REFLEX NAV
-  ========================= */
-
-  .reflex-nav-list {
-    grid-template-columns:
-      repeat(2, 1fr);
-  }
-
-
-  /*
-    5項目なので最後の
-    「アイテム」だけ横いっぱい
-  */
-
-  .reflex-nav-list a:last-child {
-    grid-column:
-      1 / -1;
-  }
-
-
-  /* =========================
-     REFLEX ZONES
-  ========================= */
+  /* REFLEX ZONES */
 
   .reflex-zones-section::before {
     width: 230px;
@@ -5259,11 +5115,6 @@ h2 {
   }
 
 
-  /*
-    スマホでは右に置くと窮屈なので
-    3列目から2列目の下へ移動
-  */
-
   .reflex-zone-toggle {
     grid-column: 2;
 
@@ -5317,17 +5168,6 @@ h2 {
     font-size: 11px;
 
     line-height: 1.7;
-  }
-
-
-  /* =========================
-     INSOLE BUTTON
-  ========================= */
-
-  .insole-link-button {
-    width: 100%;
-
-    margin-top: 22px;
   }
 
 }

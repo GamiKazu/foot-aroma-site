@@ -1533,3 +1533,783 @@ a.feature-card:hover {
     padding: 28px 24px;
   }
 }
+/* =========================================================
+   FOOT & AROMA
+   TOP PAGE - MOBILE FINAL OVERRIDE
+   ========================================================= */
+
+
+/* ---------------------------------------------------------
+   共通：リンク付き画像
+--------------------------------------------------------- */
+
+.image-link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease;
+}
+
+@media (hover: hover) {
+  .image-link:hover img {
+    transform: scale(1.025);
+    opacity: 0.96;
+  }
+}
+
+.image-link:active img {
+  transform: scale(0.99);
+  opacity: 0.9;
+}
+
+
+/* ---------------------------------------------------------
+   セクションごとの境界
+--------------------------------------------------------- */
+
+.section-about {
+  background: #f9f6f0;
+}
+
+.section-concerns {
+  background: #eee8dc;
+}
+
+.section-aroma {
+  background: #f8f5ef;
+}
+
+.section-reflexology {
+  background: var(--green-dark);
+}
+
+.section-diagnosis {
+  background: #f6f2ea;
+}
+
+.section-column {
+  background: #eee8dc;
+}
+
+.section-future {
+  background: #faf8f3;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 640px) {
+
+
+  /* -------------------------------------------------------
+     共通
+  ------------------------------------------------------- */
+
+  .container {
+    width: calc(100% - 32px);
+  }
+
+  .section {
+    padding-top: 62px;
+    padding-bottom: 62px;
+  }
+
+  .section-en {
+    margin-bottom: 16px;
+    font-size: 0.72rem;
+    letter-spacing: 0.18em;
+  }
+
+  .section h2 {
+    margin-bottom: 26px;
+  }
+
+
+  /* -------------------------------------------------------
+     ヘッダー
+  ------------------------------------------------------- */
+
+  .site-header {
+    background: rgba(247, 244, 238, 0.98);
+  }
+
+  .header-inner {
+    min-height: 78px;
+    width: calc(100% - 30px);
+  }
+
+  .header-logo-image {
+    width: 145px;
+  }
+
+
+  /* -------------------------------------------------------
+     HERO
+  ------------------------------------------------------- */
+
+  .section-hero {
+    padding: 18px 0 38px;
+  }
+
+  .hero-inner {
+    width: calc(100% - 28px);
+    padding: 30px 20px 24px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 0;
+
+    border-radius: 30px;
+
+    background:
+      linear-gradient(
+        145deg,
+        rgba(255, 255, 255, 0.72),
+        rgba(244, 241, 232, 0.86)
+      );
+
+    border: 1px solid rgba(95, 105, 89, 0.10);
+
+    box-shadow:
+      0 14px 38px rgba(65, 69, 61, 0.06);
+  }
+
+
+  .hero-content {
+    width: 100%;
+  }
+
+
+  .hero-label {
+    margin-bottom: 20px;
+
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+  }
+
+
+  .hero h1 {
+    font-size: clamp(2.7rem, 12vw, 3.45rem);
+    line-height: 1.16;
+  }
+
+
+  .hero-description {
+    margin-top: 28px;
+
+    font-size: 0.94rem;
+    line-height: 1.95;
+  }
+
+
+  /* ボタン */
+
+  .hero-buttons {
+    order: 2;
+
+    width: 100%;
+
+    margin-top: 30px;
+    margin-bottom: 26px;
+
+    gap: 12px;
+  }
+
+
+  .hero-buttons .button {
+    min-height: 58px;
+  }
+
+
+  /* 画像 */
+
+  .hero-visual {
+    order: 3;
+
+    width: 100%;
+
+    min-height: 0;
+
+    margin-top: 0;
+  }
+
+
+  .hero-image {
+    width: 100%;
+
+    border-radius: 22px;
+
+    box-shadow:
+      0 10px 28px rgba(65, 69, 61, 0.07);
+  }
+
+
+
+  /* -------------------------------------------------------
+     ABOUT
+  ------------------------------------------------------- */
+
+  .section-about {
+    padding-top: 70px;
+    padding-bottom: 72px;
+  }
+
+
+  .intro-inner {
+    padding: 0 14px;
+
+    text-align: left;
+  }
+
+
+  .intro-inner h2 {
+    margin-bottom: 30px;
+  }
+
+
+  .intro-inner p:not(.section-en) {
+    margin-bottom: 22px;
+
+    font-size: 0.95rem;
+    line-height: 2;
+  }
+
+
+  .intro-inner .text-link {
+    display: inline-block;
+
+    margin-top: 8px;
+  }
+
+
+
+  /* -------------------------------------------------------
+     FOOT CONCERNS
+  ------------------------------------------------------- */
+
+  .section-concerns {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+
+  .section-concerns .section-heading {
+    margin-bottom: 38px;
+  }
+
+
+  .concern-grid {
+    gap: 18px;
+  }
+
+
+  .feature-card {
+    min-height: 0;
+
+    padding: 26px 24px;
+
+    border-radius: 26px;
+
+    box-shadow:
+      0 10px 26px rgba(65, 69, 61, 0.045);
+  }
+
+
+  /* 01 足の疲れ を横並び */
+
+  .concern-title {
+    display: flex !important;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin: 0 0 18px;
+  }
+
+
+  .concern-number {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 34px;
+
+    margin: 0;
+
+    font-size: 0.78rem;
+
+    line-height: 1;
+
+    letter-spacing: 0.1em;
+
+    color: var(--green);
+  }
+
+
+  .concern-title h3 {
+    margin: 0 !important;
+
+    font-size: 1.25rem;
+
+    line-height: 1.4;
+  }
+
+
+  .feature-card p {
+    margin-bottom: 18px;
+
+    font-size: 0.92rem;
+
+    line-height: 1.85;
+  }
+
+
+  .feature-card a {
+    margin-top: 4px;
+
+    font-size: 0.95rem;
+  }
+
+
+
+  /* -------------------------------------------------------
+     AROMA
+  ------------------------------------------------------- */
+
+  .section-aroma {
+    padding-top: 66px;
+    padding-bottom: 66px;
+  }
+
+
+  .aroma-section-inner {
+    width: calc(100% - 28px);
+
+    padding: 30px 20px 22px;
+
+    border-radius: 30px;
+
+    background: rgba(255, 255, 255, 0.58);
+
+    border: 1px solid rgba(95, 105, 89, 0.11);
+
+    box-shadow:
+      0 12px 34px rgba(65, 69, 61, 0.05);
+  }
+
+
+  .section-aroma .split-content {
+    width: 100%;
+  }
+
+
+  .section-aroma h2 {
+    font-size: clamp(2.35rem, 10vw, 2.9rem);
+
+    line-height: 1.3;
+  }
+
+
+  .section-aroma .split-content p:not(.section-en) {
+    font-size: 0.94rem;
+
+    line-height: 1.95;
+  }
+
+
+  .aroma-panel {
+    margin-top: 26px;
+
+    padding: 0;
+
+    border-radius: 22px;
+  }
+
+
+  .aroma-panel img {
+    width: 100%;
+
+    aspect-ratio: auto;
+
+    object-fit: contain;
+
+    border-radius: 22px;
+  }
+
+
+  .section-aroma .section-action {
+    margin-top: 24px;
+  }
+
+
+
+  /* -------------------------------------------------------
+     REFLEXOLOGY
+  ------------------------------------------------------- */
+
+  .section-reflexology {
+    padding-top: 68px;
+    padding-bottom: 62px;
+  }
+
+
+  .section-reflexology .section-heading {
+    margin-bottom: 30px;
+  }
+
+
+  .section-reflexology h2 {
+    margin-bottom: 24px;
+
+    font-size: clamp(2.3rem, 9.5vw, 2.9rem);
+  }
+
+
+  .section-heading-light > p:last-of-type {
+    line-height: 1.9;
+  }
+
+
+  .reflexology-content {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 28px;
+  }
+
+
+  .info-grid {
+    display: block;
+  }
+
+
+  .info-grid > div {
+    padding: 22px 0;
+
+    border-top:
+      1px solid rgba(255, 255, 255, 0.20);
+  }
+
+
+  .reflexology-item-title {
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+    margin-bottom: 12px;
+  }
+
+
+  .reflexology-item-title span {
+    margin: 0;
+
+    flex-shrink: 0;
+  }
+
+
+  .reflexology-item-title h3 {
+    margin: 0;
+
+    font-size: 1.25rem;
+  }
+
+
+  .info-grid p {
+    margin: 0;
+
+    padding-left: 0;
+
+    font-size: 0.93rem;
+
+    line-height: 1.8;
+  }
+
+
+  .reflexology-image {
+    margin-top: 10px;
+  }
+
+
+  .reflexology-image img {
+    width: 100%;
+
+    aspect-ratio: auto;
+
+    object-fit: contain;
+
+    border-radius: 22px;
+  }
+
+
+  .section-reflexology .section-action {
+    margin-top: 24px;
+  }
+
+
+  .section-reflexology .button {
+    min-height: 56px;
+  }
+
+
+
+  /* -------------------------------------------------------
+     FREE CHECK
+  ------------------------------------------------------- */
+
+  .section-diagnosis {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+
+  .section-diagnosis .container {
+    width: calc(100% - 28px);
+  }
+
+
+  .diagnosis-box {
+    display: flex !important;
+
+    flex-direction: column !important;
+
+    width: 100%;
+
+    padding: 30px 20px 24px;
+
+    gap: 0;
+
+    border-radius: 30px;
+
+    background:
+      linear-gradient(
+        145deg,
+        #fbfaf6,
+        #eaf0e5
+      );
+
+    border:
+      1px solid rgba(95, 105, 89, 0.14);
+
+    overflow: hidden;
+  }
+
+
+  .diagnosis-content {
+    width: 100%;
+
+    order: 1;
+  }
+
+
+  .diagnosis-content h2 {
+    width: 100%;
+
+    max-width: none;
+
+    margin-bottom: 26px;
+
+    font-size: clamp(2.15rem, 9vw, 2.75rem);
+
+    line-height: 1.3;
+
+    letter-spacing: -0.025em;
+
+    word-break: normal !important;
+
+    overflow-wrap: normal !important;
+  }
+
+
+  .diagnosis-content h2 br {
+    display: none;
+  }
+
+
+  .diagnosis-content p {
+    width: 100%;
+
+    max-width: none;
+
+    margin: 0;
+
+    font-size: 0.94rem;
+
+    line-height: 1.95;
+  }
+
+
+  /* 診断画像を文章の下に大きく */
+
+  .diagnosis-image {
+    order: 2;
+
+    width: 100%;
+
+    margin-top: 28px;
+  }
+
+
+  .diagnosis-image img {
+    width: 100%;
+
+    aspect-ratio: auto;
+
+    object-fit: contain;
+
+    border-radius: 20px;
+
+    box-shadow:
+      0 8px 24px rgba(65, 69, 61, 0.07);
+  }
+
+
+  /* 診断ボタン */
+
+  .diagnosis-action {
+    order: 3;
+
+    width: 100%;
+
+    margin-top: 24px;
+  }
+
+
+  .diagnosis-action .button {
+    width: 100%;
+
+    min-height: 58px;
+  }
+
+
+
+  /* -------------------------------------------------------
+     COLUMN
+     現状がかなり良いので最小調整
+  ------------------------------------------------------- */
+
+  .section-column {
+    padding-top: 68px;
+    padding-bottom: 68px;
+  }
+
+
+  .article-grid {
+    gap: 24px;
+  }
+
+
+  .article-card {
+    border-radius: 26px;
+  }
+
+
+  .article-image {
+    border-radius: 0;
+  }
+
+
+  .article-image img {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+  }
+
+
+  .article-body {
+    padding: 26px 24px 28px;
+  }
+
+
+
+  /* -------------------------------------------------------
+     FUTURE
+  ------------------------------------------------------- */
+
+  .section-future {
+    padding-top: 72px;
+    padding-bottom: 72px;
+  }
+
+
+  .future-box {
+    padding-left: 14px;
+
+    padding-right: 14px;
+
+    text-align: left;
+  }
+
+
+  .future-box h2 {
+    font-size: clamp(2.35rem, 9.5vw, 2.9rem);
+
+    line-height: 1.32;
+  }
+
+
+  .future-box p:not(.section-en) {
+    font-size: 0.94rem;
+
+    line-height: 1.95;
+  }
+
+
+
+  /* -------------------------------------------------------
+     FOOTER
+  ------------------------------------------------------- */
+
+  .site-footer {
+    padding: 56px 30px 32px;
+  }
+
+
+  .footer-inner {
+    width: 100%;
+
+    display: block;
+  }
+
+
+  .footer-brand {
+    margin-bottom: 38px;
+  }
+
+
+  .footer-nav {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+    margin-bottom: 38px;
+  }
+
+
+  .footer-note {
+    margin-bottom: 30px;
+
+    line-height: 1.9;
+  }
+
+}

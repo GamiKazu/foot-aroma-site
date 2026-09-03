@@ -1,39 +1,24 @@
 /* =========================================================
-   Foot & Aroma
-   FINAL STYLE
+   Foot & Aroma by GOB
+   COMPLETE STYLE
 ========================================================= */
 
 :root {
   --ivory: #faf7f0;
   --ivory-soft: #f6f1e8;
   --beige: #eee7da;
-  --beige-deep: #e6ddcf;
-
   --sage: #e8efe6;
-  --sage-soft: #f1f5ef;
-
   --forest: #52664f;
   --forest-dark: #2d3c31;
   --forest-deep: #253229;
-
   --text: #2d312d;
   --text-soft: #727a72;
-
   --white: #ffffff;
-
   --line: rgba(45, 49, 45, 0.12);
   --line-light: rgba(255, 255, 255, 0.18);
-
   --shadow: 0 16px 45px rgba(51, 60, 53, 0.07);
-
-  --radius: 32px;
   --container: 1120px;
 }
-
-
-/* =========================================================
-   RESET
-========================================================= */
 
 * {
   box-sizing: border-box;
@@ -47,7 +32,6 @@ body {
   margin: 0;
   color: var(--text);
   background: var(--ivory);
-
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -56,7 +40,6 @@ body {
     "Yu Gothic",
     Meiryo,
     sans-serif;
-
   line-height: 1.85;
   -webkit-font-smoothing: antialiased;
 }
@@ -90,7 +73,6 @@ h2 {
     "Hiragino Mincho ProN",
     Georgia,
     serif;
-
   font-weight: 500;
   letter-spacing: -0.03em;
 }
@@ -100,21 +82,9 @@ h2 {
   margin-inline: auto;
 }
 
-.mobile-only {
-  display: none;
-}
-
-
-/* =========================================================
-   COMMON
-========================================================= */
-
-.section {
+.section,
+.brand-section {
   padding: 100px 0;
-}
-
-.section-soft {
-  background: var(--beige);
 }
 
 .section-en {
@@ -123,22 +93,6 @@ h2 {
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 0.2em;
-}
-
-.section-heading {
-  max-width: 720px;
-  margin-bottom: 50px;
-}
-
-.section-heading h2 {
-  margin-bottom: 20px;
-  font-size: clamp(2.5rem, 5vw, 4.2rem);
-  line-height: 1.25;
-}
-
-.section-heading > p:last-child {
-  margin-bottom: 0;
-  color: var(--text-soft);
 }
 
 .text-link {
@@ -156,14 +110,68 @@ h2 {
   opacity: 0.75;
 }
 
-.section-action {
-  margin-top: 28px;
+.button {
+  min-height: 56px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  font-size: 0.92rem;
+  font-weight: 700;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button-primary,
+.button-diagnosis {
+  color: #fff;
+  background: var(--forest);
+}
+
+.button-outline {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(45, 49, 45, 0.16);
+}
+
+.button-light {
+  color: var(--forest-deep);
+  background: #f5f4ef;
+}
+
+.image-link {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  border-radius: inherit;
+}
+
+.image-link img {
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+}
+
+@media (hover: hover) {
+  .image-link:hover img {
+    transform: scale(1.02);
+    opacity: 0.96;
+  }
+}
+
+.image-link:active img {
+  transform: scale(0.99);
+  opacity: 0.94;
 }
 
 
-/* =========================================================
-   HEADER
-========================================================= */
+/* HEADER */
 
 .site-header {
   position: sticky;
@@ -184,12 +192,12 @@ h2 {
   gap: 32px;
 }
 
-.site-logo {
+.brand-logo {
   display: block;
   flex-shrink: 0;
 }
 
-.header-logo-image {
+.brand-logo-image {
   width: 180px;
   height: auto;
 }
@@ -225,77 +233,9 @@ h2 {
 }
 
 
-/* =========================================================
-   BUTTONS
-========================================================= */
+/* HERO */
 
-.button {
-  min-height: 56px;
-  padding: 0 28px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 999px;
-  font-size: 0.92rem;
-  font-weight: 700;
-  transition:
-    transform 0.2s ease,
-    opacity 0.2s ease;
-}
-
-.button:hover {
-  transform: translateY(-2px);
-}
-
-.button-primary {
-  color: white;
-  background: var(--forest);
-}
-
-.button-secondary {
-  color: var(--text);
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(45, 49, 45, 0.16);
-}
-
-
-/* =========================================================
-   IMAGE LINKS
-========================================================= */
-
-.image-link {
-  display: block;
-  width: 100%;
-  overflow: hidden;
-  border-radius: inherit;
-}
-
-.image-link img {
-  display: block;
-  width: 100%;
-  transition:
-    transform 0.3s ease,
-    opacity 0.3s ease;
-}
-
-@media (hover: hover) {
-  .image-link:hover img {
-    transform: scale(1.02);
-    opacity: 0.96;
-  }
-}
-
-.image-link:active img {
-  transform: scale(0.99);
-  opacity: 0.94;
-}
-
-
-/* =========================================================
-   HERO
-========================================================= */
-
-.section-hero {
+.brand-hero {
   padding: 52px 0 76px;
   background:
     linear-gradient(
@@ -305,32 +245,21 @@ h2 {
     );
 }
 
-.hero-inner {
+.brand-hero-inner {
   width: min(1180px, calc(100% - 48px));
   margin-inline: auto;
   padding: 54px;
-
   display: grid;
-
   grid-template-columns: 0.95fr 1.05fr;
-  grid-template-areas:
-    "content visual"
-    "buttons visual";
-
-  column-gap: 60px;
+  gap: 60px;
   align-items: center;
-
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(45, 49, 45, 0.08);
   border-radius: 42px;
   box-shadow: var(--shadow);
 }
 
-.hero-content {
-  grid-area: content;
-}
-
-.hero-label {
+.hero-kicker {
   margin-bottom: 25px;
   color: var(--forest);
   font-size: 0.72rem;
@@ -338,126 +267,137 @@ h2 {
   letter-spacing: 0.17em;
 }
 
-.hero-content h1 {
+.hero-copy h1 {
   margin-bottom: 30px;
   font-size: clamp(3.2rem, 6vw, 5.7rem);
   line-height: 1.12;
 }
 
-.hero-description {
+.hero-lead {
   max-width: 540px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   color: var(--text-soft);
   font-size: 1rem;
   line-height: 2;
 }
 
-.hero-visual {
-  grid-area: visual;
-  overflow: hidden;
-  border-radius: 28px;
-}
-
-.hero-visual img {
-  aspect-ratio: 4 / 4.5;
-  object-fit: cover;
-}
-
-.hero-buttons {
-  grid-area: buttons;
-  margin-top: 34px;
+.hero-actions {
   display: flex;
   flex-wrap: wrap;
   gap: 14px;
 }
 
+.hero-media {
+  overflow: hidden;
+  border-radius: 28px;
+}
 
-/* =========================================================
-   ABOUT
-========================================================= */
+.hero-media img {
+  aspect-ratio: 4 / 4.5;
+  object-fit: cover;
+}
+
+
+/* ABOUT */
 
 .section-about {
   background: #fbf9f4;
 }
 
-.intro-inner {
+.about-layout {
   max-width: 820px;
 }
 
-.intro-inner h2 {
+.about-content h2 {
   margin-bottom: 30px;
   font-size: clamp(2.7rem, 5vw, 4.5rem);
   line-height: 1.25;
 }
 
-.intro-inner > p:not(.section-en) {
+.about-text p {
   color: var(--text-soft);
   line-height: 2;
 }
 
-.intro-inner .text-link {
+.about-content .text-link {
   margin-top: 12px;
 }
 
 
-/* =========================================================
-   CONCERNS
-========================================================= */
+/* FOOT CARE */
 
-.section-concerns {
+.section-foot-care {
   background: var(--beige);
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+.brand-section-head {
+  max-width: 780px;
+  margin-bottom: 50px;
 }
 
-.feature-card {
-  padding: 34px;
-  background: rgba(255, 255, 255, 0.9);
-  border-radius: 28px;
-  border: 1px solid rgba(45, 49, 45, 0.05);
-  box-shadow:
-    0 8px 30px rgba(40, 45, 40, 0.025);
-}
-
-.concern-title {
+.brand-section-title h2 {
   margin-bottom: 20px;
-  display: flex;
-  align-items: center;
-  gap: 15px;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  line-height: 1.25;
 }
 
-.concern-number {
+.brand-section-description {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.concern-list {
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 30px;
+  box-shadow: var(--shadow);
+}
+
+.concern-row {
+  min-height: 110px;
+  padding: 0 34px;
+  display: grid;
+  grid-template-columns: 70px 1fr 40px;
+  gap: 18px;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+}
+
+.concern-row:last-child {
+  border-bottom: 0;
+}
+
+.concern-row-number {
   color: #789076;
   font-size: 0.76rem;
   font-weight: 800;
   letter-spacing: 0.14em;
 }
 
-.concern-title h3 {
-  margin: 0;
-  font-size: 1.25rem;
+.concern-row-main {
+  display: flex;
+  align-items: baseline;
+  gap: 18px;
 }
 
-.feature-card p {
-  margin-bottom: 24px;
+.concern-row-main strong {
+  font-size: 1.2rem;
+}
+
+.concern-row-main small {
   color: var(--text-soft);
 }
 
-.feature-card > a {
+.concern-arrow {
   color: var(--forest);
-  font-weight: 700;
+  font-size: 1.3rem;
+  text-align: right;
 }
 
 
-/* =========================================================
-   AROMA
-========================================================= */
+/* AROMA */
 
-.section-aroma {
+.section-aromatherapy {
   background:
     linear-gradient(
       180deg,
@@ -466,131 +406,127 @@ h2 {
     );
 }
 
-.aroma-section-inner {
+.aroma-layout {
   max-width: 980px;
   padding: 54px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 50px;
+  align-items: center;
   background: rgba(255, 255, 255, 0.72);
   border: 1px solid rgba(45, 49, 45, 0.08);
   border-radius: 38px;
   box-shadow: var(--shadow);
 }
 
-.split-content {
-  max-width: 760px;
-}
-
-.split-content h2 {
+.aroma-copy h2 {
   margin-bottom: 28px;
   font-size: clamp(2.7rem, 5vw, 4.5rem);
   line-height: 1.25;
 }
 
-.split-content > p:not(.section-en) {
+.aroma-copy > p:not(.section-en) {
   color: var(--text-soft);
   line-height: 2;
 }
 
-.aroma-panel {
-  margin-top: 36px;
+.aroma-media {
   overflow: hidden;
   border-radius: 26px;
 }
 
-.aroma-panel img {
-  aspect-ratio: 16 / 9;
+.aroma-media img {
+  aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
 
-/* =========================================================
-   REFLEXOLOGY
-========================================================= */
-
-.section-dark {
-  color: white;
-}
+/* REFLEXOLOGY */
 
 .section-reflexology {
+  color: #fff;
   background: var(--forest);
 }
 
-.section-heading-light .section-en {
+.section-en-light {
   color: #c1d0c2;
 }
 
-.section-heading-light h2 {
-  color: white;
+.reflexology-top {
+  display: grid;
+  grid-template-columns: 1fr 0.9fr;
+  gap: 48px;
+  align-items: end;
+  margin-bottom: 42px;
 }
 
-.section-heading-light > p:last-child {
+.reflexology-top h2 {
+  margin: 0;
+  font-size: clamp(2.7rem, 5vw, 4.4rem);
+  line-height: 1.25;
+}
+
+.reflexology-intro {
+  margin: 0;
   color: rgba(255, 255, 255, 0.76);
 }
 
-.reflexology-content {
+.reflexology-layout {
   display: grid;
   grid-template-columns: 0.9fr 1.1fr;
   gap: 52px;
   align-items: center;
 }
 
-.info-grid {
+.reflexology-list {
   border-top: 1px solid var(--line-light);
 }
 
-.reflexology-item {
-  padding: 24px 0;
+.reflexology-row {
+  min-height: 100px;
+  display: grid;
+  grid-template-columns: 50px 1fr 1.3fr 28px;
+  align-items: center;
+  gap: 12px;
   border-bottom: 1px solid var(--line-light);
 }
 
-.reflexology-item-title {
-  margin-bottom: 9px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-.reflexology-item-title span {
+.reflexology-row span {
   color: #c3d0c5;
   font-size: 0.73rem;
-  letter-spacing: 0.14em;
 }
 
-.reflexology-item-title h3 {
-  margin: 0;
-  font-size: 1.2rem;
+.reflexology-row strong {
+  font-size: 1.15rem;
 }
 
-.reflexology-item p {
-  margin: 0;
-  color: rgba(255, 255, 255, 0.74);
-  font-size: 0.92rem;
+.reflexology-row small {
+  color: rgba(255, 255, 255, 0.72);
 }
 
-.reflexology-image {
+.reflexology-row b {
+  text-align: right;
+  font-weight: 400;
+}
+
+.reflexology-media {
   overflow: hidden;
   border-radius: 28px;
 }
 
-.reflexology-image img {
+.reflexology-media img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-.section-action-light {
-  margin-top: 40px;
-}
-
-.section-action-light .button-secondary {
-  color: var(--forest-deep);
-  background: #f5f4ef;
+.section-bottom-link {
+  margin-top: 34px;
 }
 
 
-/* =========================================================
-   DIAGNOSIS
-========================================================= */
+/* FREE CHECK */
 
-.section-diagnosis {
+.section-free-check {
   background:
     linear-gradient(
       180deg,
@@ -599,96 +535,103 @@ h2 {
     );
 }
 
-.diagnosis-box {
+.free-check-layout {
   max-width: 920px;
-  margin-inline: auto;
   padding: 54px;
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 48px;
+  align-items: center;
   background: rgba(255, 255, 255, 0.82);
   border-radius: 38px;
   border: 1px solid rgba(45, 49, 45, 0.07);
   box-shadow: var(--shadow);
 }
 
-.diagnosis-content {
-  max-width: 700px;
-}
-
-.diagnosis-content h2 {
+.free-check-copy h2 {
   margin-bottom: 26px;
   font-size: clamp(2.5rem, 5vw, 4.2rem);
   line-height: 1.25;
 }
 
-.diagnosis-content > p:last-child {
-  margin-bottom: 0;
+.free-check-copy > p:not(.section-en) {
   color: var(--text-soft);
   line-height: 2;
 }
 
-.diagnosis-image {
-  margin-top: 36px;
+.free-check-media {
   overflow: hidden;
   border-radius: 26px;
 }
 
-.diagnosis-image img {
-  width: 100%;
-  aspect-ratio: 16 / 7;
+.free-check-media img {
+  aspect-ratio: 16 / 10;
   object-fit: cover;
 }
 
-.diagnosis-action {
-  margin-top: 30px;
-}
 
-
-/* =========================================================
-   COLUMN
-========================================================= */
+/* COLUMN */
 
 .section-column {
   background: var(--beige);
 }
 
-.article-grid {
+.column-heading {
+  max-width: 720px;
+  margin-bottom: 50px;
+}
+
+.column-heading h2 {
+  margin-bottom: 20px;
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  line-height: 1.25;
+}
+
+.column-heading > p {
+  margin: 0;
+  color: var(--text-soft);
+}
+
+.journal-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-.article-card {
+.journal-grid-three {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.journal-card {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  background: white;
+  background: #fff;
   border-radius: 28px;
   border: 1px solid rgba(45, 49, 45, 0.06);
   box-shadow: var(--shadow);
 }
 
-.article-image {
-  overflow: hidden;
+.journal-image {
+  border-radius: 0;
 }
 
-.article-image img {
-  width: 100%;
+.journal-image img {
   aspect-ratio: 4 / 3;
   object-fit: cover;
 }
 
-.article-body {
-  padding: 28px;
-  display: flex;
-  flex: 1;
-  flex-direction: column;
+.journal-card > p,
+.journal-card > h3,
+.journal-card > a:not(.journal-image) {
+  margin-left: 28px;
+  margin-right: 28px;
 }
 
-.article-meta {
-  margin-bottom: 16px;
-}
-
-.article-meta span {
+.journal-category {
   display: inline-block;
+  align-self: flex-start;
+  margin-top: 24px;
+  margin-bottom: 16px;
   padding: 6px 12px;
   color: var(--forest);
   background: var(--sage);
@@ -697,56 +640,51 @@ h2 {
   font-weight: 700;
 }
 
-.article-body h3 {
+.journal-card h3 {
   margin-bottom: 18px;
   font-size: 1.15rem;
   line-height: 1.65;
 }
 
-.article-body p {
+.journal-description {
   margin-bottom: 22px;
   color: var(--text-soft);
   font-size: 0.9rem;
 }
 
-.article-link {
+.journal-card .text-link {
   margin-top: auto;
-  color: var(--forest);
-  font-weight: 700;
+  margin-bottom: 28px;
 }
 
 
-/* =========================================================
-   FUTURE
-========================================================= */
+/* FUTURE */
 
 .section-future {
   background: #fbf9f4;
 }
 
-.future-box {
+.future-layout {
   max-width: 800px;
 }
 
-.future-box h2 {
+.future-copy h2 {
   margin-bottom: 30px;
   font-size: clamp(2.7rem, 5vw, 4.4rem);
   line-height: 1.25;
 }
 
-.future-box > p:not(.section-en) {
+.future-copy > p:not(.section-en) {
   color: var(--text-soft);
   line-height: 2;
 }
 
-.future-box .text-link {
+.future-copy .text-link {
   margin-top: 10px;
 }
 
 
-/* =========================================================
-   FOOTER
-========================================================= */
+/* FOOTER */
 
 .site-footer {
   padding: 72px 0 30px;
@@ -761,9 +699,15 @@ h2 {
 }
 
 .footer-brand strong {
-  display: block;
+  display: inline-block;
   font-family: Georgia, "Yu Mincho", serif;
   font-size: 1.7rem;
+}
+
+.footer-brand span {
+  margin-left: 8px;
+  color: rgba(255, 255, 255, 0.68);
+  font-size: 0.78rem;
 }
 
 .footer-brand p {
@@ -793,35 +737,25 @@ h2 {
 .copyright {
   margin: 0;
   padding-top: 24px;
-  border-top:
-    1px solid rgba(255, 255, 255, 0.1);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 
-/* =========================================================
-   TABLET
-========================================================= */
+/* TABLET */
 
 @media (max-width: 900px) {
 
   .global-nav {
     display: none;
-
     position: absolute;
-
     top: 78px;
     left: 18px;
     right: 18px;
-
     padding: 12px 18px;
-
     flex-direction: column;
     align-items: stretch;
-
     gap: 0;
-
     background: #fffdf8;
-
     border: 1px solid var(--line);
     border-radius: 22px;
     box-shadow: var(--shadow);
@@ -844,38 +778,22 @@ h2 {
     display: block;
   }
 
-  .hero-inner {
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      "content"
-      "buttons"
-      "visual";
-
-    gap: 30px;
-  }
-
-  .hero-buttons {
-    margin-top: 0;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .reflexology-content {
+  .brand-hero-inner,
+  .aroma-layout,
+  .reflexology-top,
+  .reflexology-layout,
+  .free-check-layout {
     grid-template-columns: 1fr;
   }
 
-  .article-grid {
+  .journal-grid-three {
     grid-template-columns: 1fr;
   }
 
 }
 
 
-/* =========================================================
-   MOBILE FINAL
-========================================================= */
+/* MOBILE */
 
 @media (max-width: 640px) {
 
@@ -884,62 +802,12 @@ h2 {
     overflow-x: hidden;
   }
 
-  .mobile-only {
-    display: block;
-  }
-
   .container {
     width: calc(100% - 30px);
-    margin-inline: auto;
   }
 
-
-  /* HEADER */
-
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-  }
-
-  .header-inner {
-    width: calc(100% - 30px);
-    min-height: 94px;
-    padding: 0;
-  }
-
-  .site-logo {
-    display: flex;
-    align-items: center;
-  }
-
-  .header-logo-image {
-    width: 180px;
-    max-width: 58vw;
-    height: auto;
-  }
-
-  .menu-button {
-    display: block;
-    width: 48px;
-    height: 48px;
-    padding: 7px;
-    flex-shrink: 0;
-  }
-
-  .menu-button span {
-    height: 2px;
-    margin: 7px 0;
-  }
-
-  .global-nav {
-    top: 84px;
-  }
-
-
-  /* COMMON */
-
-  .section {
+  .section,
+  .brand-section {
     padding: 66px 0;
   }
 
@@ -950,110 +818,86 @@ h2 {
     letter-spacing: 0.18em;
   }
 
-  .section-heading {
-    max-width: none;
-    margin-bottom: 32px;
-  }
-
-  .section-heading h2 {
-    margin-bottom: 18px;
-    font-size: 2.25rem;
-    line-height: 1.32;
-    letter-spacing: -0.035em;
-  }
-
-  .section-heading > p:last-child {
-    margin-bottom: 0;
-    font-size: 0.92rem;
-    line-height: 1.9;
-  }
-
   .button {
     min-height: 56px;
+    width: 100%;
     padding: 0 20px;
     font-size: 0.92rem;
   }
 
 
+  /* HEADER */
+
+  .header-inner {
+    width: calc(100% - 30px);
+    min-height: 94px;
+  }
+
+  .brand-logo-image {
+    width: 180px;
+    max-width: 58vw;
+  }
+
+  .menu-button {
+    display: block;
+    width: 48px;
+    height: 48px;
+    padding: 7px;
+    flex-shrink: 0;
+  }
+
+  .global-nav {
+    top: 84px;
+  }
+
+
   /* HERO */
 
-  .section-hero {
+  .brand-hero {
     padding: 30px 0 54px;
   }
 
-  .hero-inner {
+  .brand-hero-inner {
     width: calc(100% - 28px);
-    margin-inline: auto;
-
     padding: 34px 22px 24px;
-
-    display: grid;
     grid-template-columns: 1fr;
-    grid-template-areas:
-      "content"
-      "buttons"
-      "visual";
-
     gap: 26px;
-
     border-radius: 32px;
   }
 
-  .hero-content {
-    grid-area: content;
-  }
-
-  .hero-label {
+  .hero-kicker {
     margin-bottom: 20px;
     font-size: 0.65rem;
     line-height: 1.6;
     letter-spacing: 0.15em;
   }
 
-  .hero-content h1 {
+  .hero-copy h1 {
     margin-bottom: 24px;
-
     font-size: 2.65rem;
     line-height: 1.28;
-
     word-break: keep-all;
   }
 
-  .hero-description {
+  .hero-lead {
     max-width: none;
-    margin-bottom: 0;
-
+    margin-bottom: 24px;
     font-size: 0.92rem;
     line-height: 1.95;
   }
 
-  .hero-buttons {
-    grid-area: buttons;
-
-    margin-top: 0;
-
+  .hero-actions {
     display: flex;
     flex-direction: column;
-
     gap: 12px;
   }
 
-  .hero-buttons .button {
-    width: 100%;
-  }
-
-  .hero-visual {
-    grid-area: visual;
-
-    margin-top: 2px;
-
+  .hero-media {
     border-radius: 24px;
   }
 
-  .hero-visual img {
-    width: 100%;
+  .hero-media img {
     aspect-ratio: 16 / 10;
-    object-fit: cover;
   }
 
 
@@ -1063,126 +907,119 @@ h2 {
     padding: 72px 0;
   }
 
-  .intro-inner {
+  .about-layout {
     max-width: none;
   }
 
-  .intro-inner h2 {
+  .about-content h2 {
     margin-bottom: 26px;
-
     font-size: 2.35rem;
     line-height: 1.35;
-
     word-break: keep-all;
   }
 
-  .intro-inner > p:not(.section-en) {
+  .about-text p {
     margin-bottom: 22px;
-
     font-size: 0.93rem;
     line-height: 2;
-  }
-
-  .intro-inner .text-link {
-    margin-top: 4px;
   }
 
 
   /* FOOT CONCERNS */
 
-  .section-concerns {
+  .section-foot-care {
     padding: 66px 0;
   }
 
-  .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 18px;
+  .brand-section-head {
+    margin-bottom: 32px;
   }
 
-  .feature-card {
-    padding: 27px 25px;
+  .brand-section-title h2 {
+    margin-bottom: 18px;
+    font-size: 2.25rem;
+    line-height: 1.32;
+  }
+
+  .brand-section-description {
+    font-size: 0.92rem;
+    line-height: 1.9;
+  }
+
+  .concern-list {
     border-radius: 27px;
   }
 
-  .concern-title {
-    margin-bottom: 15px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .concern-row {
+    min-height: 0;
+    padding: 24px 22px;
+    grid-template-columns: 38px 1fr 24px;
+    gap: 10px;
+    align-items: start;
   }
 
-  .concern-number {
-    flex-shrink: 0;
+  .concern-row-number {
+    padding-top: 3px;
     font-size: 0.72rem;
     line-height: 1;
   }
 
-  .concern-title h3 {
-    margin: 0;
-    font-size: 1.22rem;
+  .concern-row-main {
+    display: block;
+  }
+
+  .concern-row-main strong {
+    display: block;
+    margin-bottom: 7px;
+    font-size: 1.12rem;
     line-height: 1.4;
   }
 
-  .feature-card p {
-    margin-bottom: 17px;
-    font-size: 0.9rem;
-    line-height: 1.8;
+  .concern-row-main small {
+    display: block;
+    font-size: 0.85rem;
+    line-height: 1.72;
   }
 
-  .feature-card > a {
-    font-size: 0.9rem;
+  .concern-arrow {
+    padding-top: 1px;
   }
 
 
   /* AROMA */
 
-  .section-aroma {
+  .section-aromatherapy {
     padding: 66px 0;
   }
 
-  .aroma-section-inner {
+  .aroma-layout {
     width: calc(100% - 30px);
     max-width: none;
-
     padding: 31px 22px 24px;
-
+    grid-template-columns: 1fr;
+    gap: 26px;
     border-radius: 30px;
   }
 
-  .split-content {
-    max-width: none;
-  }
-
-  .split-content h2 {
+  .aroma-copy h2 {
     margin-bottom: 24px;
-
     font-size: 2.35rem;
     line-height: 1.34;
-
     word-break: keep-all;
   }
 
-  .split-content > p:not(.section-en) {
+  .aroma-copy > p:not(.section-en) {
     margin-bottom: 20px;
-
     font-size: 0.92rem;
     line-height: 1.95;
   }
 
-  .aroma-panel {
-    margin-top: 27px;
+  .aroma-media {
     border-radius: 22px;
   }
 
-  .aroma-panel img {
-    width: 100%;
+  .aroma-media img {
     aspect-ratio: 4 / 3;
-    object-fit: cover;
-  }
-
-  .section-action {
-    margin-top: 20px;
   }
 
 
@@ -1192,147 +1029,95 @@ h2 {
     padding: 68px 0;
   }
 
-  .section-reflexology .section-heading {
-    margin-bottom: 30px;
+  .reflexology-top {
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 28px;
   }
 
-  .section-reflexology .section-heading h2 {
+  .reflexology-top h2 {
     font-size: 2.35rem;
     line-height: 1.35;
   }
 
-  .section-reflexology .section-heading > p:last-child {
+  .reflexology-intro {
     font-size: 0.92rem;
     line-height: 1.9;
   }
 
-  .reflexology-content {
-    display: grid;
+  .reflexology-layout {
     grid-template-columns: 1fr;
     gap: 28px;
   }
 
-  .reflexology-item {
+  .reflexology-row {
+    min-height: 0;
     padding: 18px 0;
+    grid-template-columns: 34px 1fr 24px;
+    gap: 10px;
   }
 
-  .reflexology-item-title {
-    margin-bottom: 7px;
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  .reflexology-row strong {
+    font-size: 1.08rem;
   }
 
-  .reflexology-item-title span {
-    flex-shrink: 0;
-    font-size: 0.7rem;
+  .reflexology-row small {
+    grid-column: 2;
+    font-size: 0.82rem;
+    line-height: 1.6;
   }
 
-  .reflexology-item-title h3 {
-    margin: 0;
-    font-size: 1.12rem;
-    line-height: 1.4;
+  .reflexology-row b {
+    grid-column: 3;
+    grid-row: 1 / span 2;
+    align-self: center;
   }
 
-  .reflexology-item p {
-    margin: 0;
-    padding-left: 36px;
-
-    font-size: 0.86rem;
-    line-height: 1.75;
-  }
-
-  .reflexology-image {
-    width: 100%;
+  .reflexology-media {
     border-radius: 22px;
   }
 
-  .reflexology-image img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
-  }
-
-  .section-action-light {
+  .section-bottom-link {
     margin-top: 26px;
-  }
-
-  .section-action-light .button {
-    width: 100%;
   }
 
 
   /* FREE CHECK */
 
-  .section-diagnosis {
+  .section-free-check {
     padding: 66px 0;
   }
 
-  .diagnosis-box {
-    width: 100%;
+  .free-check-layout {
+    width: calc(100% - 30px);
     max-width: none;
-    margin: 0;
-
+    margin-inline: auto;
     padding: 31px 22px 24px;
-
-    display: block;
-
+    grid-template-columns: 1fr;
+    gap: 26px;
     border-radius: 30px;
   }
 
-  .diagnosis-content {
-    width: 100%;
-    max-width: none;
-  }
-
-  .diagnosis-content h2 {
-    width: 100%;
-
+  .free-check-copy h2 {
     margin-bottom: 22px;
-
     font-size: 2.15rem;
     line-height: 1.38;
-
     word-break: keep-all;
     overflow-wrap: normal;
   }
 
-  .diagnosis-content > p:last-child {
-    width: 100%;
-    margin-bottom: 0;
-
+  .free-check-copy > p:not(.section-en) {
+    margin-bottom: 22px;
     font-size: 0.92rem;
     line-height: 1.95;
-
-    word-break: normal;
   }
 
-  .diagnosis-image {
-    width: 100%;
-    max-width: none;
-
-    margin: 28px 0 0;
-
+  .free-check-media {
     border-radius: 22px;
   }
 
-  .diagnosis-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-
+  .free-check-media img {
     aspect-ratio: 16 / 9;
-
-    object-fit: cover;
-  }
-
-  .diagnosis-action {
-    width: 100%;
-    margin-top: 22px;
-  }
-
-  .diagnosis-action .button {
-    width: 100%;
   }
 
 
@@ -1342,43 +1127,47 @@ h2 {
     padding: 66px 0;
   }
 
-  .article-grid {
-    display: grid;
+  .column-heading {
+    margin-bottom: 32px;
+  }
+
+  .column-heading h2 {
+    margin-bottom: 18px;
+    font-size: 2.25rem;
+    line-height: 1.32;
+  }
+
+  .column-heading > p {
+    font-size: 0.92rem;
+    line-height: 1.9;
+  }
+
+  .journal-grid-three {
     grid-template-columns: 1fr;
     gap: 22px;
   }
 
-  .article-card {
-    width: 100%;
+  .journal-card {
     border-radius: 27px;
   }
 
-  .article-image {
-    width: 100%;
+  .journal-card > p,
+  .journal-card > h3,
+  .journal-card > a:not(.journal-image) {
+    margin-left: 24px;
+    margin-right: 24px;
   }
 
-  .article-image img {
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    object-fit: cover;
+  .journal-category {
+    margin-top: 22px;
   }
 
-  .article-body {
-    padding: 24px 24px 26px;
-  }
-
-  .article-meta {
-    margin-bottom: 14px;
-  }
-
-  .article-body h3 {
-    margin-bottom: 16px;
+  .journal-card h3 {
     font-size: 1.1rem;
     line-height: 1.65;
   }
 
-  .article-body p {
-    margin-bottom: 19px;
+  .journal-description {
     font-size: 0.88rem;
     line-height: 1.8;
   }
@@ -1390,22 +1179,19 @@ h2 {
     padding: 70px 0;
   }
 
-  .future-box {
+  .future-layout {
     max-width: none;
   }
 
-  .future-box h2 {
+  .future-copy h2 {
     margin-bottom: 25px;
-
     font-size: 2.3rem;
     line-height: 1.36;
-
     word-break: keep-all;
   }
 
-  .future-box > p:not(.section-en) {
+  .future-copy > p:not(.section-en) {
     margin-bottom: 20px;
-
     font-size: 0.92rem;
     line-height: 1.95;
   }
@@ -1437,16 +1223,13 @@ h2 {
 
   .footer-nav {
     margin-bottom: 34px;
-
     display: flex;
     flex-direction: column;
-
     gap: 14px;
   }
 
   .footer-note {
     margin: 0 0 26px;
-
     font-size: 0.76rem;
     line-height: 1.85;
   }

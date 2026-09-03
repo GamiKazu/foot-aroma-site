@@ -1,51 +1,59 @@
 /* =========================================================
    Foot & Aroma by GOB
-   PREMIUM RESPONSIVE STYLE
+   FINAL RESPONSIVE STYLE
+   current index.html 専用
 ========================================================= */
 
 :root {
-  --bg: #faf7f0;
-  --bg-soft: #f7f3eb;
+  --cream: #faf7f0;
+  --cream-2: #f5f0e6;
   --beige: #eee7da;
-  --beige-soft: #f3ede3;
+  --beige-2: #e8dfd1;
 
   --sage: #e7eee4;
-  --sage-2: #edf3eb;
+  --sage-light: #f0f4ed;
 
   --green: #536851;
-  --green-dark: #2c3b30;
-  --green-deep: #243127;
+  --green-dark: #354535;
+  --green-deep: #263329;
 
-  --text: #2e322e;
-  --muted: #737b73;
+  --text: #2d322e;
+  --muted: #747b74;
 
   --white: #ffffff;
 
-  --line: rgba(46, 50, 46, 0.11);
-  --light-line: rgba(255, 255, 255, 0.17);
+  --line: rgba(45, 50, 46, 0.10);
+  --line-light: rgba(255, 255, 255, 0.18);
 
   --shadow:
-    0 20px 55px rgba(42, 52, 44, 0.07);
+    0 18px 55px rgba(45, 55, 47, 0.07);
 
   --container: 1160px;
 }
 
 
-/* RESET */
+/* =========================================================
+   RESET
+========================================================= */
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
 html {
+  width: 100%;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
+  width: 100%;
   margin: 0;
+  overflow-x: hidden;
 
-  background: var(--bg);
-
+  background: var(--cream);
   color: var(--text);
 
   font-family:
@@ -57,22 +65,19 @@ body {
     Meiryo,
     sans-serif;
 
-  line-height: 1.8;
+  line-height: 1.85;
 
   -webkit-font-smoothing: antialiased;
 }
 
 img {
   display: block;
-
-  width: 100%;
-
+  max-width: 100%;
   height: auto;
 }
 
 a {
   color: inherit;
-
   text-decoration: none;
 }
 
@@ -96,88 +101,84 @@ h2 {
     serif;
 
   font-weight: 500;
-
   letter-spacing: -0.035em;
 }
 
 
-.container {
-  width:
-    min(
-      var(--container),
-      calc(100% - 56px)
-    );
+/* =========================================================
+   COMMON LAYOUT
+========================================================= */
 
+.container {
+  width: min(var(--container), calc(100% - 56px));
   margin-inline: auto;
 }
 
-
-.narrow-container {
-  max-width: 820px;
+.content-narrow {
+  width: min(820px, calc(100% - 56px));
+  margin-inline: auto;
 }
-
 
 .section {
-  padding: 104px 0;
+  padding: 100px 0;
 }
 
 
-/* TYPOGRAPHY */
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
 
-.section-label {
-  margin-bottom: 16px;
+.section-label,
+.eyebrow {
+  margin-bottom: 15px;
 
-  color: #70866e;
+  color: #71866f;
 
   font-size: 0.72rem;
-
   font-weight: 800;
 
-  letter-spacing: 0.22em;
+  letter-spacing: 0.20em;
 }
-
 
 .section-title {
   margin-bottom: 24px;
 
-  font-size:
-    clamp(
-      2.7rem,
-      5vw,
-      4.6rem
-    );
+  font-size: clamp(2.65rem, 4.6vw, 4.5rem);
 
-  line-height: 1.22;
+  line-height: 1.24;
 }
 
+.section-header {
+  margin-bottom: 46px;
 
-.section-description {
-  max-width: 430px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
 
-  margin: 0;
+  gap: 60px;
+}
+
+.section-subcopy {
+  width: 100%;
+  max-width: 390px;
+
+  margin: 0 0 8px;
 
   color: var(--muted);
 
   line-height: 1.95;
 }
 
+.long-copy p {
+  margin-bottom: 22px;
 
-.section-head {
-  margin-bottom: 46px;
+  color: var(--muted);
 
-  display: flex;
-
-  align-items: end;
-
-  justify-content: space-between;
-
-  gap: 60px;
+  line-height: 2;
 }
-
 
 .text-link {
   display: inline-flex;
-
   align-items: center;
 
   gap: 8px;
@@ -187,18 +188,18 @@ h2 {
   font-weight: 700;
 }
 
-
 .text-link span {
   transition: transform 0.2s ease;
 }
-
 
 .text-link:hover span {
   transform: translateX(4px);
 }
 
 
-/* BUTTON */
+/* =========================================================
+   BUTTONS
+========================================================= */
 
 .button {
   min-height: 56px;
@@ -206,15 +207,12 @@ h2 {
   padding: 0 30px;
 
   display: inline-flex;
-
-  align-items: center;
-
   justify-content: center;
+  align-items: center;
 
   border-radius: 999px;
 
   font-size: 0.92rem;
-
   font-weight: 700;
 
   transition:
@@ -222,63 +220,65 @@ h2 {
     opacity 0.2s ease;
 }
 
-
 .button:hover {
   transform: translateY(-2px);
 }
 
-
 .button-primary {
-  color: #fff;
-
+  color: white;
   background: var(--green);
 }
-
 
 .button-secondary {
   color: var(--text);
 
-  background: #fff;
+  background: rgba(255, 255, 255, 0.94);
 
   border: 1px solid var(--line);
 }
 
-
 .button-light {
   color: var(--green-dark);
 
-  background: #f6f5ef;
+  background: #f7f5ef;
 }
 
 
-/* IMAGE LINKS */
+/* =========================================================
+   CLICKABLE IMAGES
+========================================================= */
 
-.image-link {
+.clickable-image {
   display: block;
 
   overflow: hidden;
 }
 
+.clickable-image img {
+  width: 100%;
 
-.image-link img {
   transition:
-    transform 0.4s ease,
-    opacity 0.4s ease;
+    transform 0.35s ease,
+    opacity 0.35s ease;
 }
-
 
 @media (hover: hover) {
 
-  .image-link:hover img {
+  .clickable-image:hover img {
     transform: scale(1.025);
-
     opacity: 0.96;
   }
 
 }
 
+.clickable-image:active img {
+  transform: scale(0.99);
+}
 
-/* HEADER */
+
+/* =========================================================
+   HEADER
+========================================================= */
 
 .site-header {
   position: sticky;
@@ -287,212 +287,182 @@ h2 {
 
   z-index: 1000;
 
-  background:
-    rgba(
-      250,
-      247,
-      240,
-      0.95
-    );
+  width: 100%;
+
+  background: rgba(250, 247, 240, 0.96);
 
   backdrop-filter: blur(15px);
 
-  border-bottom:
-    1px solid var(--line);
+  border-bottom: 1px solid var(--line);
 }
 
-
 .header-inner {
-  width:
-    min(
-      1200px,
-      calc(100% - 48px)
-    );
+  position: relative;
 
-  min-height: 90px;
+  width: min(1200px, calc(100% - 48px));
+
+  min-height: 92px;
 
   margin-inline: auto;
 
   display: flex;
-
   align-items: center;
-
   justify-content: space-between;
 
   gap: 36px;
 }
 
 
+/* ロゴ暴走防止 */
+
 .site-logo {
-  flex-shrink: 0;
-}
-
-
-.site-logo img {
-  width: 185px;
-
-  height: auto;
-}
-
-
-.global-nav {
   display: flex;
-
   align-items: center;
 
-  gap: 28px;
+  width: 190px;
+  max-width: 190px;
 
-  font-size: 0.82rem;
+  flex: 0 0 190px;
 
+  overflow: hidden;
+}
+
+.site-logo img {
+  display: block;
+
+  width: 190px !important;
+  max-width: 190px !important;
+
+  height: 58px !important;
+  max-height: 58px !important;
+
+  object-fit: contain;
+  object-position: left center;
+}
+
+
+/* PCナビ */
+
+.desktop-nav {
+  display: flex;
+  align-items: center;
+
+  gap: 29px;
+
+  font-size: 0.81rem;
   font-weight: 700;
 }
 
+.desktop-nav a {
+  position: relative;
 
-.global-nav a {
   padding: 10px 0;
 }
 
+.desktop-nav a::after {
+  content: "";
 
-.menu-button {
-  display: none;
+  position: absolute;
 
-  width: 48px;
+  left: 0;
+  bottom: 4px;
 
-  height: 48px;
+  width: 0;
+  height: 1px;
 
-  padding: 8px;
+  background: var(--green);
 
-  border: 0;
-
-  background: transparent;
-
-  cursor: pointer;
+  transition: width 0.2s ease;
 }
 
-
-.menu-button span {
-  display: block;
-
+.desktop-nav a:hover::after {
   width: 100%;
-
-  height: 2px;
-
-  margin: 7px 0;
-
-  background: var(--text);
 }
 
 
-/* HERO */
+/* モバイルナビはPCで隠す */
 
-.hero {
-  padding: 54px 0 78px;
+.menu-button,
+.mobile-nav {
+  display: none;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero-section {
+  padding: 52px 0 78px;
 
   background:
     linear-gradient(
       180deg,
       #faf7ef 0%,
-      #f1ebdf 100%
+      #f0eadf 100%
     );
 }
 
-
-.hero-shell {
-  width:
-    min(
-      1200px,
-      calc(100% - 48px)
-    );
+.hero-card {
+  width: min(1200px, calc(100% - 48px));
 
   margin-inline: auto;
 
-  padding: 56px;
+  padding: 54px;
 
   display: grid;
 
   grid-template-columns:
-    minmax(0, 0.92fr)
-    minmax(0, 1.08fr);
+    minmax(0, 0.94fr)
+    minmax(0, 1.06fr);
 
-  gap: 60px;
+  gap: 58px;
 
   align-items: center;
 
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.75
-    );
+  background: rgba(255, 255, 255, 0.78);
 
-  border:
-    1px solid rgba(
-      46,
-      50,
-      46,
-      0.08
-    );
+  border: 1px solid rgba(45, 50, 46, 0.07);
 
-  border-radius: 42px;
+  border-radius: 40px;
 
   box-shadow: var(--shadow);
 }
-
 
 .hero-copy {
   min-width: 0;
 }
 
-
 .eyebrow {
-  margin-bottom: 23px;
-
-  color: var(--green);
-
-  font-size: 0.72rem;
-
-  font-weight: 800;
-
-  letter-spacing: 0.18em;
+  margin-bottom: 22px;
 }
 
+.hero-copy h1 {
+  margin-bottom: 28px;
 
-.hero h1 {
-  margin-bottom: 30px;
+  font-size: clamp(3rem, 5vw, 5.15rem);
 
-  font-size:
-    clamp(
-      3rem,
-      5vw,
-      5.25rem
-    );
-
-  line-height: 1.14;
+  line-height: 1.15;
 }
-
 
 .hero-description {
-  max-width: 520px;
+  max-width: 510px;
 
-  margin-bottom: 32px;
+  margin-bottom: 30px;
 
   color: var(--muted);
 
   line-height: 2;
 }
 
-
-.hero-actions {
+.hero-buttons {
   display: flex;
-
   flex-wrap: wrap;
 
-  gap: 13px;
+  gap: 12px;
 }
 
-
-.hero-visual {
+.hero-image-wrap {
   min-width: 0;
 
   overflow: hidden;
@@ -500,168 +470,127 @@ h2 {
   border-radius: 28px;
 }
 
-
-.hero-visual img {
+.hero-image-wrap img {
   width: 100%;
 
-  aspect-ratio: 4 / 4.35;
+  aspect-ratio: 4 / 4.25;
 
   object-fit: cover;
 }
 
 
-/* ABOUT */
+/* =========================================================
+   ABOUT
+========================================================= */
 
 .about-section {
   background: #fbf9f4;
 }
 
 
-.about-copy p {
-  margin-bottom: 22px;
-
-  color: var(--muted);
-
-  line-height: 2;
-}
-
-
-/* CONCERNS */
+/* =========================================================
+   FOOT CONCERNS
+========================================================= */
 
 .concerns-section {
   background: var(--beige);
 }
 
-
-.concern-grid {
+.concerns-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(
-      2,
-      minmax(0, 1fr)
-    );
+    repeat(2, minmax(0, 1fr));
 
   gap: 22px;
 }
 
-
 .concern-card {
-  min-height: 250px;
+  min-height: 240px;
 
-  padding: 32px;
+  padding: 31px;
 
   display: flex;
-
   flex-direction: column;
 
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.92
-    );
+  background: rgba(255, 255, 255, 0.92);
 
-  border-radius: 28px;
+  border: 1px solid rgba(45, 50, 46, 0.05);
 
-  border:
-    1px solid rgba(
-      46,
-      50,
-      46,
-      0.05
-    );
+  border-radius: 27px;
 
   box-shadow:
-    0 10px 30px
-    rgba(
-      45,
-      52,
-      46,
-      0.03
-    );
+    0 10px 30px rgba(45, 55, 47, 0.03);
 
   transition:
     transform 0.25s ease,
     box-shadow 0.25s ease;
 }
 
-
 .concern-card:hover {
   transform: translateY(-3px);
 
   box-shadow:
-    0 18px 35px
-    rgba(
-      45,
-      52,
-      46,
-      0.07
-    );
+    0 18px 38px rgba(45, 55, 47, 0.07);
 }
 
-
-.concern-heading {
-  margin-bottom: 18px;
+.concern-card-title {
+  margin-bottom: 17px;
 
   display: flex;
-
   align-items: center;
 
-  gap: 14px;
+  gap: 12px;
 }
 
-
-.concern-heading span {
+.concern-card-title span {
   flex-shrink: 0;
 
   color: #789076;
 
-  font-size: 0.74rem;
-
+  font-size: 0.72rem;
   font-weight: 800;
 
   letter-spacing: 0.14em;
 }
 
-
-.concern-heading h3 {
+.concern-card-title h3 {
   margin: 0;
 
-  font-size: 1.28rem;
+  font-size: 1.24rem;
 }
-
 
 .concern-card p {
-  margin-bottom: 22px;
+  margin-bottom: 20px;
 
   color: var(--muted);
+
+  line-height: 1.85;
 }
 
-
-.card-link {
+.concern-card strong {
   margin-top: auto;
 
   color: var(--green);
 
-  font-weight: 700;
+  font-size: 0.9rem;
 }
 
 
-/* AROMA */
+/* =========================================================
+   AROMA
+========================================================= */
 
 .aroma-section {
   background:
     linear-gradient(
       180deg,
       #f8f5ee,
-      #edf2ea
+      #edf2e9
     );
 }
 
-
-.editorial-card {
+.editorial-panel {
   padding: 52px;
 
   display: grid;
@@ -670,101 +599,85 @@ h2 {
     minmax(0, 0.9fr)
     minmax(0, 1.1fr);
 
-  gap: 52px;
+  gap: 50px;
 
   align-items: center;
 
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.75
-    );
+  background: rgba(255, 255, 255, 0.76);
 
-  border:
-    1px solid rgba(
-      46,
-      50,
-      46,
-      0.07
-    );
+  border: 1px solid var(--line);
 
-  border-radius: 38px;
+  border-radius: 37px;
 
   box-shadow: var(--shadow);
 }
 
+.editorial-copy {
+  min-width: 0;
+}
 
-.editorial-copy p {
+.editorial-copy p:not(.section-label) {
+  margin-bottom: 20px;
+
   color: var(--muted);
 
   line-height: 2;
 }
 
-
 .editorial-image {
   border-radius: 26px;
 }
 
-
 .editorial-image img {
+  width: 100%;
+
   aspect-ratio: 4 / 3;
 
   object-fit: cover;
 }
 
 
-/* REFLEXOLOGY */
+/* =========================================================
+   REFLEXOLOGY
+========================================================= */
 
 .reflexology-section {
-  color: #fff;
+  color: white;
 
   background: var(--green);
 }
 
-
-.section-label-light {
-  color: #c5d1c5;
+.light-label {
+  color: #c6d2c6;
 }
-
 
 .light-title {
-  color: #fff;
+  color: white;
 }
 
-
-.reflexology-header {
-  margin-bottom: 42px;
+.reflexology-heading {
+  margin-bottom: 40px;
 
   display: grid;
 
   grid-template-columns:
     minmax(0, 1fr)
-    minmax(0, 0.8fr);
+    minmax(0, 0.82fr);
 
   gap: 50px;
 
   align-items: end;
 }
 
-
-.reflexology-description {
+.reflexology-heading > p {
   margin: 0;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.74
-    );
+  color: rgba(255, 255, 255, 0.74);
 
   line-height: 1.95;
 }
 
-
-.reflexology-layout {
+.reflexology-content {
   display: grid;
 
   grid-template-columns:
@@ -776,96 +689,77 @@ h2 {
   align-items: center;
 }
 
-
 .reflexology-list {
-  border-top:
-    1px solid var(--light-line);
+  border-top: 1px solid var(--line-light);
 }
 
+.reflexology-item {
+  min-height: 100px;
 
-.reflexology-row {
-  min-height: 105px;
-
-  padding: 19px 0;
+  padding: 18px 0;
 
   display: grid;
 
   grid-template-columns:
-    44px
+    42px
     minmax(0, 1fr)
-    30px;
+    24px;
 
-  gap: 14px;
+  gap: 13px;
 
   align-items: center;
 
-  border-bottom:
-    1px solid var(--light-line);
+  border-bottom: 1px solid var(--line-light);
 }
 
+.item-number {
+  color: #c5d1c6;
 
-.reflexology-number {
-  color: #c4d0c5;
-
-  font-size: 0.72rem;
+  font-size: 0.7rem;
 }
 
+.reflexology-item h3 {
+  margin-bottom: 4px;
 
-.reflexology-row h3 {
-  margin-bottom: 5px;
-
-  font-size: 1.15rem;
+  font-size: 1.12rem;
 }
 
-
-.reflexology-row p {
+.reflexology-item p {
   margin: 0;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.7
-    );
+  color: rgba(255, 255, 255, 0.7);
 
-  font-size: 0.88rem;
+  font-size: 0.87rem;
 
   line-height: 1.7;
 }
 
-
-.reflexology-arrow {
+.item-arrow {
   text-align: right;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.75
-    );
+  color: rgba(255, 255, 255, 0.76);
 }
-
 
 .reflexology-image {
-  border-radius: 28px;
+  border-radius: 27px;
 }
 
-
 .reflexology-image img {
+  width: 100%;
+
   aspect-ratio: 4 / 3;
 
   object-fit: cover;
 }
 
-
-.reflexology-action {
-  margin-top: 34px;
+.reflexology-button {
+  margin-top: 31px;
 }
 
 
-/* DIAGNOSIS */
+/* =========================================================
+   DIAGNOSIS
+========================================================= */
 
 .diagnosis-section {
   background:
@@ -876,49 +770,36 @@ h2 {
     );
 }
 
-
-.diagnosis-card {
+.diagnosis-panel {
+  width: 100%;
   max-width: 980px;
 
   margin-inline: auto;
 
-  padding: 52px;
+  padding: 50px;
 
   display: grid;
 
   grid-template-columns:
-    minmax(0, 0.9fr)
-    minmax(0, 1.1fr);
+    minmax(0, 0.94fr)
+    minmax(0, 1.06fr);
 
   grid-template-areas:
     "copy image"
-    "action image";
+    "button image";
 
-  column-gap: 48px;
+  column-gap: 46px;
 
   align-items: center;
 
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.84
-    );
+  background: rgba(255, 255, 255, 0.84);
 
-  border-radius: 38px;
+  border: 1px solid var(--line);
 
-  border:
-    1px solid rgba(
-      46,
-      50,
-      46,
-      0.07
-    );
+  border-radius: 37px;
 
   box-shadow: var(--shadow);
 }
-
 
 .diagnosis-copy {
   grid-area: copy;
@@ -926,23 +807,17 @@ h2 {
   min-width: 0;
 }
 
-
-.diagnosis-title {
-  font-size:
-    clamp(
-      2.4rem,
-      4vw,
-      4rem
-    );
+.diagnosis-copy .section-title {
+  font-size: clamp(2.3rem, 4vw, 3.75rem);
 }
 
-
 .diagnosis-copy > p:last-child {
+  margin-bottom: 0;
+
   color: var(--muted);
 
   line-height: 2;
 }
-
 
 .diagnosis-image {
   grid-area: image;
@@ -950,78 +825,76 @@ h2 {
   border-radius: 26px;
 }
 
-
 .diagnosis-image img {
+  width: 100%;
+
   aspect-ratio: 16 / 10;
 
   object-fit: cover;
 }
 
+.diagnosis-button-wrap {
+  grid-area: button;
 
-.diagnosis-action {
-  grid-area: action;
-
-  margin-top: 26px;
+  margin-top: 24px;
 }
 
 
-/* COLUMN */
+/* =========================================================
+   COLUMN
+========================================================= */
 
 .column-section {
   background: var(--beige);
 }
 
-
 .column-grid {
   display: grid;
 
   grid-template-columns:
-    repeat(
-      3,
-      minmax(0, 1fr)
-    );
+    repeat(3, minmax(0, 1fr));
 
   gap: 24px;
 }
-
 
 .column-card {
   overflow: hidden;
 
   display: flex;
-
   flex-direction: column;
 
-  background: #fff;
+  background: white;
 
-  border-radius: 28px;
+  border-radius: 27px;
 
   box-shadow: var(--shadow);
 }
 
+.column-image {
+  overflow: hidden;
+}
 
 .column-image img {
+  width: 100%;
+
   aspect-ratio: 4 / 3;
 
   object-fit: cover;
 }
 
-
 .column-body {
-  padding: 26px;
+  padding: 25px;
 
   display: flex;
-
   flex: 1;
 
   flex-direction: column;
 }
 
-
 .category-badge {
   align-self: flex-start;
 
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
   padding: 6px 12px;
 
@@ -1032,71 +905,66 @@ h2 {
   border-radius: 999px;
 
   font-size: 0.7rem;
-
   font-weight: 700;
 }
 
-
 .column-body h3 {
-  margin-bottom: 16px;
+  margin-bottom: 15px;
 
-  font-size: 1.14rem;
+  font-size: 1.13rem;
 
   line-height: 1.65;
 }
 
-
 .column-body p {
-  margin-bottom: 21px;
+  margin-bottom: 20px;
 
   color: var(--muted);
 
-  font-size: 0.9rem;
+  font-size: 0.89rem;
 
   line-height: 1.8;
 }
-
 
 .column-body .text-link {
   margin-top: auto;
 }
 
 
-/* FUTURE */
+/* =========================================================
+   FUTURE
+========================================================= */
 
 .future-section {
   background: #fbf9f4;
 }
 
 
-.future-section p:not(.section-label) {
-  color: var(--muted);
-
-  line-height: 2;
-}
-
-
-/* FOOTER */
+/* =========================================================
+   FOOTER
+========================================================= */
 
 .site-footer {
-  padding: 70px 0 30px;
+  padding: 68px 0 30px;
 
-  color: #fff;
+  color: white;
 
   background: var(--green-deep);
 }
 
+.footer-inner {
+  width: min(var(--container), calc(100% - 56px));
 
-.footer-grid {
+  margin-inline: auto;
+
   display: grid;
 
   grid-template-columns:
     minmax(0, 1fr)
     auto;
 
-  gap: 36px;
+  gap: 35px;
 }
-
 
 .footer-brand strong {
   display: inline-block;
@@ -1109,61 +977,37 @@ h2 {
   font-size: 1.7rem;
 }
 
-
 .footer-brand span {
   margin-left: 8px;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.6
-    );
+  color: rgba(255, 255, 255, 0.6);
 
   font-size: 0.75rem;
 }
 
-
 .footer-brand p {
-  margin-top: 8px;
+  margin: 8px 0 0;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.65
-    );
+  color: rgba(255, 255, 255, 0.65);
 }
-
 
 .footer-nav {
   display: flex;
-
   flex-wrap: wrap;
 
-  gap: 15px 22px;
+  gap: 14px 22px;
 
   font-size: 0.8rem;
 }
-
 
 .footer-note,
 .copyright {
   grid-column: 1 / -1;
 
-  color:
-    rgba(
-      255,
-      255,
-      255,
-      0.6
-    );
+  color: rgba(255, 255, 255, 0.6);
 
-  font-size: 0.78rem;
+  font-size: 0.77rem;
 }
-
 
 .footer-note {
   max-width: 720px;
@@ -1171,95 +1015,111 @@ h2 {
   margin: 18px 0 0;
 }
 
-
 .copyright {
   margin: 0;
 
-  padding-top: 24px;
+  padding-top: 23px;
 
   border-top:
-    1px solid
-    rgba(
-      255,
-      255,
-      255,
-      0.1
-    );
+    1px solid rgba(255, 255, 255, 0.1);
 }
 
 
-/* TABLET */
+/* =========================================================
+   TABLET
+========================================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 960px) {
 
-  .global-nav {
+  .desktop-nav {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+
+    width: 46px;
+    height: 46px;
+
+    padding: 7px;
+
+    flex-shrink: 0;
+
+    border: 0;
+
+    background: transparent;
+
+    cursor: pointer;
+  }
+
+  .menu-button span {
+    display: block;
+
+    width: 100%;
+    height: 2px;
+
+    margin: 7px 0;
+
+    background: var(--text);
+  }
+
+  .mobile-nav {
     display: none;
 
     position: absolute;
 
     top: 80px;
-    left: 18px;
-    right: 18px;
+    left: 0;
+    right: 0;
 
-    padding: 12px 18px;
+    padding: 10px 18px;
 
     flex-direction: column;
 
-    align-items: stretch;
-
-    gap: 0;
-
     background: #fffdf8;
 
-    border-radius: 22px;
+    border: 1px solid var(--line);
+
+    border-radius: 20px;
 
     box-shadow: var(--shadow);
   }
 
-
-  .global-nav.is-open {
+  .mobile-nav.is-open {
     display: flex;
   }
 
-
-  .global-nav a {
+  .mobile-nav a {
     padding: 14px 4px;
 
-    border-bottom:
-      1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+
+    font-size: 0.9rem;
+    font-weight: 700;
   }
 
-
-  .global-nav a:last-child {
+  .mobile-nav a:last-child {
     border-bottom: 0;
   }
 
-
-  .menu-button {
-    display: block;
-  }
-
-
-  .hero-shell {
+  .hero-card {
     grid-template-columns: 1fr;
   }
 
-
-  .editorial-card,
-  .reflexology-header,
-  .reflexology-layout,
-  .diagnosis-card {
+  .editorial-panel,
+  .reflexology-heading,
+  .reflexology-content {
     grid-template-columns: 1fr;
   }
 
+  .diagnosis-panel {
+    grid-template-columns: 1fr;
 
-  .diagnosis-card {
     grid-template-areas:
       "copy"
       "image"
-      "action";
+      "button";
   }
-
 
   .column-grid {
     grid-template-columns: 1fr;
@@ -1272,26 +1132,18 @@ h2 {
    MOBILE
 ========================================================= */
 
-@media (max-width: 640px) {
-
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
+@media (max-width: 680px) {
 
   .container {
     width: calc(100% - 30px);
   }
 
-
-  .section {
-    padding: 68px 0;
+  .content-narrow {
+    width: calc(100% - 42px);
   }
 
-
-  .mobile-break {
-    display: block;
+  .section {
+    padding: 66px 0;
   }
 
 
@@ -1300,173 +1152,152 @@ h2 {
   .header-inner {
     width: calc(100% - 30px);
 
-    min-height: 92px;
+    min-height: 90px;
+
+    gap: 16px;
   }
 
+  .site-logo {
+    width: 178px;
+    max-width: 58vw;
+
+    flex: 0 1 178px;
+  }
 
   .site-logo img {
-    width: 180px;
+    width: 178px !important;
+    max-width: 58vw !important;
 
-    max-width: 58vw;
+    height: 48px !important;
+    max-height: 48px !important;
+
+    object-fit: contain;
+    object-position: left center;
   }
 
-
-  .menu-button {
-    width: 46px;
-
-    height: 46px;
-
-    flex-shrink: 0;
-  }
-
-
-  .global-nav {
-    top: 83px;
+  .mobile-nav {
+    top: 80px;
   }
 
 
   /* TYPOGRAPHY */
 
-  .section-label {
-    margin-bottom: 13px;
+  .section-label,
+  .eyebrow {
+    margin-bottom: 12px;
 
-    font-size: 0.68rem;
+    font-size: 0.67rem;
 
-    line-height: 1.4;
+    line-height: 1.45;
 
-    letter-spacing: 0.18em;
+    letter-spacing: 0.17em;
   }
-
 
   .section-title {
     margin-bottom: 20px;
 
-    font-size: 2.22rem;
+    font-size: 2.15rem;
 
     line-height: 1.34;
 
     word-break: normal;
-
-    overflow-wrap: break-word;
   }
 
-
-  .section-head {
+  .section-header {
     margin-bottom: 30px;
 
     display: block;
   }
 
-
-  .section-description {
-    margin-top: 16px;
-
+  .section-subcopy {
     max-width: none;
 
-    font-size: 0.91rem;
+    margin-top: 15px;
+
+    font-size: 0.9rem;
 
     line-height: 1.9;
+  }
+
+  .button {
+    width: 100%;
+
+    min-height: 55px;
+
+    padding: 0 18px;
   }
 
 
   /* HERO */
 
-  .hero {
-    padding: 30px 0 54px;
+  .hero-section {
+    padding: 28px 0 52px;
   }
 
-
-  .hero-shell {
+  .hero-card {
     width: calc(100% - 28px);
 
     max-width: calc(100% - 28px);
 
-    padding: 32px 22px 22px;
+    padding: 30px 20px 21px;
 
     display: flex;
-
     flex-direction: column;
 
-    gap: 24px;
+    gap: 23px;
 
     overflow: hidden;
 
-    border-radius: 30px;
+    border-radius: 29px;
   }
 
-
   .hero-copy,
-  .hero-actions,
-  .hero-visual {
+  .hero-buttons,
+  .hero-image-wrap {
     width: 100%;
-
     max-width: 100%;
 
     min-width: 0;
   }
 
-
-  .eyebrow {
-    margin-bottom: 19px;
-
-    font-size: 0.62rem;
-
-    line-height: 1.6;
-
-    letter-spacing: 0.14em;
-  }
-
-
-  .hero h1 {
+  .hero-copy h1 {
     width: 100%;
 
-    margin-bottom: 22px;
+    margin-bottom: 21px;
 
-    font-size: 2.35rem;
+    font-size: 2.18rem;
 
-    line-height: 1.32;
+    line-height: 1.35;
 
     word-break: normal;
-
     overflow-wrap: break-word;
   }
-
 
   .hero-description {
     width: 100%;
 
-    margin-bottom: 24px;
+    max-width: none;
 
-    font-size: 0.91rem;
+    margin-bottom: 23px;
+
+    font-size: 0.9rem;
 
     line-height: 1.95;
-
-    white-space: normal;
   }
 
-
-  .hero-actions {
+  .hero-buttons {
     display: flex;
 
     flex-direction: column;
 
-    gap: 11px;
+    gap: 10px;
   }
 
-
-  .hero-actions .button {
-    width: 100%;
+  .hero-image-wrap {
+    border-radius: 21px;
   }
 
-
-  .hero-visual {
-    order: 2;
-
-    border-radius: 22px;
-  }
-
-
-  .hero-visual img {
+  .hero-image-wrap img {
     width: 100%;
 
     aspect-ratio: 16 / 10;
@@ -1477,10 +1308,10 @@ h2 {
 
   /* ABOUT */
 
-  .about-copy p {
-    margin-bottom: 20px;
+  .long-copy p {
+    margin-bottom: 19px;
 
-    font-size: 0.92rem;
+    font-size: 0.9rem;
 
     line-height: 1.95;
   }
@@ -1488,198 +1319,170 @@ h2 {
 
   /* CONCERNS */
 
-  .concern-grid {
+  .concerns-grid {
     grid-template-columns: 1fr;
 
-    gap: 17px;
+    gap: 16px;
   }
-
 
   .concern-card {
     min-height: 0;
 
-    padding: 24px 22px;
+    padding: 22px 20px;
 
-    border-radius: 25px;
+    border-radius: 24px;
   }
 
+  .concern-card-title {
+    margin-bottom: 12px;
 
-  .concern-heading {
-    margin-bottom: 13px;
-
-    gap: 11px;
+    gap: 10px;
   }
 
-
-  .concern-heading span {
-    font-size: 0.7rem;
+  .concern-card-title span {
+    font-size: 0.68rem;
   }
 
-
-  .concern-heading h3 {
-    font-size: 1.15rem;
+  .concern-card-title h3 {
+    font-size: 1.1rem;
 
     line-height: 1.4;
   }
 
-
   .concern-card p {
-    margin-bottom: 15px;
+    margin-bottom: 14px;
 
-    font-size: 0.88rem;
+    font-size: 0.86rem;
 
     line-height: 1.78;
   }
 
 
-  .card-link {
-    font-size: 0.89rem;
-  }
-
-
   /* AROMA */
 
-  .editorial-card {
-    width: 100%;
-
-    padding: 30px 21px 22px;
+  .editorial-panel {
+    padding: 28px 20px 21px;
 
     display: flex;
 
     flex-direction: column;
 
-    gap: 24px;
+    gap: 23px;
 
-    border-radius: 29px;
+    border-radius: 28px;
   }
 
+  .editorial-copy p:not(.section-label) {
+    margin-bottom: 17px;
 
-  .editorial-copy {
-    width: 100%;
-  }
-
-
-  .editorial-copy p {
-    margin-bottom: 18px;
-
-    font-size: 0.91rem;
+    font-size: 0.89rem;
 
     line-height: 1.95;
   }
 
-
   .editorial-image {
     width: 100%;
 
-    border-radius: 21px;
+    border-radius: 20px;
   }
 
-
   .editorial-image img {
+    width: 100%;
+
     aspect-ratio: 4 / 3;
+
+    object-fit: cover;
   }
 
 
   /* REFLEXOLOGY */
 
-  .reflexology-header {
-    margin-bottom: 28px;
+  .reflexology-heading {
+    margin-bottom: 27px;
 
     display: block;
   }
 
+  .reflexology-heading > p {
+    margin-top: 15px;
 
-  .reflexology-description {
-    margin-top: 18px;
-
-    font-size: 0.91rem;
+    font-size: 0.89rem;
 
     line-height: 1.9;
   }
 
-
-  .reflexology-layout {
+  .reflexology-content {
     display: flex;
 
     flex-direction: column;
 
-    gap: 26px;
+    gap: 25px;
   }
-
 
   .reflexology-list {
     width: 100%;
   }
 
-
-  .reflexology-row {
+  .reflexology-item {
     min-height: 0;
 
-    padding: 17px 0;
+    padding: 16px 0;
 
     grid-template-columns:
-      32px
+      31px
       minmax(0, 1fr)
-      22px;
+      20px;
 
-    gap: 10px;
+    gap: 9px;
   }
 
-
-  .reflexology-number {
-    font-size: 0.68rem;
+  .item-number {
+    font-size: 0.66rem;
   }
 
+  .reflexology-item h3 {
+    margin-bottom: 3px;
 
-  .reflexology-row h3 {
-    margin-bottom: 4px;
-
-    font-size: 1.06rem;
+    font-size: 1.03rem;
   }
 
+  .reflexology-item p {
+    font-size: 0.8rem;
 
-  .reflexology-row p {
-    font-size: 0.82rem;
-
-    line-height: 1.62;
+    line-height: 1.6;
   }
-
 
   .reflexology-image {
     width: 100%;
 
-    border-radius: 21px;
+    border-radius: 20px;
   }
 
-
-  .reflexology-action {
-    margin-top: 24px;
-  }
-
-
-  .reflexology-action .button {
+  .reflexology-image img {
     width: 100%;
+  }
+
+  .reflexology-button {
+    width: 100%;
+
+    margin-top: 22px;
   }
 
 
   /* DIAGNOSIS */
 
-  .diagnosis-card {
+  .diagnosis-panel {
     width: 100%;
 
     max-width: none;
 
-    padding: 30px 21px 22px;
+    padding: 28px 20px 21px;
 
     display: flex;
-
     flex-direction: column;
 
-    gap: 0;
-
-    border-radius: 29px;
+    border-radius: 28px;
   }
-
 
   .diagnosis-copy {
     width: 100%;
@@ -1687,60 +1490,49 @@ h2 {
     order: 1;
   }
 
-
-  .diagnosis-title {
+  .diagnosis-copy .section-title {
     width: 100%;
 
-    max-width: none;
+    font-size: 1.95rem;
 
-    font-size: 2.05rem;
-
-    line-height: 1.38;
+    line-height: 1.4;
 
     word-break: normal;
-
     overflow-wrap: break-word;
   }
-
 
   .diagnosis-copy > p:last-child {
     margin-bottom: 0;
 
-    font-size: 0.91rem;
+    font-size: 0.89rem;
 
     line-height: 1.95;
   }
 
-
   .diagnosis-image {
     width: 100%;
 
-    margin-top: 26px;
+    margin-top: 24px;
 
     order: 2;
 
-    border-radius: 21px;
+    border-radius: 20px;
   }
-
 
   .diagnosis-image img {
     width: 100%;
 
     aspect-ratio: 16 / 9;
+
+    object-fit: cover;
   }
 
-
-  .diagnosis-action {
+  .diagnosis-button-wrap {
     width: 100%;
 
-    margin-top: 20px;
+    margin-top: 19px;
 
     order: 3;
-  }
-
-
-  .diagnosis-action .button {
-    width: 100%;
   }
 
 
@@ -1749,41 +1541,31 @@ h2 {
   .column-grid {
     grid-template-columns: 1fr;
 
-    gap: 21px;
+    gap: 20px;
   }
-
 
   .column-card {
-    border-radius: 26px;
+    border-radius: 25px;
   }
-
-
-  .column-image img {
-    aspect-ratio: 4 / 3;
-  }
-
 
   .column-body {
-    padding: 23px;
+    padding: 22px;
   }
-
 
   .category-badge {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
   }
 
-
   .column-body h3 {
-    margin-bottom: 14px;
+    margin-bottom: 13px;
 
-    font-size: 1.08rem;
+    font-size: 1.05rem;
 
     line-height: 1.65;
   }
 
-
   .column-body p {
-    font-size: 0.87rem;
+    font-size: 0.85rem;
 
     line-height: 1.8;
   }
@@ -1791,59 +1573,51 @@ h2 {
 
   /* FUTURE */
 
-  .future-section p:not(.section-label) {
-    font-size: 0.91rem;
-
-    line-height: 1.95;
+  .future-section {
+    padding-top: 68px;
+    padding-bottom: 68px;
   }
 
 
   /* FOOTER */
 
   .site-footer {
-    padding: 54px 0 28px;
+    padding: 52px 0 27px;
   }
 
-
-  .footer-grid {
+  .footer-inner {
     width: calc(100% - 46px);
 
     display: block;
   }
 
-
   .footer-brand {
-    margin-bottom: 30px;
+    margin-bottom: 29px;
   }
-
 
   .footer-brand strong {
-    font-size: 1.55rem;
+    font-size: 1.52rem;
   }
 
-
   .footer-nav {
-    margin-bottom: 32px;
+    margin-bottom: 31px;
 
     display: flex;
-
     flex-direction: column;
 
     gap: 13px;
   }
 
-
   .footer-note {
-    margin: 0 0 24px;
+    margin: 0 0 23px;
 
-    font-size: 0.75rem;
+    font-size: 0.74rem;
 
     line-height: 1.85;
   }
 
-
   .copyright {
-    padding-top: 21px;
+    padding-top: 20px;
   }
 
 }

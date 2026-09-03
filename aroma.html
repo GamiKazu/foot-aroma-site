@@ -101,18 +101,16 @@
     <div class="header-inner">
 
       <a
-        class="site-logo"
         href="index.html"
+        class="text-logo"
         aria-label="Foot & Aroma by GOB トップページ"
       >
 
-        <img
-          src="logo-simple.png"
-          alt="Foot & Aroma"
-          class="header-logo-image"
-        >
+        <span class="text-logo-main">
+          Foot & Aroma
+        </span>
 
-        <span class="header-gob">
+        <span class="text-logo-sub">
           by GOB
         </span>
 
@@ -124,6 +122,7 @@
         type="button"
         aria-label="メニューを開く"
         aria-expanded="false"
+        aria-controls="global-nav"
       >
         <span></span>
         <span></span>
@@ -132,6 +131,7 @@
 
 
       <nav
+        id="global-nav"
         class="global-nav"
         aria-label="メインナビゲーション"
       >
@@ -542,8 +542,6 @@
         <div class="aroma-scent-grid">
 
 
-          <!-- LAVENDER -->
-
           <article
             id="lavender"
             class="aroma-scent-card"
@@ -591,8 +589,6 @@
 
 
 
-          <!-- BERGAMOT -->
-
           <article
             id="bergamot"
             class="aroma-scent-card"
@@ -638,8 +634,6 @@
           </article>
 
 
-
-          <!-- PEPPERMINT -->
 
           <article
             id="peppermint"

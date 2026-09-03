@@ -1942,3 +1942,370 @@ h2 {
   }
 
 }
+/* =========================================================
+   FINAL PREMIUM TUNING
+   ABOUT / FOOT CONCERNS / REFLEXOLOGY
+========================================================= */
+
+
+/* =========================================================
+   ABOUT - decorative premium treatment
+========================================================= */
+
+.section-about {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-about::before {
+  content: "";
+  position: absolute;
+  right: -70px;
+  bottom: -80px;
+
+  width: 260px;
+  height: 260px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(220, 231, 217, 0.48) 0%,
+      rgba(220, 231, 217, 0.22) 42%,
+      rgba(220, 231, 217, 0) 72%
+    );
+
+  pointer-events: none;
+}
+
+.section-about::after {
+  content: "";
+  position: absolute;
+  right: 8%;
+  top: 18%;
+
+  width: 140px;
+  height: 220px;
+
+  opacity: 0.16;
+
+  background:
+    linear-gradient(
+      115deg,
+      transparent 0 43%,
+      rgba(85, 106, 82, 0.55) 44% 45%,
+      transparent 46% 100%
+    );
+
+  transform: rotate(-12deg);
+
+  pointer-events: none;
+}
+
+.about-content {
+  position: relative;
+  z-index: 2;
+}
+
+.about-content .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.about-content .eyebrow::after {
+  content: "";
+  display: inline-block;
+
+  width: 54px;
+  height: 1px;
+
+  background: rgba(83, 106, 82, 0.35);
+}
+
+.about-content h2 {
+  position: relative;
+}
+
+.about-content h2::before {
+  content: "01";
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: rgba(83, 106, 82, 0.55);
+
+  font-family: Georgia, serif;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+}
+
+
+/* =========================================================
+   FOOT CONCERNS - stronger section identity
+========================================================= */
+
+.section-concerns {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-concerns::before {
+  content: "";
+  position: absolute;
+  left: -85px;
+  top: 40px;
+
+  width: 240px;
+  height: 240px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 255, 255, 0.45) 0%,
+      rgba(255, 255, 255, 0.18) 46%,
+      rgba(255, 255, 255, 0) 74%
+    );
+
+  pointer-events: none;
+}
+
+.section-concerns .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-concerns .section-heading .eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.section-concerns .section-heading .eyebrow::after {
+  content: "";
+  display: inline-block;
+
+  width: 58px;
+  height: 1px;
+
+  background: rgba(83, 106, 82, 0.34);
+}
+
+.concern-grid {
+  gap: 16px;
+}
+
+.concern-card {
+  position: relative;
+
+  min-height: 0;
+
+  padding: 22px 22px 20px;
+
+  border:
+    1px solid rgba(83, 106, 82, 0.07);
+
+  box-shadow:
+    0 10px 26px rgba(52, 65, 54, 0.035);
+
+  overflow: hidden;
+}
+
+.concern-card::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 4px;
+  height: 100%;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(112, 140, 108, 0.55),
+      rgba(112, 140, 108, 0.1)
+    );
+
+  opacity: 0.75;
+}
+
+.concern-card:nth-child(2)::before {
+  opacity: 0.55;
+}
+
+.concern-card:nth-child(3)::before {
+  opacity: 0.4;
+}
+
+.concern-card:nth-child(4)::before {
+  opacity: 0.28;
+}
+
+.concern-card-top {
+  margin-bottom: 12px;
+}
+
+.concern-card-top span {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-width: 34px;
+  height: 34px;
+
+  padding: 0 8px;
+
+  border-radius: 999px;
+
+  background: rgba(231, 238, 228, 0.92);
+
+  color: #6f886d;
+
+  font-size: 0.68rem;
+}
+
+.concern-card-top h3 {
+  font-size: 1.12rem;
+}
+
+.concern-card p {
+  margin-bottom: 14px;
+}
+
+.concern-card strong {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+
+  font-size: 0.88rem;
+}
+
+.concern-card strong::after {
+  content: "";
+  display: inline-block;
+
+  width: 22px;
+  height: 1px;
+
+  background: rgba(83, 106, 82, 0.34);
+}
+
+
+/* =========================================================
+   REFLEXOLOGY - slightly tighter vertical rhythm
+========================================================= */
+
+.reflexology-heading {
+  margin-bottom: 22px;
+}
+
+.reflexology-row {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+
+.reflexology-row strong {
+  margin-bottom: 2px;
+}
+
+.reflexology-menu {
+  max-width: 100%;
+}
+
+.reflexology-action {
+  margin-top: 20px;
+}
+
+
+/* =========================================================
+   MOBILE refinement
+========================================================= */
+
+@media screen and (max-width: 640px) {
+
+  .section-about {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .section-about::after {
+    width: 90px;
+    height: 150px;
+
+    right: 2%;
+    top: 18%;
+  }
+
+  .about-content h2::before {
+    margin-bottom: 8px;
+  }
+
+  .section-concerns {
+    padding-top: 58px;
+    padding-bottom: 58px;
+  }
+
+  .section-concerns .section-heading {
+    margin-bottom: 24px;
+  }
+
+  .concern-grid {
+    gap: 14px;
+  }
+
+  .concern-card {
+    padding: 19px 19px 18px;
+
+    border-radius: 22px;
+  }
+
+  .concern-card-top {
+    margin-bottom: 10px;
+  }
+
+  .concern-card-top span {
+    min-width: 31px;
+    height: 31px;
+
+    font-size: 0.65rem;
+  }
+
+  .concern-card-top h3 {
+    font-size: 1.05rem;
+  }
+
+  .concern-card p {
+    margin-bottom: 12px;
+
+    font-size: 0.86rem;
+    line-height: 1.75;
+  }
+
+  .concern-card strong {
+    font-size: 0.86rem;
+  }
+
+  .reflexology-heading {
+    margin-bottom: 20px;
+  }
+
+  .reflexology-row {
+    padding-top: 12px;
+    padding-bottom: 12px;
+  }
+
+  .reflexology-row strong {
+    font-size: 1rem;
+  }
+
+  .reflexology-row small {
+    font-size: 0.78rem;
+  }
+
+}

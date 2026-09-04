@@ -9,11 +9,11 @@
     content="width=device-width, initial-scale=1.0"
   >
 
-  <title>無料足裏セルフチェック｜足の状態・おすすめアロマ・セルフケア｜Foot & Aroma by GOB</title>
+  <title>無料足元セルフケア診断｜おすすめアロマ・セルフケア｜Foot & Aroma by GOB</title>
 
   <meta
     name="description"
-    content="足裏写真と簡単な質問から、足元の傾向やセルフケアのヒント、おすすめの香りを確認できる無料セルフチェックをご案内します。リフレクソロジーとアロマテラピーを組み合わせたFoot & Aroma by GOBの診断コンテンツです。"
+    content="簡単な質問への回答から、足元の傾向やセルフケアのヒント、おすすめの香りを確認できる無料セルフチェックです。"
   >
 
   <link
@@ -27,12 +27,12 @@
 
   <meta
     property="og:title"
-    content="無料足裏セルフチェック｜Foot & Aroma by GOB"
+    content="無料足元セルフケア診断｜Foot & Aroma by GOB"
   >
 
   <meta
     property="og:description"
-    content="足裏写真と簡単な質問から、足元の傾向やセルフケア、おすすめの香りを確認できます。"
+    content="簡単な質問への回答から、足元の傾向やセルフケア、おすすめの香りを確認できます。"
   >
 
   <meta
@@ -58,12 +58,12 @@
 
   <meta
     name="twitter:title"
-    content="無料足裏セルフチェック｜Foot & Aroma by GOB"
+    content="無料足元セルフケア診断｜Foot & Aroma by GOB"
   >
 
   <meta
     name="twitter:description"
-    content="足裏写真と簡単な質問から、足元の傾向やおすすめセルフケアを確認できます。"
+    content="簡単な質問への回答から、足元の傾向やおすすめセルフケアを確認できます。"
   >
 
   <meta
@@ -77,8 +77,8 @@
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "無料足裏セルフチェック",
-    "description": "足裏写真と簡単な質問から、足元の傾向やセルフケア、おすすめの香りを確認できる無料セルフチェック。",
+    "name": "無料足元セルフケア診断",
+    "description": "簡単な質問への回答から、足元の傾向やセルフケア、おすすめの香りを確認できる無料セルフチェック。",
     "url": "https://gamikazu.github.io/foot-aroma-site/diagnosis.html",
     "inLanguage": "ja"
   }
@@ -166,7 +166,9 @@
        MAIN
   ========================================= -->
 
-  <main class="diagnosis-page">
+  <main class="diagnosis-page" id="diagnosis-app"></main>
+
+  <div hidden aria-hidden="true">
 
 
     <!-- ========================================
@@ -1048,7 +1050,7 @@
     </section>
 
 
-  </main>
+  </div>
 
 
 
@@ -1132,6 +1134,7 @@
 
 
   <script src="script.js"></script>
+  <script src="diagnosis-app.js"></script>
 
 
 </body>

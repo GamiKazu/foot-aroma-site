@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://gamikazu.github.io/foot-aroma-site/sitemap.xml
